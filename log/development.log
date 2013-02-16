@@ -2022,3 +2022,1150 @@ ActionController::RoutingError (No route matches [GET] "/sign_in"):
 
 
   Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:02 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Served asset /jquery.js - 304 Not Modified (0ms)
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+
+
+Served asset /application.js - 304 Not Modified (0ms)
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:44:05 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:46:12 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:42 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:43 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:44 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:45 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:46 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Served asset /application.css - 304 Not Modified (0ms)
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Served asset /application.css - 304 Not Modified (0ms)
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:47 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:52:49 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 14:58:57 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Compiled scaffolds.css  (25ms)  (pid 1249)
+Compiled submissions.css  (3ms)  (pid 1249)
+Compiled application.css  (78ms)  (pid 1249)
+Compiled submissions.js  (201ms)  (pid 1249)
+Compiled application.js  (224ms)  (pid 1249)
+Completed 200 OK in 489ms (Views: 470.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /submissions.css - 200 OK (3ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /submissions.js - 200 OK (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 14:58:58 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2013-02-16 14:59:41 -0800
+Processing by SubmissionsController#new as HTML
+Mysql2::Error: Table 'thechallenge.submissions' doesn't exist: SHOW FULL FIELDS FROM `submissions`
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'thechallenge.submissions' doesn't exist: SHOW FULL FIELDS FROM `submissions`):
+  app/controllers/submissions_controller.rb:27:in `new'
+  app/controllers/submissions_controller.rb:27:in `new'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130216215118)
+Migrating to CreateSubmissions (20130216225845)
+  [1m[35m (62.7ms)[0m  CREATE TABLE `submissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `name` varchar(255), `github_url` varchar(255), `description` varchar(255), `challenge` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130216225845')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Processing by SubmissionsController#new as HTML
+  Rendered submissions/_form.html.erb (7.4ms)
+  Rendered submissions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 43ms (Views: 25.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /submissions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:00:00 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/submissions/show" for 127.0.0.1 at 2013-02-16 15:06:01 -0800
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` WHERE `submissions`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Submission with id=show):
+  app/controllers/submissions_controller.rb:16:in `show'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2013-02-16 15:06:04 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:05 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Processing by SubmissionsController#new as HTML
+  Rendered submissions/_form.html.erb (5.7ms)
+  Rendered submissions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 66ms (Views: 17.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /submissions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:30 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Processing by SubmissionsController#new as HTML
+  Rendered submissions/_form.html.erb (3.7ms)
+  Rendered submissions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:31 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:06:36 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.2ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:06:37 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:09 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:35 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 15:13:36 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (118ms)
