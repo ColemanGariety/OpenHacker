@@ -1,4 +1,7 @@
 class SubmissionsController < ApplicationController
+
+	skip_before_filter :require_login, :only => [:index, :show]
+
   # GET /submissions
   # GET /submissions.json
   def index

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+	skip_before_filter :require_login, :only => [:show]
+	
 	def new
 	  @user = User.new
 	end

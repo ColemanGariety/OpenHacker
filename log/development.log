@@ -7255,3 +7255,2746 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:13:41
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:13:41 -0800
 Served asset /application.js - 304 Not Modified (0ms)
 Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:14:28 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+
+
+Served asset /application.css - 304 Not Modified (0ms)
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:34 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:16:37 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:25 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:18:46 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:46 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:46 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:18:47 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:19:38 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:05 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:21:25 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.4ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:25 -0800
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:25 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:21:26 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:23:12 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.7ms)
+ERROR: compiling _app_views_layouts_application_html_erb___363834557925417862_70334407477640 RAISED /Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:13: syntax error, unexpected tSTRING_BEG
+...buffer.append= ( current_user."><%= current_user.username );...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:14: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.append= ( link_to "Log out", log_out_path );@output...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append= ( link_to "Sign up", sign_up_path );@output_...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+...t_buffer.append= ( link_to "log in", log_in_path );@output_b...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append= ( link_to "Home", root_path );@output_buffer...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...t_tag :div, msg, :id => "flash_#{name}" );@output_buffer.saf...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:28: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:29: unknown regexp options - htl
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:30: unterminated string meets end of file
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:30: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_layouts_application_html_erb___363834557925417862_70334407477640(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>The Challenge</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+
+<div id="user_nav">
+');   if current_user 
+@output_buffer.safe_concat('    Logged in as <a href="');@output_buffer.append= ( root_path );@output_buffer.safe_concat('/');@output_buffer.append= ( current_user."><%= current_user.username );@output_buffer.safe_concat('</a>.
+    ');@output_buffer.append= ( link_to "Log out", log_out_path );@output_buffer.safe_concat('
+');   else 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( link_to "Sign up", sign_up_path );@output_buffer.safe_concat(' or
+    ');@output_buffer.append= ( link_to "log in", log_in_path );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to "Home", root_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+
+'); flash.each do |name, msg| 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( content_tag :div, msg, :id => "flash_#{name}" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Colby/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/Colby/Sites/The-Challenge/app/controllers/submissions_controller.rb:7:in `index'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__2390516793667130473__process_action__2291126836194319249__callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__3467349091143568624__call__3583538353171542395__callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.9/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:147:in `handle'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:99:in `rescue in block (2 levels) in start'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:96:in `block (2 levels) in start'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:86:in `each'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:66:in `loop'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:66:in `start'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:13:in `run'
+/Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/bin/nack_worker:4:in `<main>'
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:13: syntax error, unexpected tSTRING_BEG
+...buffer.append= ( current_user."><%= current_user.username );...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:14: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.append= ( link_to "Log out", log_out_path );@output...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append= ( link_to "Sign up", sign_up_path );@output_...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+...t_buffer.append= ( link_to "log in", log_in_path );@output_b...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append= ( link_to "Home", root_path );@output_buffer...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...t_tag :div, msg, :id => "flash_#{name}" );@output_buffer.saf...
+...                               ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:28: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:29: unknown regexp options - htl
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:30: unterminated string meets end of file
+/Users/Colby/Sites/The-Challenge/app/views/layouts/application.html.erb:30: syntax error, unexpected $end, expecting ')'):
+    10: 
+    11: <div id="user_nav">
+    12:   <% if current_user %>
+    13:     Logged in as <a href="<%= root_path %>/<%= current_user."><%= current_user.username %></a>.
+    14:     <%= link_to "Log out", log_out_path %>
+    15:   <% else %>
+    16:     <%= link_to "Sign up", sign_up_path %> or
+  app/controllers/submissions_controller.rb:7:in `index'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.5ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (4.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:23:30 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:24:13 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (1.0ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 31ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"users"}):
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___363834557925417862_70334437974080'
+  app/controllers/submissions_controller.rb:7:in `index'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:25:22 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.2ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 52ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"users"}):
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___363834557925417862_70334437974080'
+  app/controllers/submissions_controller.rb:7:in `index'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` WHERE `submissions`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered submissions/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:23 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:24 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:24 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:24 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:25:28 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"users"}):
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___363834557925417862_70334437974080'
+  app/controllers/submissions_controller.rb:7:in `index'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.4ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.9ms)
+
+
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+
+
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+
+
+Served asset /users.js - 304 Not Modified (0ms)
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:43 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubmission Load (0.4ms)[0m  SELECT `submissions`.* FROM `submissions` WHERE `submissions`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered submissions/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:45 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submissions/1/edit" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Processing by SubmissionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` WHERE `submissions`.`id` = 1 LIMIT 1
+  Rendered submissions/_form.html.erb (4.4ms)
+  Rendered submissions/edit.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+
+
+Served asset /jquery.js - 304 Not Modified (0ms)
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:25:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2013-02-16 16:25:52 -0800
+
+AbstractController::ActionNotFound (The action 'edit' could not be found for UsersController):
+  actionpack (3.2.9) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__3467349091143568624__call__3583538353171542395__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  railties (3.2.9) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:147:in `handle'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:99:in `rescue in block (2 levels) in start'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:96:in `block (2 levels) in start'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:86:in `each'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:66:in `loop'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:66:in `start'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/lib/nack/server.rb:13:in `run'
+  /Users/Colby/Library/Application Support/Pow/Versions/0.4.0/node_modules/nack/bin/nack_worker:4:in `<main>'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:26:12 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:13 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+Served asset /application.js - 304 Not Modified (0ms)
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:26:15 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:21 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:22 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:22 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:22 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:22 -0800
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:32:22 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.4ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:37 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:39 -0800
+Served asset /application.js - 304 Not Modified (3ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.3ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Served asset /users.js - 304 Not Modified (0ms)
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:41:41 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.2ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 54ms (Views: 34.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:29 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://the-challenge.dev/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[36mSubmission Load (0.3ms)[0m  [1mSELECT `submissions`.* FROM `submissions` [0m
+  Rendered submissions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+
+
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:49:31 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2013-02-16 16:49:32 -0800
+Processing by SubmissionsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `signin_url' for #<SubmissionsController:0x007ff00671ee38>):
+  app/controllers/application_controller.rb:16:in `require_login'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2013-02-16 16:50:03 -0800
+Processing by SubmissionsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `sign_in_url' for #<SubmissionsController:0x007ff00667b9b8>):
+  app/controllers/application_controller.rb:16:in `require_login'
+
+
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.2ms)
+  Rendered /Users/Colby/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SubmissionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:50:22 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:23 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:58 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:51:59 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:04 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:05 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:06 -0800
+Processing by SessionsController#new as HTML
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+
+
+Served asset /submissions.js - 304 Not Modified (0ms)
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:20 -0800
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:52:23 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.2ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 13.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /submissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+
+
+Served asset /submissions.js - 304 Not Modified (0ms)
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:24 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/submissions/1/edit" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Processing by SubmissionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://the-challenge.dev/log_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Served asset /submissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:25 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/q1LPeSuU/Crx8DjiOl7qMHRan9w5ro4zcSv1jIz4wY=", "email"=>"colby@aley.me", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'colby@aley.me' LIMIT 1[0m
+Redirected to http://the-challenge.dev/
+Completed 302 Found in 382ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Processing by SubmissionsController#index as HTML
+  [1m[35mSubmission Load (0.2ms)[0m  SELECT `submissions`.* FROM `submissions` 
+  Rendered submissions/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /submissions.css - 304 Not Modified (0ms)
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /sessions.js - 304 Not Modified (1ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/submissions.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /submissions.js - 304 Not Modified (1ms)
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-16 16:52:31 -0800
+Served asset /application.js - 304 Not Modified (0ms)
