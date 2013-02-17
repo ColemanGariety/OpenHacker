@@ -40,7 +40,7 @@ class SubmissionsController < ApplicationController
   # POST /submissions
   # POST /submissions.json
   def create
-    @submission = Submission.new(params[:submission])
+    @submission = Submission.new(params[:submission].merge(:user_id => current_user.id, :challenge => 1))
 
     respond_to do |format|
       if @submission.save
