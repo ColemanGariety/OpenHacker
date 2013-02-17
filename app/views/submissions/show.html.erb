@@ -11,11 +11,6 @@
 </p>
 
 <p>
-  <b>Github url:</b>
-  <%= @submission.github_url %>
-</p>
-
-<p>
   <b>Description:</b>
   <%= @submission.description %>
 </p>
@@ -25,6 +20,7 @@
   <%= @submission.challenge %>
 </p>
 
-
-<%= link_to 'Edit', edit_submission_path(@submission) %> |
-<%= link_to 'Back', submissions_path %>
+<% if current_user.id == @submission.user_id %>
+	<%= link_to 'Edit', edit_submission_path(@submission) %> |
+<% end %>
+<a href="<%= @submission.github_url %>">View on Github</a>
