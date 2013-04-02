@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+  margin: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #333;
+}
+
+header .inner, section, footer {
+  width: 100%;
+  padding: 15px;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 50px;
+}
+
+/* Header */
+
+header {
+  background-color: #FF7400;
+  color: #FFF;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-family: "ITC Franklin Condensed";
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.2);
+}
+
+header .inner {
+  height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+header .inner h2 {
+  margin: 0;
+  font-size: 2.25em;
+  font-weight: 100;
+  display: inline;
+}
+
+header .inner .right {
+  font-size: 0;
+  height: 40px;
+}
+
+header .inner .right div {
+  font-size: 22px;
+  border-left: 1px solid #FF9640;
+  border-right: 1px solid #FF9640;
+  margin-right: -1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+/* Generic Elements */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* Headers */
+
+h1, h2, h3 {
+  font-family: "ITC Franklin Condensed";
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.25em;
+  font-weight: 100;
+}
+
+/* Anchors */
+
+header a:link, header a, header a div, header a h2 {
+  color: #FFF;
+  text-decoration: none;
+}

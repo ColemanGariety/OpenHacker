@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  repo_url: MyString
+  thumb_url: MyString
+  submitting_user_id: 1
+  receiving_challenge_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  repo_url: MyString
+  thumb_url: MyString
+  submitting_user_id: 1
+  receiving_challenge_id: 1

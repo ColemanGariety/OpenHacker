@@ -1,0 +1,27 @@
+@font-face {
+ font-family: "ITC Franklin Condensed";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/1/304427a6-d77e-4049-a5b5-5ce26e78ceba") format("truetype");
+ font-style: normal;
+ font-weight: normal;
+}
+
+@font-face {
+ font-family: "ITC Franklin Condensed";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/1/27f1ee11-9574-4daa-b678-2d12912a2443") format("truetype");
+ font-style: italic;
+ font-weight: normal;
+}
+
+@font-face {
+ font-family: "ITC Franklin Condensed";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/1/539bc077-14a6-468d-b7bc-be4939dcac8e") format("truetype");
+ font-style: normal;
+ font-weight: bold;
+}
+
+@font-face {
+ font-family: "ITC Franklin Condensed";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/1/7854efbb-a4da-40d5-bb03-474729ccd4a6") format("truetype");
+ font-style: italic;
+ font-weight: bold;
+}

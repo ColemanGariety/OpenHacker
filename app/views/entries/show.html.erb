@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @entry.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @entry.description %>
+</p>
+
+<p>
+  <b>Repo url:</b>
+  <%= @entry.repo_url %>
+</p>
+
+<p>
+  <b>Thumb url:</b>
+  <%= @entry.thumb_url %>
+</p>
+
+<p>
+  <b>Submitting user:</b>
+  <%= @entry.submitting_user_id %>
+</p>
+
+<p>
+  <b>Receiving challenge:</b>
+  <%= @entry.receiving_challenge_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
