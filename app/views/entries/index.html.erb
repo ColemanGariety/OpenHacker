@@ -1,18 +1,3 @@
-<h1>Listing entries</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Repo url</th>
-    <th>Thumb url</th>
-    <th>Submitting user</th>
-    <th>Receiving challenge</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @entries.each do |entry| %>
   <tr>
     <td><%= entry.title %></td>
@@ -26,8 +11,3 @@
     <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Entry', new_entry_path %>

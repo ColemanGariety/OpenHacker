@@ -1,4 +1,7 @@
 ThechallengeIo::Application.routes.draw do
+  resources :votes
+
+
   root :to => "entries#index"
 
   resources :challenges

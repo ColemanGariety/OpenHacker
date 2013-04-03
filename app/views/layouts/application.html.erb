@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ThechallengeIo</title>
+  <title><%= yield(:title) or "The Challenge" %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="inner" id="site">
+    <header>
+      <div class="inner">
+        <a href="/" class="left">
+          <h2>The Challenge</h2>
+          <h2 class="shadow">The Challenge</h2>
+        </a>
+        <div class="right">
+          <% if current_user %>
+              <%= link_to "<div>Good #{time_of_day()}, #{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+              <%= link_to '<div>Vote</div>'.html_safe, new_vote_path %>
+              <%= link_to '<div>Submit</div>'.html_safe, new_entry_path %>
+              <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
+          <% else %>
+            <a href="/auth/github"><div>Sign in with GitHub</div></a>
+          <% end %>
+        </div>
+      </div>
+    </header>
 
-<header>
-  <div class="inner">
-    <a href="/"><h2>The Challenge</h2></a>
-    <div class="right">
-      <% if current_user %>
-          <%= link_to "<div>Good #{time_of_day()}, #{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
-          <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
-      <% else %>
-        <a href="/auth/github"><div>Sign in with GitHub</div></a>
-      <% end %>
-    </div>
+    <section>
+      <%= yield %>
+    </section>
   </div>
-</header>
-
-<section>
-  <%= yield %>
-</section>
-
 </body>
 </html>

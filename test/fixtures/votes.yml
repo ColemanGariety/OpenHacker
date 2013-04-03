@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  voting_user_id: 1
+  value: 1
+  receiving_entry_id: 1
+
+two:
+  voting_user_id: 1
+  value: 1
+  receiving_entry_id: 1
