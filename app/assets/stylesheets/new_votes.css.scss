@@ -1,0 +1,8 @@
+header .inner {
+  max-width: none;
+  border: 0;
+}
+
+header .inner .right a:last-child div {
+  border-right: 0;
+}

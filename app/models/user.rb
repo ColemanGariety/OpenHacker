@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :votes
+  has_many :challenges
+  has_many :entries
+
   def self.from_omniauth(auth)
     find_by_github_uid(auth["uid"]) || create_from_omniauth(auth)
   end

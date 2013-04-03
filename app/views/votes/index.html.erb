@@ -1,27 +1,21 @@
-<h1>Listing votes</h1>
+<% if current_voting_challenge %>
+  <h1>Vote on <%= current_voting_challenge.title %></h1>
 
-<table>
-  <tr>
-    <th>Voting user</th>
-    <th>Value</th>
-    <th>Receiving entry</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <%= link_to 'Vote on this challenge', new_vote_path %>
 
-<% @votes.each do |vote| %>
-  <tr>
-    <td><%= vote.voting_user_id %></td>
-    <td><%= vote.value %></td>
-    <td><%= vote.receiving_entry_id %></td>
-    <td><%= link_to 'Show', vote %></td>
-    <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
-    <td><%= link_to 'Destroy', vote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <% @entries.each do |entry| %>
+    <tr>
+      <td><%= entry.title %></td>
+      <td><%= entry.description %></td>
+      <td><%= entry.repo_url %></td>
+      <td><%= entry.thumb_url %></td>
+      <td><%= entry.submitting_user_id %></td>
+      <td><%= entry.receiving_challenge_id %></td>
+      <td><%= link_to 'Show', entry %></td>
+      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+      <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <h2>Sorry, no challenges are in voting at the moment&hellip;</h2>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Vote', new_vote_path %>

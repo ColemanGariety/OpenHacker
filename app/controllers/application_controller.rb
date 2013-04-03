@@ -6,16 +6,22 @@ class ApplicationController < ActionController::Base
 private
 
   def current_user
-    @current_user ||= User.find(cookies[:user_id]) if cookies[:user_id]
+    User.find(cookies[:user_id]) if cookies[:user_id]
   end
 
-  def time_of_day
-    t = Time.now
-    t.hour >= 0 && t.hour < 12 ? :morning : t.hour >= 12 && t.hour < 17 ? :afternoon : t.hour >= 17 && t.hour <= 23 ? :evening : nil
+  def current_open_challenge
+    Challenge.where(:approved => true).order("created_at DESC").first
   end
 
-  helper_method :current_user, :time_of_day
+  def current_voting_challenge
+    # Active record query for the challenge currently in voting
+  end
 
+  def current_closed_challenge
+    # Active record query for the most recently ended challenge
+  end
+
+  helper_method :current_user, :current_open_challenge, :current_voting_challenge, :current_closed_challenge
 
   def authenticate
     redirect_to "/auth/github" unless current_user

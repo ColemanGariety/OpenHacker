@@ -1,13 +1,12 @@
 ThechallengeIo::Application.routes.draw do
-  resources :votes
-
-
   root :to => "entries#index"
 
   resources :challenges
   resources :entries
   resources :users
+  resources :votes
 
+  match '/vote' => 'votes#index', :as => "vote"
   match 'auth/github/callback' => 'sessions#create'
   match "auth/failure" => redirect("/")
   match 'logout' => 'sessions#destroy', :as => "signout"

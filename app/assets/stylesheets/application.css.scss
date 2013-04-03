@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require typography
  */
 
 html {
@@ -99,10 +99,10 @@ header .inner h2 {
   display: inline-block;
   top: 0;
   position: relative;
-  -webkit-transition: top .25s;
-     -moz-transition: top .25s;
-       -o-transition: top .25s;
-          transition: top .25s;
+  -webkit-transition: top .3s;
+     -moz-transition: top .3s;
+       -o-transition: top .3s;
+          transition: top .3s;
   -webkit-transition-timing-function: cubic-bezier(0.920, 0.015, 0.610, 1); /* older webkit */
   -webkit-transition-timing-function: cubic-bezier(0.920, 0.015, 0.610, 1.430);
      -moz-transition-timing-function: cubic-bezier(0.920, 0.015, 0.610, 1.430);
@@ -185,12 +185,12 @@ header .inner .right a:active + a div {
 /* Headers */
 
 h1, h2, h3 {
+  margin: 0;
   font-family: "ITC Franklin Condensed";
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 h1 {
-  margin: 0;
   font-size: 3.25em;
   font-weight: 100;
   font-weight: 900;
@@ -201,4 +201,14 @@ h1 {
 header a:link, header a, header a div, header a h2 {
   color: #FFF;
   text-decoration: none;
+}
+
+/* Profiles */
+
+#default {
+  float: left;
+  width: 250px;
+  height: 250px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }

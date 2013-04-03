@@ -10,31 +10,17 @@ class VotesController < ApplicationController
     end
   end
 
-  # GET /votes/1
-  # GET /votes/1.json
-  def show
-    @vote = Vote.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @vote }
-    end
-  end
-
   # GET /votes/new
   # GET /votes/new.json
   def new
     @vote = Vote.new
 
+    @entries = Entry.where(:receiving_challenge_id => current_voting_challenge.id) if current_voting_challenge
+
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "new_vote" }
       format.json { render json: @vote }
     end
-  end
-
-  # GET /votes/1/edit
-  def edit
-    @vote = Vote.find(params[:id])
   end
 
   # POST /votes
@@ -66,18 +52,6 @@ class VotesController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @vote.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /votes/1
-  # DELETE /votes/1.json
-  def destroy
-    @vote = Vote.find(params[:id])
-    @vote.destroy
-
-    respond_to do |format|
-      format.html { redirect_to votes_url }
-      format.json { head :no_content }
     end
   end
 end
