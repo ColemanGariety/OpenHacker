@@ -13,21 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-$(function(){
-  $("hgroup").hover(function(){
-    $("h2:first-child").stop(1,1).animate({
-      'top': "-55px"
-    },200)
-    $("h2:last-child").stop(1,1).animate({
-      'top': "0"
-    },200)
-  }, function(){
-    $("h2:first-child").stop(1,1).animate({
-      'top': "0"
-    },200)
-    $("h2:last-child").stop(1,1).animate({
-      'top': "55px"
-    },200)
-  })
-})

@@ -17,7 +17,7 @@
       </a>
       <div class="right">
         <% if current_user %>
-            <%= link_to "<div>Good #{time_of_day()}, #{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+            <%= link_to "<div>#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
             <%= link_to '<div>Vote</div>'.html_safe, vote_path %>
             <%= link_to '<div>Submit</div>'.html_safe, new_entry_path %>
             <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
