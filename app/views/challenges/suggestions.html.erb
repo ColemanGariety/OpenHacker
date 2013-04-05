@@ -1,0 +1,13 @@
+<h1>Challenge Suggestions</h1>
+<p>Tell us your challenge idea <%= link_to 'here', new_challenge_path %>.</p>
+
+<ul>
+<% @challenges.each do |challenge| %>
+  <li>
+    <span><%= challenge.description %></span><br>
+    <span>Suggested by <%= User.find(challenge.submitting_user_id).full_name %></span>
+    <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
+    <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </li>
+<% end %>
+</ul>

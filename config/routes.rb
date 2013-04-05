@@ -1,10 +1,12 @@
 ThechallengeIo::Application.routes.draw do
   root :to => "entries#index"
 
-  resources :challenges, :path => "challenge"
-  resources :entries, :path => "entry"
-  resources :users, :path => "user"
-  resources :votes, :path => "vote"
+  resources :challenges
+  resources :entries
+  resources :users
+  resources :votes
+
+  get "suggestions" => "challenges#suggestions", :as => "challenge_suggestions"
 
   match "submit" => "entries#new", :as => "submit"
   match 'auth/github/callback' => 'sessions#create'

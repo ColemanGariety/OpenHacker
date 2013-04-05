@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @challenge.title %>
-</p>
+<h1><%= @challenge.title %></h1>
 
 <p>
   <b>Description:</b>
@@ -11,10 +6,6 @@
 </p>
 
 <p>
-  <b>Submitting user:</b>
-  <%= @challenge.submitting_user_id %>
+  <b>Suggested by:</b>
+  <%= link_to User.find(@challenge.submitting_user_id).full_name, User.find(@challenge.submitting_user_id) %>
 </p>
-
-
-<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-<%= link_to 'Back', challenges_path %>

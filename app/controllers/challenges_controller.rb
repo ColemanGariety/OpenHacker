@@ -1,6 +1,6 @@
 class ChallengesController < ApplicationController
-  # GET /challenges
-  # GET /challenges.json
+  # GET /challenge
+  # GET /challenge.json
   def index
     @challenges = Challenge.all
 
@@ -10,8 +10,19 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # GET /challenges/1
-  # GET /challenges/1.json
+  # GET /suggestions
+  # GET /suggestions.json
+  def suggestions
+    @challenges = Challenge.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @challenges }
+    end
+  end
+
+  # GET /challenge/1
+  # GET /challenge/1.json
   def show
     @challenge = Challenge.find(params[:id])
 
@@ -21,8 +32,8 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # GET /challenges/new
-  # GET /challenges/new.json
+  # GET /challenge/new
+  # GET /challenge/new.json
   def new
     @challenge = Challenge.new
 
@@ -32,19 +43,21 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # GET /challenges/1/edit
+  # GET /challenge/1/edit
   def edit
     @challenge = Challenge.find(params[:id])
   end
 
-  # POST /challenges
-  # POST /challenges.json
+  # POST /challenge
+  # POST /challenge.json
   def create
     @challenge = Challenge.new(params[:challenge])
 
+    @challenge.submitting_user_id = current_user.id
+
     respond_to do |format|
       if @challenge.save
-        format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
+        format.html { redirect_to challenge_suggestions_path, notice: 'Challenge was successfully created.' }
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
         format.html { render action: "new" }
@@ -53,8 +66,8 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # PUT /challenges/1
-  # PUT /challenges/1.json
+  # PUT /challenge/1
+  # PUT /challenge/1.json
   def update
     @challenge = Challenge.find(params[:id])
 
@@ -69,14 +82,14 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # DELETE /challenges/1
-  # DELETE /challenges/1.json
+  # DELETE /challenge/1
+  # DELETE /challenge/1.json
   def destroy
     @challenge = Challenge.find(params[:id])
     @challenge.destroy
 
     respond_to do |format|
-      format.html { redirect_to challenges_url }
+      format.html { redirect_to challenge_suggestions_path }
       format.json { head :no_content }
     end
   end

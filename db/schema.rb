@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405074827) do
+ActiveRecord::Schema.define(:version => 20130405192431) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "submitting_user_id"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
-    t.boolean  "approved",           :default => false
-    t.datetime "opened_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "prize"
     t.string   "rules"
+    t.integer  "status"
+    t.datetime "opened_at"
   end
 
   create_table "entries", :force => true do |t|

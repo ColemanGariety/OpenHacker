@@ -10,15 +10,15 @@ private
   end
 
   def current_open_challenge
-    Challenge.where(:approved => true).order("created_at DESC").first
+    Challenge.find_by_status(2)
   end
 
   def current_voting_challenge
-    Challenge.where("opened_at > ?", Time.now - 1.week).first
+    Challenge.find_by_status(3)
   end
 
   def current_closed_challenge
-    # Active record query for the most recently ended challenge
+    Challenge.find_by_status(4)
   end
 
   helper_method :current_user, :current_open_challenge, :current_voting_challenge, :current_closed_challenge

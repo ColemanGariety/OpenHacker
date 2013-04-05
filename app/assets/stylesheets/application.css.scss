@@ -12,9 +12,7 @@
  *= require typography
  */
 
-html {
-  height: 100%;
-}
+html { height: 100%; }
 
 body {
   background-color: #f8f6f3;
@@ -29,16 +27,12 @@ body {
   width: 100%;
 }
 
-header .inner, section, footer{
-  width: 100%;
-  padding: 15px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-section {
-  margin-top: 50px;
-  padding-top: 15px;
+body:before {
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;
 }
 
 #site.inner {
@@ -49,10 +43,39 @@ section {
   border-left: 1px solid #DDD;
   border-right: 1px solid #DDD;
   max-width: 898px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -450px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+header .inner, section, footer{
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+section, footer {
+  max-width: 870px;
+}
+
+section {
+  padding-top: 15px;
+  overflow: auto;
+	padding-bottom: 50px;
+	position: relative;
+	top: 50px;
+}
+
+footer {
+  position: relative;
+	margin-top: -50px;
+	height: 50px;
+	clear: both;
+	padding: 0;
+	padding-left: 15px;
+  padding-right: 15px;
+  line-height: 50px;
+  font-family: "ITC Franklin Condensed";
+  font-size: 1.4em;
 }
 
 /* Header */
@@ -78,6 +101,7 @@ header .inner {
   padding: 0;
   position: relative;
   background-color: #FF7400;
+  max-width: 900px;
 }
 
 header .inner .left {
@@ -183,9 +207,13 @@ header .inner .right a:active + a div {
   float: right;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 /* Copy Text */
 
-h1 + p {
+h1 + p, p:first-child {
   margin-top: 0;
 }
 

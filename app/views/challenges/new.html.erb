@@ -1,5 +1,25 @@
-<h1>New challenge</h1>
+<h1>Suggest a Challenge</h1>
+<p>Tell us your challenge idea in 140 characters or less...</p>
 
-<%= render 'form' %>
+<%= form_for(@challenge) do |f| %>
 
-<%= link_to 'Back', challenges_path %>
+  <% if @challenge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+
+      <ul>
+      <% @challenge.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
