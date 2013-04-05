@@ -14,7 +14,7 @@ private
   end
 
   def current_voting_challenge
-    # Active record query for the challenge currently in voting
+    Challenge.where("opened_at > ?", Time.now - 1.week).first
   end
 
   def current_closed_challenge

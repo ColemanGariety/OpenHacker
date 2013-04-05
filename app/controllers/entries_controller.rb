@@ -18,7 +18,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "show_entry" }
       format.json { render json: @entry }
     end
   end
