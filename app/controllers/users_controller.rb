@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  # GET /users.json
+  def index
+    @users = User.all
+
+    respond_to do |format|
+      format.json { render json: @users.map { |u| u.as_json(:only => :username) } }
+    end
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
