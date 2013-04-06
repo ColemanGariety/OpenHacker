@@ -1,4 +1,7 @@
 <img src="http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=500&d=http://thelist.io/assets/profile.jpg" id="default">
 <h1><%= @user.full_name %></h1>
-<%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %>
+<%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
+<%= 'Hireable' if @user.hireable%><%= ' | Moderator' if @user.level == 1 %>
+
+
 <p><%= @user.bio %></p>

@@ -82,6 +82,21 @@ class ChallengesController < ApplicationController
       end
     end
   end
+  
+  # PUT Runs every sunday night to update the week's challenge
+  def cron
+  	open_challenge = Challenge.find_by_status(1)
+  	open_challenge.update_attributes(:status => 2, :opened_at => Time.now)
+  	open_challenge.save
+
+  	voting_challenge = Challenge.find_by_status(2)
+  	voting_challenge.status = 3
+  	voting_challenge.save
+  	
+  	closed_challenge = Challenge.find_by_status(3)
+  	closed_challenge.status = 4
+  	closed_challenge.save
+  end
 
   # DELETE /challenge/1
   # DELETE /challenge/1.json
