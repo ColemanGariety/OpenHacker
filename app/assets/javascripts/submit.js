@@ -1,17 +1,12 @@
 var repos,
   contents,
   screenshot_jpg,
-  collaborators = [],
   selected_repo,
   found_screenshot_jpg = false,
   found_description = false,
   found_commits = false,
-  found_contributors = false,
+  found_collaborators = [],
   found_demo = false
-
-function checkURL(){
-  return /((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/.test(checkURL.arguments[0]);
-}
 
 // Get repos
 $.ajax({
@@ -29,6 +24,20 @@ $.ajax({
 
 function validateRepo() {
   if ($("#repos select").find(":selected").val() != "null") {
+
+    $("#refresh-message").remove()
+    $("#refresh-button").off("click")
+    $("#collaborators_list").html("")
+    $(".mark").html("&#10003;").attr("class","mark")
+    $("#step-2").removeClass("focused")
+    $("#step-1").addClass("focused")
+
+    var found_screenshot_jpg = false,
+      found_description = false,
+      found_commits = false,
+      found_collaborators = [],
+      found_demo = false
+
     $("#step-1").removeClass("focused")
     $("#step-2").addClass("focused")
 
@@ -43,7 +52,7 @@ function validateRepo() {
         console.log(contents, "Contents")
         for (var i = 0; i < contents.length; i++) {
           if (data.data[i].name == "screenshot.jpg") {
-            found_screenshot_jpg = data.data[i].url
+            found_screenshot_jpg = data.data[i].html_url.replace("https://github.com/","https://raw.github.com/").replace("/blob/","/")
           }
         }
 
@@ -76,6 +85,8 @@ function validateRepo() {
             var opened_at = new Date($("#challenge").attr("data-opened-at"))
             var created_at = new Date(selected_repo.created_at)
 
+            console.log(opened_at + ":" + created_at)
+
             if (created_at >= opened_at) {
               found_commits = String(created_at)
 
@@ -94,8 +105,8 @@ function validateRepo() {
                   console.log(data.data, "Collaborators")
 
                   var i = 0
-                  while (collaborators.length <= 3 && data.data[i] != undefined) {
-                    collaborators.push(data.data[i].login)
+                  while (found_collaborators.length <= 3 && data.data[i] != undefined) {
+                    found_collaborators.push(data.data[i].login)
                     $("#collaborators_list").append("<li>" + data.data[i].login + "</li>")
                     i++
                   }
@@ -105,47 +116,58 @@ function validateRepo() {
                   setTimeout(function(){
                     // Check demo URL
                     if (selected_repo.homepage != null) {
+                      found_demo = selected_repo.homepage
+
                       $("#demo_check").find(".mark").addClass("done")
                     } else {
                       $("#demo_check").find(".mark").html("&#10006;").addClass("red").addClass("done")
                     }
 
-                    if (found_screenshot_jpg != false && found_description != false && found_commits != false && found_contributors != false && found_demo != false) {
+                    if (found_screenshot_jpg != false && found_description != false && found_commits != false && found_collaborators != false && found_demo != false) {
                       $("#step-2").removeClass("focused")
                       $("#step-3").addClass("focused")
+                      $("#repo-title").html(selected_repo.name)
+                      $("#repo-desc").html(found_description)
+                      $("#repo-url").html("<a target=\"_blank\" href=\"" + found_demo + "\">" + found_demo + "</a>")
+                      $("#preview .image-wrap").html("<img src=\"" + found_screenshot_jpg + "\">")
+                      $("#entry_title").val(selected_repo.name)
+                      $("#entry_description").val(found_description)
+                      $("#entry_repo_url").val(selected_repo.html_url)
+                      $("#entry_thumb_url").val(found_screenshot_jpg)
+                      $("#entry_demo_url").val(found_demo)
                     } else {
                       $("#check").append("<li id=\"refresh-message\"><br><i><span>Fix the problems and <a href='javascript:;' id='refresh-button'>refresh</a>, or <a href='javascript:;' id='change-repo-button'>pick a different repo</a>.</span></i></li>")
 
-                        $("#refresh-button").click(function(){
-                          $("#refresh-message").remove()
-                          $("#refresh-button").off("click")
-                          $("#collaborators_list").html("")
-                          $(".mark").html("&#10003;").attr("class","mark")
+                      $("#refresh-button").click(function(){
+                        $("#refresh-message").remove()
+                        $("#refresh-button").off("click")
+                        $("#collaborators_list").html("")
+                        $(".mark").html("&#10003;").attr("class","mark")
 
-                          var found_screenshot_jpg = false,
-                            found_description = false,
-                            found_commits = false,
-                            found_contributors = false,
-                            found_demo = false
+                        var found_screenshot_jpg = false,
+                          found_description = false,
+                          found_commits = false,
+                          found_collaborators = [],
+                          found_demo = false
 
-                          validateRepo()
-                        })
+                        validateRepo()
+                      })
 
-                        $("#change-repo-button").click(function(){
-                          $("#repos select").val('Pick one...')
-                          $("#refresh-message").remove()
-                          $("#refresh-button").off("click")
-                          $("#collaborators_list").html("")
-                          $(".mark").html("&#10003;").attr("class","mark")
-                          $("#step-2").removeClass("focused")
-                          $("#step-1").addClass("focused")
+                      $("#change-repo-button").click(function(){
+                        $("#repos select").val('Pick one...')
+                        $("#refresh-message").remove()
+                        $("#refresh-button").off("click")
+                        $("#collaborators_list").html("")
+                        $(".mark").html("&#10003;").attr("class","mark")
+                        $("#step-2").removeClass("focused")
+                        $("#step-1").addClass("focused")
 
-                          var found_screenshot_jpg = false,
-                            found_description = false,
-                            found_commits = false,
-                            found_contributors = false,
-                            found_demo = false
-                        })
+                        var found_screenshot_jpg = false,
+                          found_description = false,
+                          found_commits = false,
+                          found_collaborators = [],
+                          found_demo = false
+                      })
                     }
                   }, 250)
                 }

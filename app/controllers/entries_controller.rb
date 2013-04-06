@@ -20,7 +20,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
 
     respond_to do |format|
-      format.html 
+      format.html
       format.json { render json: @entry }
     end
   end
@@ -46,6 +46,9 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(params[:entry])
+
+    @entry.submitting_user_id = current_user.id
+    @entry.receiving_challenge_id = current_open_challenge.id
 
     respond_to do |format|
       if @entry.save

@@ -2,7 +2,7 @@
 
   <% suggested_by = User.find(current_open_challenge.submitting_user_id) %>
 
-  <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at %>">Submit to "<%= current_open_challenge.title %>"</h1>
+  <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
   <p>
     <b>Description:</b>
     <%= current_open_challenge.description %>
@@ -27,7 +27,7 @@
     <%= current_open_challenge.prize %>
   </p>
   <% end %>
-  
+
   <p>
     <b>Challenge Started:</b>
     <%= time_ago_in_words(current_open_challenge.created_at) %> ago
@@ -59,7 +59,24 @@
 
   <div id="step-3" class="step">
     <h2>3. Preview your entry:</h2>
+    <div id="preview">
+      <div class="image-wrap">
+      </div>
+      <h3>Title: </h3><span id="repo-title"></span><br><br>
+      <h3>Description: </h3><span id="repo-desc"></span><br><br>
+      <h3>URL: </h3><span id="repo-url"></span>
+    </div><br><br>
 
+    <%= form_for(@entry) do |f| %>
+      <%= f.hidden_field :title %>
+      <%= f.hidden_field :description %>
+      <%= f.hidden_field :repo_url %>
+      <%= f.hidden_field :thumb_url %>
+      <%= f.hidden_field :demo_url %>
+      <div class="actions">
+        <%= f.submit "Submit Entry" %>
+      </div>
+    <% end %>
   </div>
 
 <% else %>
