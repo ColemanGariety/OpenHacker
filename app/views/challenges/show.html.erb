@@ -1,4 +1,4 @@
-<h1><%= @challenge.title %></h1>
+<h1>Challenge: <%= @challenge.title %></h1>
 
 <p>
   <b>Description:</b>
@@ -8,4 +8,24 @@
 <p>
   <b>Suggested by:</b>
   <%= link_to User.find(@challenge.submitting_user_id).full_name, User.find(@challenge.submitting_user_id) %>
+</p>
+
+<% if current_open_challenge.rules %>
+<p>
+  <b>Rules:</b>
+  <%= current_open_challenge.rules %>
+</p>
+<% end %>
+
+
+<% if current_open_challenge.prize %>
+<p>
+  <b>Prizes:</b>
+  <%= current_open_challenge.prize %>
+</p>
+<% end %>
+
+<p>
+  <b>Challenge Started:</b>
+  <%= time_ago_in_words(current_open_challenge.created_at) %> ago
 </p>
