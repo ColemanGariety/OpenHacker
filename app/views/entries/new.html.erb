@@ -32,6 +32,11 @@
     <b>Challenge Started:</b>
     <%= time_ago_in_words(current_open_challenge.created_at) %> ago
   </p>
+  
+  <p>
+  <b>Time Remaining:</b>
+  <%= distance_of_time_in_words(Time.now, current_open_challenge.opened_at + 1.week, true) %>
+  </p>
 
   <hr>
 

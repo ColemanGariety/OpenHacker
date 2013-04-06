@@ -1,15 +1,15 @@
 <h1>Past Challenges</h1>
 
-<ul>
-<% @challenges.each do |challenge| %>
-  <li>
+<ol>
+<% Challenge.where("status = ? OR status = ?", 3, 4).each do |challenge| %>
+  <li><%= challenge.opened_at.strftime("STarted on %m/%d/%Y") %>
     <span><%= link_to challenge.title, challenge %></span>
     <span><%= challenge.description %></span>
     <span>Suggested by <%= link_to User.find(challenge.submitting_user_id).full_name, User.find(challenge.submitting_user_id) %></span>
-    <% if current_user.level == 1 %>
+    <% if current_user && current_user.level == 1 %>
     	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
     	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
     <% end %>
   </li>
 <% end %>
-</ul>
+</ol>

@@ -1,36 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @entry.title %>
-</p>
+
+<h2><%= @entry.title %></h2>
 
 <p>
   <b>Description:</b>
   <%= @entry.description %>
 </p>
 
+<img src="/assets/frame_web.png" width="400px">
+<img src="<%= @entry.thumb_url %>" width="200px">
+
 <p>
-  <b>Repo url:</b>
-  <%= @entry.repo_url %>
+  <b>Submitted by:</b>
+  <%= link_to User.find_by_id(@entry.submitting_user_id).full_name, User.find_by_id(@entry.submitting_user_id) %>
 </p>
 
 <p>
-  <b>Thumb url:</b>
-  <%= @entry.thumb_url %>
+  <b>Challenge:</b>
+  <%= link_to Challenge.find_by_id(@entry.receiving_challenge_id).title, Challenge.find_by_id(@entry.receiving_challenge_id) %>
 </p>
 
-<p>
-  <b>Submitting user:</b>
-  <%= @entry.submitting_user_id %>
-</p>
-
-<p>
-  <b>Receiving challenge:</b>
-  <%= Challenge.find_by_id(@entry.receiving_challenge_id).title %>
-</p>
-
-<% if current_user.level == 1 %>
+<% if current_user && current_user.level == 1 %>
 	<%= link_to 'Edit', edit_entry_path(@entry) %> |
 <% end %>
-<%= link_to 'Back', entries_path %>
+<%= link_to 'Demo', @entry.demo_url %> | <%= link_to 'View on Github', @entry.repo_url %>
