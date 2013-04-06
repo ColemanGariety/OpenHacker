@@ -1,7 +1,7 @@
 var repos,
   contents,
   screenshot_jpg,
-  collaborators,
+  collaborators = [],
   selected_repo,
   found_screenshot_jpg = false,
   found_description = false,
@@ -82,17 +82,17 @@ $("#repos select").change(function() {
             setTimeout(function(){
               // Check contributors
               $.ajax({
-                url: "https://api.github.com/repos/" + $("#user").attr("data-username") + "/" + $("#repos select").find(":selected").val() + "/collaborators/?access_token=" + $("#user").attr("data-token"),
+                url: "https://api.github.com/repos/" + $("#user").attr("data-username") + "/" + $("#repos select").find(":selected").val() + "/collaborators",
                 type: "GET",
                 dataType: "JSONP",
                 success: function(data) {
-                  console.log(data, "Collaborators")
+                  console.log(data.data, "Collaborators")
 
-                  if (data.data.message != "Not Found") {
-                    $("#contributor_check").find(".mark").addClass("done")
-                  } else {
-                    $("#contributor_check").find(".mark").html("&#10006;").addClass("red").addClass("done")
+                  for (var i = 0; i < 3; i++) {
+                    collaborators.push(data.data[i])
                   }
+
+                  $("#contributor_check").find(".mark").addClass("done")
                 }
               })
             },500)
