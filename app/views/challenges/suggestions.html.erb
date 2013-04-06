@@ -5,9 +5,11 @@
 <% @challenges.each do |challenge| %>
   <li>
     <span><%= challenge.description %></span><br>
-    <span>Suggested by <%= User.find(challenge.submitting_user_id).full_name %></span>
-    <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
-    <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <span>Suggested by <%= link_to User.find(challenge.submitting_user_id).full_name, User.find(challenge.submitting_user_id) %></span>
+    <% if current_user.level == 1 %>
+  	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;or
+  	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> ]
+    <% end %>
   </li>
 <% end %>
 </ul>

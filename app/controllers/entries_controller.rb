@@ -38,6 +38,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+  	redirect_to root_url unless current_user.level == 1
     @entry = Entry.find(params[:id])
   end
 
@@ -76,6 +77,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.json
   def destroy
+  	redirect_to root_url unless current_user.level == 1
     @entry = Entry.find(params[:id])
     @entry.destroy
 
