@@ -1,7 +1,47 @@
+<div id="profile-header">
 <img src="http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=500&d=http://thelist.io/assets/profile.jpg" id="default">
 <h1><%= @user.full_name %></h1>
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
 <%= 'Hireable' if @user.hireable%><%= ' | Moderator' if @user.level == 1 %>
 
-
 <p><%= @user.bio %></p>
+</div>
+
+<h2>Suggested challenges</h2>
+
+<% if Challenge.where(:submitting_user_id => @user.id).count == 0 %>
+ <p><%= @user.full_name.split(" ").first %> has not suggested any challenges yet.</p>
+<% else %>
+<ul>
+<% Challenge.where(:submitting_user_id => @user.id).each do |challenge| %>
+  <li>
+    <span><%= link_to challenge.title, challenge %></span>
+    <span><%= challenge.description %></span>
+    <% if current_user.level == 1 %>
+    	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
+    	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
+    <% end %>
+  </li>
+<% end %>
+</ul>
+<% end %>
+
+<h2>Submitted entries</h2>
+
+<% if Entry.where(:submitting_user_id => @user.id).count == 0 %>
+ <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
+<% else %>
+	<ul>
+	<% Entry.where(:submitting_user_id => @user.id).each do |entry| %>
+	  <li>
+	    <span><%= link_to entry.title, entry %></span>
+	    <span><%= entry.description %></span>
+	    <a href="<%= entry.demo_url %>">Demo</a>
+	    <% if current_user.level == 1 %>
+	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
+	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
+	    <% end %>
+	  </li>
+	<% end %>
+	</ul>
+<% end %>
