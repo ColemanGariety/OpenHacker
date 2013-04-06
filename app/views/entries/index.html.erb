@@ -8,8 +8,10 @@
       <td><%= entry.submitting_user_id %></td>
       <td><%= entry.receiving_challenge_id %></td>
       <td><%= link_to 'Show', entry %></td>
-      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-      <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if current_user.level == 1 %>
+      	[Mod: <td><%= link_to 'Edit', edit_entry_path(entry) %></td>&ndsp;
+      	<td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>]
+      <% end %>
     </tr>
   <% end %>
 <% else %>

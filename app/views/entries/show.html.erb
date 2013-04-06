@@ -30,6 +30,7 @@
   <%= @entry.receiving_challenge_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<% if current_user.level == 1 %>
+	<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<% end %>
 <%= link_to 'Back', entries_path %>
