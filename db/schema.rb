@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406032433) do
+ActiveRecord::Schema.define(:version => 20130406045821) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
@@ -47,9 +47,10 @@ ActiveRecord::Schema.define(:version => 20130406032433) do
     t.string   "location"
     t.boolean  "hireable"
     t.text     "bio"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "level"
+    t.string   "github_token"
   end
 
   create_table "votes", :force => true do |t|

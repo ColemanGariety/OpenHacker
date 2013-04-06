@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   def self.create_from_omniauth(auth)
     create! do |user|
       user.github_uid = auth["uid"]
+      user.github_token = auth["credentials"]["token"]
       user.username = auth["info"]["nickname"]
       user.email = auth["info"]["email"]
       user.full_name = auth["info"]["name"]

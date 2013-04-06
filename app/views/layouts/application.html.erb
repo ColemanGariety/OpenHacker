@@ -24,7 +24,7 @@
         </a>
         <div class="right">
           <% if current_user %>
-              <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+              <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
               <%= link_to '<div>Vote</div>'.html_safe, current_voting_challenge if current_voting_challenge %>
               <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
               <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
