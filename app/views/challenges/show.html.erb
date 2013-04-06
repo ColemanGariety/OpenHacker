@@ -1,3 +1,4 @@
+<div id="profile-header">
 <h1>Challenge: <%= @challenge.title %></h1>
 
 <p>
@@ -25,7 +26,43 @@
 </p>
 <% end %>
 
+<% if current_open_challenge.id == @challenge.id %>
 <p>
   <b>Challenge Started:</b>
-  <%= time_ago_in_words(current_open_challenge.created_at) %> ago
+  <%= time_ago_in_words(@challenge.opened_at) %> ago
 </p>
+<% else %>
+<p>
+  <b>Challenge Ended:</b>
+  <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
+</p>
+<% end %>
+
+<% if current_open_challenge.id == @challenge.id %>
+<p>
+  <b>Time Remaining:</b>
+  <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+</p>
+<% end %>
+
+</div>
+
+<h2>Submitted entries</h2>
+
+<% if Entry.where(:receiving_challenge_id => @challenge.id).count == 0 %>
+ <p>No entries have been submitted yet.</p>
+<% else %>
+	<ul>
+	<% Entry.where(:receiving_challenge_id => @challenge.id).each do |entry| %>
+	  <li>
+	    <span><%= link_to entry.title, entry %></span>
+	    <span><%= entry.description %></span>
+	    <a href="<%= entry.demo_url %>">Demo</a>
+	    <% if current_user.level == 1 %>
+	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
+	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
+	    <% end %>
+	  </li>
+	<% end %>
+	</ul>
+<% end %>

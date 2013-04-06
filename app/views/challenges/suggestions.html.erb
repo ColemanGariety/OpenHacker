@@ -7,8 +7,9 @@
     <span><%= challenge.description %></span><br>
     <span>Suggested by <%= link_to User.find(challenge.submitting_user_id).full_name, User.find(challenge.submitting_user_id) %></span>
     <% if current_user.level == 1 %>
-  	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;or
-  	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> ]
+  	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;,
+  	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> or
+  	  <td><%= link_to 'Approve', challenge, method: :approve %></td> ]
     <% end %>
   </li>
 <% end %>

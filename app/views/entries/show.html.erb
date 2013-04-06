@@ -27,7 +27,7 @@
 
 <p>
   <b>Receiving challenge:</b>
-  <%= @entry.receiving_challenge_id %>
+  <%= Challenge.find_by_id(@entry.receiving_challenge_id).title %>
 </p>
 
 <% if current_user.level == 1 %>
