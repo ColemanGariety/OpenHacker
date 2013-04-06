@@ -2,7 +2,7 @@
 
   <% suggested_by = User.find(current_open_challenge.submitting_user_id) %>
 
-  <h1>Enter "<%= current_open_challenge.title %>"</h1>
+  <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at %>">Submit to "<%= current_open_challenge.title %>"</h1>
   <p>
     <b>Description:</b>
     <%= current_open_challenge.description %>
@@ -23,10 +23,53 @@
     <%= current_open_challenge.prize %>
   </p>
 
-  <h2>Your Repos:</h2>
-  <ul id="repos">
+  <hr>
 
-  </ul>
+  <div id="step-1" class="step focused">
+    <h2>1. Choose a repository:</h2>
+    <form id="repos">
+      <select>
+        <option value="null">Pick one...</option>
+      </select>
+    </form>
+  </div>
+
+  <div id="step-2" class="step">
+    <h2>2. Make sure everything checks out:</h2>
+    <ul id="check">
+      <li id="screenshot_check"><span class="mark">&#10003;</span>Has `screenshot.jpg` in the root directory</li>
+      <li id="description_check"><span class="mark">&#10003;</span>Has a description</li>
+      <li id="commit_date_check"><span class="mark">&#10003;</span>Created after challenge start</li>
+      <li id="contributor_check"><span class="mark">&#10003;</span>Has a primary contributor</li>
+    </ul>
+  </div>
+
+  <div id="step-3" class="step">
+    <h2>3. Give people a place to demo your project:</h2>
+    <%= form_for(@entry) do |f| %>
+
+      <% if @entry.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+
+          <ul>
+          <% @entry.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :demo_url, "URL:" %>
+        <%= f.text_field :demo_url %>
+      </div><br>
+      <div class="actions">
+        <%= f.submit "Submit Repository" %>
+      </div>
+    <% end %>
+  </div>
+
 <% else %>
   <h2>Sorry, no challenges are open right now&hellip;</h2>
 <% end %>
