@@ -73,6 +73,7 @@ footer {
   line-height: 50px;
   font-family: "ITC Franklin Condensed";
   font-size: 1.4em;
+  border-top: 1px solid #DDD;
 }
 
 /* Header */
@@ -270,6 +271,12 @@ header a:link, header a, header a div, header a h2 {
 
 .step.focused {
   opacity: 1;
+  z-index: 100;
+}
+
+#step-2.focused {
+  margin-top: -100px;
+  padding-top: 100px;
 }
 
 #check {
@@ -283,11 +290,12 @@ header a:link, header a, header a div, header a h2 {
   color: green;
   position: relative;
   top: 2px;
-  -webkit-transition: -webkit-transform .3s;
-     -moz-transition: -moz-transform .3s;
-      -ms-transition: -ms-transform .3s;
-       -o-transition: -o-transform .3s;
-          transition: transform .3s;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .2s, opacity .2s;
+     -moz-transition: -moz-transform .2s, opacity .2s;
+      -ms-transition: -ms-transform .2s, opacity .2s;
+       -o-transition: -o-transform .2s, opacity .2s;
+          transition: transform .2s, opacity .2s;
   -webkit-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1); /* older webkit */
   -webkit-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1.650);
      -moz-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1.650);
@@ -308,8 +316,13 @@ header a:link, header a, header a div, header a h2 {
 }
 
 #check .mark.done {
+  opacity: 1;
   -webkit-transform: scale(1);
      -moz-transform: scale(1);
        -o-transform: scale(1);
           transform: scale(1);
+}
+
+#collaborators_list {
+  padding-left: 70px;
 }

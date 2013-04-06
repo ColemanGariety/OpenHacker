@@ -37,37 +37,19 @@
   <div id="step-2" class="step">
     <h2>2. Make sure everything checks out:</h2>
     <ul id="check">
-      <li id="screenshot_check"><span class="mark">&#10003;</span>Has `screenshot.jpg` in the root directory</li>
+      <li id="screenshot_check"><span class="mark">&#10003;</span>Has a `screenshot.jpg` file in the root directory</li>
       <li id="description_check"><span class="mark">&#10003;</span>Has a description</li>
       <li id="commit_date_check"><span class="mark">&#10003;</span>Created after challenge start</li>
       <li id="contributor_check"><span class="mark">&#10003;</span>Has valid collaborators</li>
+      <li><ol id="collaborators_list">
+      </ol></li>
+      <li id="demo_check"><span class="mark">&#10003;</span>Has a valid demo URL</li>
     </ul>
   </div>
 
   <div id="step-3" class="step">
-    <h2>3. Give people a place to demo your project:</h2>
-    <%= form_for(@entry) do |f| %>
+    <h2>3. Preview your entry:</h2>
 
-      <% if @entry.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
-
-          <ul>
-          <% @entry.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.label :demo_url, "URL:" %>
-        <%= f.text_field :demo_url %>
-      </div><br>
-      <div class="actions">
-        <%= f.submit "Submit Repository" %>
-      </div>
-    <% end %>
   </div>
 
 <% else %>
