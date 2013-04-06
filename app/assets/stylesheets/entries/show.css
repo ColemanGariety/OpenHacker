@@ -1,0 +1,40 @@
+header {
+  position: absolute;
+}
+
+header .inner {
+  max-width: none;
+  border: 0;
+}
+
+header .inner .right a:last-child div, header .inner .left {
+  border: 0;
+}
+
+#site.inner {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
+
+section {
+  position: absolute;
+  min-width: 100%;
+  padding: 0;
+  border: 0;
+  top: 50px;
+  bottom: 0;
+}
+
+footer {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  vertical-align: top;
+}

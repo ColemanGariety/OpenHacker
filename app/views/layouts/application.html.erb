@@ -3,13 +3,13 @@
 <head>
   <title><%= yield(:title) or "The Challenge" %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag params[:controller] if File.exist?(params[:controller]) %>
+  <%= stylesheet_link_tag "#{params[:controller]}/#{params[:action]}.css" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.css") %>
   <%= csrf_meta_tags %>
   <!--[if !IE 7]>
   	<style type="text/css">
   		.wrapper {
-  		  display:table;
-  		  height:100%;
+  		  display: table;
+  		  height: 100%;
   		}
   	</style>
   <![endif]-->
@@ -44,6 +44,6 @@
     <%= link_to "Archives", challenges_path %>
   </footer>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag request.env['PATH_INFO'] if File.exist?(request.env['PATH_INFO']) %>
+  <%= javascript_include_tag "#{params[:controller]}/#{params[:action]}.js" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>
 </body>
 </html>

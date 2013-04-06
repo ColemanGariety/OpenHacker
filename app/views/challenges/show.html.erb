@@ -2,47 +2,27 @@
 <h1>Challenge: <%= @challenge.title %></h1>
 
 <p>
-  <b>Description:</b>
-  <%= @challenge.description %>
+  <b>Description:</b> <%= @challenge.description %>
 </p>
 
 <p>
-  <b>Suggested by:</b>
-  <%= link_to User.find(@challenge.submitting_user_id).full_name, User.find(@challenge.submitting_user_id) %>
+  <b>Suggested by:</b> <%= link_to User.find(@challenge.submitting_user_id).full_name, User.find(@challenge.submitting_user_id) %>
 </p>
 
-<% if current_open_challenge.rules %>
 <p>
-  <b>Rules:</b>
-  <%= current_open_challenge.rules %>
+  <b>Rules:</b> <%= current_open_challenge.rules %>
 </p>
-<% end %>
 
+<p>
+  <b>Prizes:</b> <%= current_open_challenge.prize %>
+</p>
 
-<% if current_open_challenge.prize %>
-<p>
-  <b>Prizes:</b>
-  <%= current_open_challenge.prize %>
-</p>
-<% end %>
-
-<% if current_open_challenge.id == @challenge.id %>
-<p>
-  <b>Challenge Started:</b>
-  <%= time_ago_in_words(@challenge.opened_at) %> ago
-</p>
-<% else %>
-<p>
-  <b>Challenge Ended:</b>
-  <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
-</p>
-<% end %>
-
-<% if current_open_challenge.id == @challenge.id %>
-<p>
-  <b>Time Remaining:</b>
-  <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
-</p>
+<% if @challenge.status == 2 %>
+  <b>Submission deadline:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
+<% elsif @challenge.status == 3 %>
+  <b>Voting deadline:</b> <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+<% elsif @challenge.status == 4 %>
+  <b>Challenge Ended:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
 <% end %>
 
 </div>
@@ -57,7 +37,7 @@
 	  <li>
 	    <span><%= link_to entry.title, entry %></span>
 	    <span><%= entry.description %></span>
-	    <a href="<%= entry.demo_url %>">Demo</a>
+	    <%= link_to "Vote", entry %>
 	    <% if current_user && current_user.level == 1 %>
 	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
 	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
