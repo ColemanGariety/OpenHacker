@@ -1,5 +1,31 @@
 <% if current_open_challenge %>
+
+  <% suggested_by = User.find(current_open_challenge.submitting_user_id) %>
+
   <h1>Enter "<%= current_open_challenge.title %>"</h1>
+  <p>
+    <b>Description:</b>
+    <%= current_open_challenge.description %>
+  </p>
+
+  <p>
+    <b>Suggested by:</b>
+    <%= link_to suggested_by.full_name, suggested_by %>
+  </p>
+
+  <p>
+    <b>Rules:</b>
+    <%= current_open_challenge.rules %>
+  </p>
+
+  <p>
+    <b>Prizes:</b>
+    <%= current_open_challenge.prize %>
+  </p>
+
+  <h2>Your Repos:</h2>
+  <ul id="repos">
+  </ul>
 <% else %>
   <h2>Sorry, no challenges are open right now&hellip;</h2>
 <% end %>

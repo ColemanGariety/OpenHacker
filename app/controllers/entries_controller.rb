@@ -1,6 +1,8 @@
 class EntriesController < ApplicationController
   skip_before_filter :authenticate, :only => :index
 
+  require 'httparty'
+
   # GET /entries
   # GET /entries.json
   def index

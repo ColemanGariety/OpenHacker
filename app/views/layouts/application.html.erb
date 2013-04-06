@@ -3,8 +3,7 @@
 <head>
   <title><%= yield(:title) or "The Challenge" %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag params[:controller] %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag params[:controller] if File.exist?(params[:controller]) %>
   <%= csrf_meta_tags %>
   <!--[if !IE 7]>
   	<style type="text/css">
@@ -25,7 +24,7 @@
         </a>
         <div class="right">
           <% if current_user %>
-              <%= link_to "<div>#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+              <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
               <%= link_to '<div>Vote</div>'.html_safe, current_voting_challenge if current_voting_challenge %>
               <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
               <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
@@ -44,5 +43,7 @@
     <%= link_to "Suggestions", challenge_suggestions_path %>
     <%= link_to "Archives", challenges_path %>
   </footer>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag request.env['PATH_INFO'] if File.exist?(request.env['PATH_INFO']) %>
 </body>
 </html>

@@ -37,7 +37,6 @@ body:before {
 
 #site.inner {
   padding: 0;
-  height: 100%;
   width: 100%;
   background: #FFF;
   border-left: 1px solid #DDD;
@@ -58,11 +57,9 @@ section, footer {
 }
 
 section {
-  padding-top: 15px;
+  padding-top: 65px;
   overflow: auto;
 	padding-bottom: 50px;
-	position: relative;
-	top: 50px;
 }
 
 footer {
@@ -94,6 +91,7 @@ header {
      -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
           box-shadow: 0 1px 5px rgba(20,20,20,.2);
   overflow: hidden;
+  z-index: 100;
 }
 
 header .inner {
