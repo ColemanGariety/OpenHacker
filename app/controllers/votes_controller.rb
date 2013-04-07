@@ -2,7 +2,7 @@ class VotesController < ApplicationController
   # POST /votes
   # POST /votes.json
   def vote
-    @vote = Vote.find_or_initialize_by_receiving_entry_id_and_voting_user_id(params[:receiving_entry_id], current_user.id)
+    @vote = Vote.find_or_initialize_by_value_and_receiving_entry_id_and_voting_user_id(params[:value], params[:receiving_entry_id], current_user.id)
 
     respond_to do |format|
       if @vote.save
