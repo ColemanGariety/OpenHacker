@@ -111,7 +111,6 @@ function validateRepo() {
                   var i = 0
                   while (found_collaborators.length <= 3 && data.data[i] != undefined) {
                     found_collaborators.push(data.data[i].login)
-                    $("#collaborators_list").append("<li>" + data.data[i].login + "</li>")
                     i++
                   }
 

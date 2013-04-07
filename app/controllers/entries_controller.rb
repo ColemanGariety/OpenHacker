@@ -6,7 +6,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.where(:receiving_challenge_id => current_closed_challenge.id).limit(3)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406234430) do
+ActiveRecord::Schema.define(:version => 20130407021841) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20130406234430) do
     t.datetime "updated_at",             :null => false
     t.string   "demo_url"
     t.integer  "github_repo_id"
+    t.string   "platform"
   end
 
   create_table "users", :force => true do |t|
