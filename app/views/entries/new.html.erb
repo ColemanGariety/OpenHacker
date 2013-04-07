@@ -2,48 +2,49 @@
 
   <% suggested_by = User.find(current_open_challenge.submitting_user_id) %>
 
-  <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
-  <p>
-    <b>Description:</b>
-    <%= current_open_challenge.description %>
-  </p>
+  <div id="profile-header">
+    <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
+    <p>
+      <b>Description:</b>
+      <%= current_open_challenge.description %>
+    </p>
 
-  <p>
-    <b>Suggested by:</b>
-    <%= link_to suggested_by.full_name, suggested_by %>
-  </p>
+    <p>
+      <b>Suggested by:</b>
+      <%= link_to suggested_by.full_name, suggested_by %>
+    </p>
 
-  <% if current_open_challenge.rules %>
-  <p>
-    <b>Rules:</b>
-    <%= current_open_challenge.rules %>
-  </p>
-  <% end %>
+    <% if current_open_challenge.rules %>
+    <p>
+      <b>Rules:</b>
+      <%= current_open_challenge.rules %>
+    </p>
+    <% end %>
 
 
-  <% if current_open_challenge.prize %>
-  <p>
-    <b>Prizes:</b>
-    <%= current_open_challenge.prize %>
-  </p>
-  <% end %>
+    <% if current_open_challenge.prize %>
+    <p>
+      <b>Prizes:</b>
+      <%= current_open_challenge.prize %>
+    </p>
+    <% end %>
 
-  <p>
-    <b>Challenge Started:</b>
-    <%= time_ago_in_words(current_open_challenge.created_at) %> ago
-  </p>
-  
-  <p>
-  <b>Time Remaining:</b>
-  <%= distance_of_time_in_words(Time.now, current_open_challenge.opened_at + 1.week, true) %>
-  </p>
+    <p>
+      <b>Challenge Started:</b>
+      <%= time_ago_in_words(current_open_challenge.created_at) %> ago
+    </p>
 
-  <hr>
+    <p>
+    <b>Time Remaining:</b>
+    <%= distance_of_time_in_words(Time.now, current_open_challenge.opened_at + 1.week, true) %>
+    </p>
+  </div>
 
   <div id="step-1" class="step focused">
     <h2>1. Choose a repository:</h2>
+    <br>
     <form id="repos">
-      <select>
+      <select disabled="disabled">
         <option value="null">Pick one...</option>
       </select>
     </form>
@@ -52,13 +53,14 @@
   <div id="step-2" class="step">
     <h2>2. Make sure everything checks out:</h2>
     <ul id="check">
-      <li id="screenshot_check"><span class="mark">&#10003;</span>Has a `screenshot.jpg` file in the root directory</li>
-      <li id="description_check"><span class="mark">&#10003;</span>Has a description</li>
-      <li id="commit_date_check"><span class="mark">&#10003;</span>Created after challenge start</li>
-      <li id="contributor_check"><span class="mark">&#10003;</span>Has valid collaborators</li>
+      <li id="screenshot_check"><span class="mark">&#x2713;</span>Has a `screenshot.jpg` file in the root directory</li>
+      <li id="description_check"><span class="mark">&#x2713;</span>Has a description</li>
+      <li id="commit_date_check"><span class="mark">&#x2713;</span>Created after challenge start</li>
+      <li id="contributor_check"><span class="mark">&#x2713;</span>Has valid collaborators</li>
       <li><ol id="collaborators_list">
       </ol></li>
-      <li id="demo_check"><span class="mark">&#10003;</span>Has a valid demo URL</li>
+      <li id="demo_check"><span class="mark">&#x2713;</span>Has a valid demo URL</li>
+      <li id="uniqueness_check"><span class="mark">&#x2713;</span>Hasn't been submitted before</li>
     </ul>
   </div>
 
@@ -78,6 +80,7 @@
       <%= f.hidden_field :repo_url %>
       <%= f.hidden_field :thumb_url %>
       <%= f.hidden_field :demo_url %>
+      <%= f.hidden_field :github_repo_id %>
       <div class="actions">
         <%= f.submit "Submit Entry" %>
       </div>

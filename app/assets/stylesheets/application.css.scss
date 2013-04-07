@@ -228,6 +228,10 @@ h1 + p, p:first-child {
   margin-top: 0;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 /* Headers */
 
 h1, h2, h3 {
@@ -264,8 +268,8 @@ header a:link, header a, header a div, header a h2 {
 }
 
 #profile-header {
-	border: 1px solid #f8f6f3;
-	padding: 8px;
+	border: 1px dashed #DDD;
+	padding: 15px;
 	margin-bottom: 20px;
 }
 /* Submission Page */
