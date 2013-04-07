@@ -11,6 +11,46 @@ header .inner .right a:last-child div, header .inner .left {
   border: 0;
 }
 
+#star-space {
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -110px;
+	line-height: 50px;
+	top: 0;
+}
+
+#star-space:before {
+	content: 'Vote:';
+	position: absolute;
+	left: -30px;
+	font-size: 1.5em;
+}
+
+#star-space .star {
+	left: 50%;
+	position: relative;
+	top: 6px;
+	background-image: url("/assets/star@2x.png");
+	width: 25px;
+	height: 25px;
+	-moz-background-size: 25px;
+	-o-background-size: 25px;
+	background-size: 25px;
+}
+
+#star-space .star-wrapper {
+	height: 25px;
+	width: 25px;
+	margin-top: 5px;
+	float: right;
+}
+
+#star-space .star-wrapper:hover .star, #star-space .star-wrapper:hover ~ .star-wrapper .star {
+	background-image: url("/assets/star_fill@2x.png");
+}
+
 #site.inner {
   position: relative;
   min-width: 100%;
