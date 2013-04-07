@@ -40,8 +40,10 @@
     </section>
   </div>
   <footer>
-    <%= link_to "Suggestions", challenge_suggestions_path %>
-    <%= link_to "Archives", challenges_path %>
+    <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;•&nbsp;</span>
+    <%= link_to "Archives", challenges_path %><span>&nbsp;•&nbsp;</span>
+    <%= link_to "About", about_path %><span>&nbsp;•&nbsp;</span>
+    <%= link_to "Rules", rules_path %>
   </footer>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "#{params[:controller]}/#{params[:action]}.js" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>

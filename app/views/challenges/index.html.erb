@@ -2,7 +2,7 @@
 
 <ol>
 <% Challenge.where("status = ? OR status = ?", 3, 4).each do |challenge| %>
-  <li><%= challenge.opened_at.strftime("STarted on %m/%d/%Y") %>
+  <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
     <span><%= link_to challenge.title, challenge %></span>
     <span><%= challenge.description %></span>
     <span>Suggested by <%= link_to User.find(challenge.submitting_user_id).full_name, User.find(challenge.submitting_user_id) %></span>
