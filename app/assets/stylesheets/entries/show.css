@@ -47,7 +47,7 @@ header .inner .right a:last-child div, header .inner .left {
 	float: right;
 }
 
-#star-space .star-wrapper:hover .star, #star-space .star-wrapper:hover ~ .star-wrapper .star, #star-space .star-wrapper.voted, #star-space .star-wrapper.voted ~ .star-wrapper {
+#star-space .star-wrapper:hover .star, #star-space .star-wrapper:hover ~ .star-wrapper .star, #star-space .star-wrapper.voted .star, #star-space .star-wrapper.voted ~ .star-wrapper .star {
 	background-image: url("/assets/star_fill@2x.png");
 }
 
