@@ -22,6 +22,11 @@
           <h2>The Challenge</h2>
           <h2 class="shadow">The Challenge</h2>
         </a>
+        <div id="star-space">
+        	<% 4.times do |i| %>
+        		<div class="star-wrapper"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => i, :receiving_entry_id => (request.env['PATH_INFO'].split("/").last)), :remote => true, :method => "put" %></div>
+        	<% end %>
+        </div>
         <div class="right">
           <% if current_user %>
               <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>

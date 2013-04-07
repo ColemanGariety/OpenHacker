@@ -14,4 +14,6 @@ ThechallengeIo::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => "signout"
   match 'about' => 'pages#about'
   match 'rules' => 'pages#rules'
+  
+  put "vote", :to => "votes#vote", :as => :vote
 end
