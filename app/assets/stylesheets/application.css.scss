@@ -204,6 +204,10 @@ footer {
 
 /* Generic Elements */
 
+.clearfix {
+  clear: both;
+}
+
 .red {
   color: red !important;
 }

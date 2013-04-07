@@ -21,7 +21,12 @@ private
     Challenge.find_by_status(4)
   end
 
-  helper_method :current_user, :current_open_challenge, :current_voting_challenge, :current_closed_challenge
+  def random_entry
+    offset = rand(Entry.count)
+    rand_record = Entry.first(:offset => offset)
+  end
+
+  helper_method :current_user, :current_open_challenge, :current_voting_challenge, :current_closed_challenge, :random_entry
 
   def authenticate
     redirect_to "/auth/github" unless current_user
