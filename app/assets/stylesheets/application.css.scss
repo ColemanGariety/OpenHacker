@@ -377,3 +377,136 @@ header a:link, header a, header a div, header a h2 {
   height: 125px;
   vertical-align: top;
 }
+
+/* Homepage */
+
+section.home {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 50px;
+  max-width: 900px;
+}
+
+.tile {
+  border-bottom: 1px solid #DDD;
+  width: 50%;
+  float: left;
+  border-left: 1px solid #DDD;
+  margin-left: -1px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home a:first-child .tile {
+  width: 100%;
+  min-height: 400px;
+}
+
+.tile .inner {
+  padding: 30px;
+  padding-top: 20px;
+}
+
+.tile h1 {
+  font-size: 2.5em;
+}
+
+.tile a:link, .tile a, .tile h1, .tile, p {
+  color: #444;
+}
+
+.tile:hover h1, .tile:hover p {
+  color: #888;
+}
+
+.tile:active h1, .tile:active p {
+  color: #111;
+}
+
+.home a:first-child h1 {
+  width: 350px;
+  font-size: 3.5em;
+}
+
+.home a:first-child p {
+  width: 350px;
+}
+
+.home a .iphone p {
+  width: 160px;
+}
+
+.tile .frame {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  -webkit-transition: bottom .35s, opacity .35s;
+     -moz-transition: bottom .35s, opacity .35s;
+      -ms-transition: bottom .35s, opacity .35s;
+       -o-transition: bottom .35s, opacity .35s;
+          transition: bottom .35s, opacity .35s;
+  -webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+.tile.web .frame {
+  width: 350px;
+  height: 225px;
+  background-image: url('/assets/frame_web@2x.png');
+  -moz-background-size: 600px auto;
+    -o-background-size: 600px auto;
+       background-size: 600px auto;
+}
+
+.tile.iphone .frame {
+  width: 260px;
+  height: 290px;
+  background-image: url('/assets/frame_iphone@2x.png');
+  -moz-background-size: 325px auto;
+    -o-background-size: 325px auto;
+       background-size: 325px auto;
+}
+
+.home a:first-child .frame {
+  width: 500px;
+  height: 325px;
+}
+
+.tile:hover .frame {
+  bottom: 0;
+  opacity: .8;
+}
+
+.frame-inner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.web .frame-inner {
+  width: 292px;
+  height: 137px;
+  -moz-background-size: 600px auto;
+    -o-background-size: 600px auto;
+       background-size: 600px auto;
+}
+
+.home a:first-child .web .frame-inner {
+  width: 442px;
+  height: 237px;
+}
+
+.iphone .frame-inner {
+  width: 220px;
+  height: 188px;
+}
+
+.home a .iphone .frame-inner {
+  -moz-background-size: 250px auto;
+    -o-background-size: 250px auto;
+       background-size: 250px auto;
+}

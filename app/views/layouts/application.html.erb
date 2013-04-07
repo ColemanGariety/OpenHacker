@@ -35,7 +35,7 @@
       </div>
     </header>
 
-    <section>
+    <section <%= "class=home" if params[:controller] == "entries" && params[:action] == "index" %>>
       <%= yield %>
     </section>
   </div>
