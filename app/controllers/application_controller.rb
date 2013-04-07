@@ -22,7 +22,7 @@ private
   end
 
   def random_entry
-    Entry.where(:receiving_challenge_id => current_voting_challenge).order("RAND()").first
+    Entry.where(receiving_challenge_id: current_voting_challenge.id).offset(rand(Entry.where(receiving_challenge_id: current_voting_challenge.id).count)).first
   end
 
   helper_method :current_user, :current_open_challenge, :current_voting_challenge, :current_closed_challenge, :random_entry
