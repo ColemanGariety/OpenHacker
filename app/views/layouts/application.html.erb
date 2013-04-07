@@ -24,7 +24,7 @@
         </a>
         <div id="star-space">
         	<% 4.times do |i| %>
-        		<div class="star-wrapper"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => i + 1, :receiving_entry_id => (request.env['PATH_INFO'].split("/").last)), :remote => true, :method => "put" %></div>
+        		<div class="star-wrapper"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => i, :receiving_entry_id => (request.env['PATH_INFO'].split("/").last)), :remote => true, :method => "put" %></div>
         	<% end %>
         </div>
         <div class="right">
