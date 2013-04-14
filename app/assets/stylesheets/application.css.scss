@@ -341,7 +341,10 @@ footer a:after {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border: 1px solid #555;
+  border: 4px solid #666;
+  -webkit-border-radius: 180px;
+  	 -moz-border-radius: 180px;
+  		    border-radius: 180px;
 }
 
 #profile-header {

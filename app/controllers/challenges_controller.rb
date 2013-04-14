@@ -107,6 +107,7 @@ class ChallengesController < ApplicationController
   # DELETE /challenge/1
   # DELETE /challenge/1.json
   def destroy
+  	redirect_to root_url unless is_moderator(current_user)
     @challenge = Challenge.find(params[:id])
     @challenge.destroy
 
