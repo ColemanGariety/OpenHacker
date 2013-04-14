@@ -592,3 +592,26 @@ section.home {
     -o-background-size: 250px auto;
        background-size: 250px auto;
 }
+
+/* Top page */
+
+.item {
+	border-bottom: 1px solid #DDD;
+	width: 100%;
+	text-decoration: none;
+}
+
+.top-frame-inner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.item .top-frame {
+  width: 300px;
+  height: 175px;
+  background-image: url('/assets/frame_web@2x.png');
+  -moz-background-size: 600px auto;
+    -o-background-size: 600px auto;
+       background-size: 600px auto;
+}

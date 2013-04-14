@@ -1,8 +1,6 @@
 class EntriesController < ApplicationController
   skip_before_filter :authenticate, :only => :index
 
-  require 'httparty'
-
   # GET /entries
   # GET /entries.json
   def index
@@ -11,6 +9,30 @@ class EntriesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @entries }
+    end
+  end
+  
+  def top
+  	@entries = Entry.where(:receiving_challenge_id => current_closed_challenge.id)
+  		.joins("LEFT JOIN votes ON entries.id = votes.receiving_entry_id")
+  		.select("entries.id," +
+        "sum(value) as score," +
+        "entries.title," +
+        "description," +
+        "repo_url," +
+        "thumb_url," +
+        "submitting_user_id," +
+        "receiving_challenge_id," +
+        "entries.created_at," +
+        "github_repo_id," +
+        "platform"
+  		)
+      .group("entries.id")
+      .order("sum(value) DESC")
+  	
+    respond_to do |format|
+      format.html
+      format.json { render json: @entry }
     end
   end
 
