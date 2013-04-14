@@ -2,7 +2,8 @@
 <img src="http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=500&d=http://thelist.io/assets/profile.jpg" id="default">
 <h1><%= @user.full_name %></h1>
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
-<%= 'Hireable' if @user.hireable%><%= ' — Moderator' if @user.level == 1 %>
+<%= 'Hireable' if @user.hireable%>
+<%= '- Moderator' if is_moderator(@user) %>
 
 <p class="bio"><%= @user.bio %></p>
 <div class="clearfix"></div>
@@ -10,7 +11,7 @@
 
 <h1>Entries:</h1>
 
-<% if @entries.count == 0 %>
+<% if @entries.nil? %>
  <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
 <% else %>
   <% @entries.each do |entry| %>
@@ -26,27 +27,3 @@
     <% end %>
   <% end %>
 <% end %>
-
-<!--
-
-<h2>Suggested challenges</h2>
-
-<% if @challenges.count == 0 %>
- <p><%= @user.full_name.split(" ").first %> has not suggested any challenges yet.</p>
-<% else %>
-<ul>
-<% @challenges.each do |challenge| %>
-  <li>
-    <span><%= link_to challenge.title, challenge %></span>
-    <span><%= challenge.description %></span>
-    <% if current_user.level == 1 %>
-    	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
-    	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
-    <% end %>
-  </li>
-<% end %>
-</ul>
-<% end %>
-
-<<<<<<< HEAD
--->
