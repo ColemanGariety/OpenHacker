@@ -6,7 +6,7 @@
     <span><%= link_to challenge.title, challenge %></span>
     <span><%= challenge.description %></span>
     <span>Suggested by <%= link_to User.find(challenge.submitting_user_id).full_name, User.find(challenge.submitting_user_id) %></span>
-    <% if current_user && current_user.level == 1 %>
+    <% if current_user && @is_moderator %>
     	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
     	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
     <% end %>

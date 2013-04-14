@@ -6,7 +6,10 @@ class ApplicationController < ActionController::Base
 private
 
   def current_user
-    User.find(cookies[:user_id]) if cookies[:user_id]
+    @user = User.find(cookies[:user_id]) if cookies[:user_id]
+    
+    @user.ribbon_array ||= []
+    self.is_moderator = @user.ribbon_array.include?(1) ? true : false
   end
 
   def current_open_challenge

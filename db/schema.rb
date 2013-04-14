@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407021841) do
+ActiveRecord::Schema.define(:version => 20130414023149) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(:version => 20130407021841) do
     t.string   "platform"
   end
 
+  create_table "ribbons", :force => true do |t|
+    t.string   "type"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "github_uid"
     t.string   "username"
@@ -52,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20130407021841) do
     t.text     "bio"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.integer  "level"
+    t.text     "ribbon_array"
     t.string   "github_token"
   end
 
