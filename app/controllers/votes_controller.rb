@@ -3,7 +3,7 @@ class VotesController < ApplicationController
   # POST /votes.json
   def vote
     @vote = Vote.find_or_initialize_by_receiving_entry_id_and_voting_user_id(params[:receiving_entry_id], current_user.id)
-    
+
     @vote.value = params[:value]
 
     respond_to do |format|

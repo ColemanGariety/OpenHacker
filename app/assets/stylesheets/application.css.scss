@@ -61,7 +61,6 @@ body:before {
 }
 
 header .inner, section, footer{
-  width: 100%;
   padding: 20px;
   margin: 0 auto;
 }
@@ -82,6 +81,7 @@ footer {
 	height: 49px;
 	clear: both;
 	padding: 0;
+  color: #999;
 	padding-left: 20px;
   padding-right: 20px;
   line-height: 50px;
@@ -181,8 +181,8 @@ header .inner .right div {
   border-left: 1px solid #FF9640;
   border-right: 1px solid #FF9640;
   margin-right: -1px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: inline-block;
 }
 
@@ -349,6 +349,11 @@ footer a:after {
 	padding: 20px;
 	margin-bottom: 20px;
 }
+
+.bio {
+  margin: 0;
+}
+
 /* Submission Page */
 
 .step {
@@ -506,6 +511,10 @@ section.home {
   color: #111;
 }
 
+.tile:active .frame {
+  opacity: 1 !important;
+}
+
 .home a .tile.blue h1 {
   width: 350px;
   font-size: 3.5em;
@@ -614,4 +623,10 @@ section.home {
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
        background-size: 600px auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .inner, header .inner .left, header a:last-child {
+    border: none !important;
+  }
 }

@@ -4,29 +4,29 @@
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
 <%= 'Hireable' if @user.hireable%><%= ' — Moderator' if @user.level == 1 %>
 
-<p><%= @user.bio %></p>
+<p class="bio"><%= @user.bio %></p>
 <div class="clearfix"></div>
 </div>
 
-<h2>Submitted entries</h2>
+<h1>Entries:</h1>
 
 <% if @entries.count == 0 %>
  <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
 <% else %>
-	<ul>
-	<% @entries.each do |entry| %>
-	  <li>
-	    <span><%= link_to entry.title, entry %></span>
-	    <span><%= entry.description %></span>
-	    — <a href="<%= entry.demo_url %>">Demo</a>
-	    <% if current_user && current_user.level == 1 %>
-	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
-	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
-	    <% end %>
-	  </li>
-	<% end %>
-	</ul>
+  <% @entries.each do |entry| %>
+    <%= link_to entry do %>
+      <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
+        <div class="item">
+            <h1><%= entry.title %></h1>
+          <p><%= entry.description %></p>
+          <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
+        </div>
+      </div>
+    </a>
+    <% end %>
+  <% end %>
 <% end %>
+
 <!--
 
 <h2>Suggested challenges</h2>
