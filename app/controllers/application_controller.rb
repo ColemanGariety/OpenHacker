@@ -15,6 +15,10 @@ private
     user.ribbon_array ||= []
     user.ribbon_array.include?(1) ? true : false
 	end
+	
+	def is_banned(user)
+		@is_banned = Time.now - user.banned_at < 7 unless user.baned_at.nil? ? true : false
+	end
 
   def current_open_challenge
     Challenge.find_by_status(2)

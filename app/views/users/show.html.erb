@@ -4,7 +4,7 @@
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
 <%= 'Hireable' if @user.hireable%>
 <%= '- Moderator' if is_moderator(@user) %>
-
+<%= link_to 'Ban', "/users/#{@user.username}/ban", :method => "put", :remote => true, data: { confirm: 'Are you sure? This user will be banned for seven days.' }  %>
 <p class="bio"><%= @user.bio %></p>
 <div class="clearfix"></div>
 </div>
