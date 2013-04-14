@@ -1,7 +1,5 @@
 <% if current_open_challenge %>
 
-  <% suggested_by = User.find(current_open_challenge.submitting_user_id) %>
-
   <div id="profile-header">
     <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
     <p>
@@ -11,7 +9,7 @@
 
     <p>
       <b>Suggested by:</b>
-      <%= link_to suggested_by.full_name, suggested_by %>
+      <%= link_to @suggested_by.full_name, @suggested_by %>
     </p>
 
     <% if current_open_challenge.rules %>

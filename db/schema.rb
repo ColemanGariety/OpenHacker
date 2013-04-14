@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414055817) do
+ActiveRecord::Schema.define(:version => 20130414220314) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "submitting_user_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "prize"
     t.string   "rules"
     t.integer  "status"
@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(:version => 20130414055817) do
     t.text     "description"
     t.string   "repo_url"
     t.string   "thumb_url"
-    t.integer  "submitting_user_id"
-    t.integer  "receiving_challenge_id"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.integer  "user_id"
+    t.integer  "challenge_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.string   "demo_url"
     t.integer  "github_repo_id"
     t.string   "platform"
@@ -58,11 +58,11 @@ ActiveRecord::Schema.define(:version => 20130414055817) do
   end
 
   create_table "votes", :force => true do |t|
-    t.integer  "voting_user_id"
+    t.integer  "user_id"
     t.integer  "value"
-    t.integer  "receiving_entry_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "entry_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

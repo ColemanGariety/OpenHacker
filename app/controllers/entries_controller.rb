@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.where(:receiving_challenge_id => current_closed_challenge.id).limit(3)
+    @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,16 +13,16 @@ class EntriesController < ApplicationController
   end
 
   def top
-  	@entries = Entry.where(:receiving_challenge_id => current_closed_challenge.id)
-  		.joins("LEFT JOIN votes ON entries.id = votes.receiving_entry_id")
+  	@entries = Entry.where(:challenge_id => current_closed_challenge.id)
+  		.joins("LEFT JOIN votes ON entries.id = votes.entry_id")
   		.select("entries.id," +
         "sum(value) as score," +
         "entries.title," +
         "description," +
         "repo_url," +
         "thumb_url," +
-        "submitting_user_id," +
-        "receiving_challenge_id," +
+        "user_id," +
+        "challenge_id," +
         "entries.created_at," +
         "github_repo_id," +
         "platform"
@@ -41,7 +41,8 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 
-    @voted_value = Vote.find_by_receiving_entry_id_and_voting_user_id(@entry.id, current_user.id).value
+    vote = Vote.find_by_entry_id_and_user_id(@entry.id, current_user.id)
+    @voted_value = vote ? vote.value : 0
 
     respond_to do |format|
       format.html # show.html.erb
@@ -53,6 +54,8 @@ class EntriesController < ApplicationController
   # GET /entries/new.json
   def new
     @entry = Entry.new
+
+    @suggested_by = User.find(current_open_challenge.user_id)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -71,8 +74,8 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(params[:entry])
 
-    @entry.submitting_user_id = current_user.id
-    @entry.receiving_challenge_id = current_open_challenge.id
+    @entry.user_id = current_user.id
+    @entry.challenge_id = current_open_challenge.id
 
     respond_to do |format|
       if @entry.save

@@ -12,23 +12,16 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find_by_username(params[:id])
-    @entries = Entry.where(:submitting_user_id => @user.id)
-    
+
+    @entries = Entry.where(:user_id => @user.id)
+
+    @challenges = Challenge.where(:user_id => @user.id)
+
+    @is_moderator = @user.ribbon_array.include?(1) ? true : false
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
-  end
-  
-  # PUT /users/ColbyAley/ban
-  def ban
-  	if is_moderator(current_user)
-	  	user = User.find_by_username(params[:username])
-	  	user.banned_at = Time.now.strftime('%Y%m%d')
-	  	user.save
-	  	render :nothing => true
-	  else
-	  	redirect_to index_path
-	  end
   end
 end

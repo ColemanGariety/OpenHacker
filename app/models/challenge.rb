@@ -1,7 +1,5 @@
 class Challenge < ActiveRecord::Base
-  attr_accessible :description, :submitting_user_id, :title
-  
-  attr_accessor :is_moderator
+  attr_accessible :description, :user_id, :title
 
   belongs_to :user
 

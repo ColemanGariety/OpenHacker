@@ -2,7 +2,9 @@ class ChallengesController < ApplicationController
   # GET /challenge
   # GET /challenge.json
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.where("status = ? OR status = ?", 3, 4)
+
+    @user = User.find(challenge.user_id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +27,10 @@ class ChallengesController < ApplicationController
   # GET /challenge/1.json
   def show
     @challenge = Challenge.find(params[:id])
+
+    @user = User.find(@challenge.user_id)
+
+    @entries = Entry.where(:challenge_id => @challenge.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -54,7 +60,7 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(params[:challenge])
 
-    @challenge.submitting_user_id = current_user.id
+    @challenge.user_id = current_user.id
 
     respond_to do |format|
       if @challenge.save
@@ -86,19 +92,19 @@ class ChallengesController < ApplicationController
   # 12:00 PM Sunday, PST
   def cron
   	open_challenge = Challenge.find_by_status(1)
-  	if open_challenge && Entry.find_by_receiving_challenge_id(open_challenge.id)
+  	if open_challenge && Entry.find_by_challenge_id(open_challenge.id)
     	open_challenge.update_attributes(:status => 2, :opened_at => Time.now)
     	open_challenge.save
   	end
 
   	voting_challenge = Challenge.find_by_status(2)
-  	if voting_challenge && Entry.find_by_receiving_challenge_id(voting_challenge.id)
+  	if voting_challenge && Entry.find_by_challenge_id(voting_challenge.id)
     	voting_challenge.status = 3
     	voting_challenge.save
   	end
 
   	closed_challenge = Challenge.find_by_status(3)
-  	if closed_challenge && Entry.find_by_receiving_challenge_id(closed_challenge.id)
+  	if closed_challenge && Entry.find_by_challenge_id(closed_challenge.id)
   	  closed_challenge.status = 4
   	  closed_challenge.save
   	end

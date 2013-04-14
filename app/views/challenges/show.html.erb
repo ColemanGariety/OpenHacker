@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <b>Suggested by:</b> <%= link_to User.find(@challenge.submitting_user_id).full_name, User.find(@challenge.submitting_user_id) %>
+  <b>Suggested by:</b> <%= link_to @user.full_name, @user %>
 </p>
 
 <p>
@@ -29,11 +29,11 @@
 
 <h2>Entries:</h2>
 
-<% if Entry.where(:receiving_challenge_id => @challenge.id).count == 0 %>
+<% if @entries.nil? %>
  <p>No entries have been submitted yet.</p>
 <% else %>
 	<ul>
-	<% Entry.where(:receiving_challenge_id => @challenge.id).each do |entry| %>
+	<% @entries.each do |entry| %>
 	  <li>
 	    <span><%= link_to entry.title, entry %></span>
 	    <span><%= entry.description %></span>
