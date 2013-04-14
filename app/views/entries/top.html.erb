@@ -1,0 +1,12 @@
+<% @entries.each do |entry| %>
+  <%= link_to entry do %>
+    <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
+      <div class="item">
+        <h1><%= entry.title %></h1>
+        <p><%= entry.description %></p>
+        <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
+      </div>
+    </div>
+  </a>
+  <% end %>
+<% end %>

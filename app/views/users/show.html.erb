@@ -37,7 +37,6 @@
 	  <li>
 	    <span><%= link_to entry.title, entry %></span>
 	    <span><%= entry.description %></span>
-	    | <a href="<%= entry.demo_url %>">Demo</a>
 	    <% if current_user && current_user.level == 1 %>
 	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
 	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
