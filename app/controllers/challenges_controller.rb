@@ -82,7 +82,7 @@ class ChallengesController < ApplicationController
       end
     end
   end
-  
+
   # PUT Runs every sunday night to update the week's challenge
   def cron
   	open_challenge = Challenge.find_by_status(1)
@@ -92,7 +92,7 @@ class ChallengesController < ApplicationController
   	voting_challenge = Challenge.find_by_status(2)
   	voting_challenge.status = 3
   	voting_challenge.save
-  	
+
   	closed_challenge = Challenge.find_by_status(3)
   	closed_challenge.status = 4
   	closed_challenge.save
@@ -109,5 +109,8 @@ class ChallengesController < ApplicationController
       format.html { redirect_to challenge_suggestions_path }
       format.json { head :no_content }
     end
+  end
+
+  def rules
   end
 end

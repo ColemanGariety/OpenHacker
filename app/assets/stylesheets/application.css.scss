@@ -12,6 +12,20 @@
  *= require typography
  */
 
+/* Selection */
+
+::selection {
+  background: #FF7400;
+  color: #FFF;
+}
+
+::-moz-selection {
+  background: #FF7400;
+  color: #FFF;
+}
+
+/* Layout */
+
 html { height: 100%; }
 
 body {
@@ -19,7 +33,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
-  -webkit-font-smoothing: antialiased;
+/*   -webkit-font-smoothing: antialiased; */
   text-rendering: optimizeLegibility;
   color: #333;
   position: absolute;
@@ -48,28 +62,28 @@ body:before {
 
 header .inner, section, footer{
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   margin: 0 auto;
 }
 
 section, footer {
-  max-width: 870px;
+  max-width: 860px;
 }
 
 section {
-  padding-top: 65px;
+  padding-top: 70px;
   overflow: auto;
 	padding-bottom: 50px;
 }
 
 footer {
   position: relative;
-	margin-top: -50px;
+	margin-top: -51px;
 	height: 49px;
 	clear: both;
 	padding: 0;
-	padding-left: 15px;
-  padding-right: 15px;
+	padding-left: 20px;
+  padding-right: 20px;
   line-height: 50px;
   font-family: "ITC Franklin Condensed";
   font-size: 1.4em;
@@ -106,21 +120,25 @@ header .inner {
 header .inner .left {
   position: absolute;
   height: 50px;
-  width: 156px;
+  width: 159px;
   left: 0;
   top: 0;
-  padding-left: 15px;
+  padding-left: 20px;
   border-left: 1px solid #FF9640;
 }
 
 header .inner h2 {
   margin: 0;
   font-size: 36px;
-  width: 156px;
+  width: 159px;
   height: 50px;
   font-weight: 100;
   display: inline-block;
   top: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   -webkit-transition: top .3s;
      -moz-transition: top .3s;
@@ -138,7 +156,7 @@ header .inner h2 {
 header .inner h2.shadow {
   position: absolute;
   top: 55px;
-  left: 15px;
+  left: 20px;
 }
 
 header .inner .left:hover h2 {
@@ -163,8 +181,8 @@ header .inner .right div {
   border-left: 1px solid #FF9640;
   border-right: 1px solid #FF9640;
   margin-right: -1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: inline-block;
 }
 
@@ -267,23 +285,68 @@ header a:link, header a, header a div, header a h2 {
   text-decoration: none;
 }
 
+a:link, a {
+  color: #666;
+  text-decoration: none;
+  position: relative;
+}
+
+a:link:after, a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  position: absolute;
+  border-top: 1px dashed #666;
+}
+
+a:hover {
+  color: #FF7400;
+}
+
+a:hover:after {
+  border-color: #FF7400;
+}
+
+a:active {
+  color: #333;
+}
+
+a:active:after {
+  border-color: #333;
+}
+
+header a:after {
+  display: none;
+}
+
+footer a:after {
+  bottom: 3px !important;
+}
+
+/* About */
+
+#about-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* Profiles */
 
 #default {
   float: left;
   width: 150px;
   height: 150px;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-       -o-border-radius: 5px;
-          border-radius: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
 }
 
 #profile-header {
 	border: 1px dashed #DDD;
-	padding: 15px;
+	padding: 20px;
 	margin-bottom: 20px;
 }
 /* Submission Page */
@@ -313,8 +376,6 @@ header a:link, header a, header a div, header a h2 {
   font-weight: 900;
   font-size: 1.5em;
   color: green;
-  position: relative;
-  top: 2px;
   opacity: 0;
   -webkit-transition: -webkit-transform .2s, opacity .2s;
      -moz-transition: -moz-transform .2s, opacity .2s;
@@ -353,11 +414,11 @@ header a:link, header a, header a div, header a h2 {
 }
 
 #preview {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 450px;
   border: 1px solid #DDD;
   display: inline-block;
-  padding: 15px;
+  padding: 20px;
   font-size: .75em;
 }
 
@@ -369,7 +430,7 @@ header a:link, header a, header a div, header a h2 {
 #preview .image-wrap {
   min-width: 200px;
   min-height: 125px;
-  margin-right: 15px;
+  margin-right: 20px;
   margin-bottom: 5px;
   border: 1px solid #DDD;
   display: inline-block;
@@ -391,25 +452,42 @@ section.home {
   max-width: 900px;
 }
 
+.section-header {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin-top: -1px;
+  font-family: "ITC Franklin Condensed";
+  font-size: 1.5em
+}
+
 .tile {
   border-bottom: 1px solid #DDD;
   width: 50%;
   float: left;
   border-left: 1px solid #DDD;
-  margin-left: -1px;
+  margin-left: -2px;
   min-height: 300px;
   position: relative;
   overflow: hidden;
 }
 
-.home a:first-child .tile {
+.tile.blue {
   width: 100%;
   min-height: 400px;
+  left: auto;
+  padding-right: 1px;
+}
+
+.tile.yellow {
+  left: 2px;
 }
 
 .tile .inner {
-  padding: 30px;
-  padding-top: 20px;
+  padding: 20px;
+  padding-top: 5px;
 }
 
 .tile h1 {
@@ -428,12 +506,12 @@ section.home {
   color: #111;
 }
 
-.home a:first-child h1 {
+.home a .tile.blue h1 {
   width: 350px;
   font-size: 3.5em;
 }
 
-.home a:first-child p {
+.home a .tile.blue p {
   width: 350px;
 }
 
@@ -445,16 +523,16 @@ section.home {
   position: absolute;
   right: 0;
   bottom: -20px;
-  -webkit-transition: bottom .35s, opacity .35s;
-     -moz-transition: bottom .35s, opacity .35s;
-      -ms-transition: bottom .35s, opacity .35s;
-       -o-transition: bottom .35s, opacity .35s;
-          transition: bottom .35s, opacity .35s;
-  -webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+  -webkit-transition: bottom .4s;
+     -moz-transition: bottom .4s;
+      -ms-transition: bottom .4s;
+       -o-transition: bottom .4s;
+          transition: bottom .4s;
+-webkit-transition-timing-function: cubic-bezier(0.095, 0.940, 0.100, 0.945);
+   -moz-transition-timing-function: cubic-bezier(0.095, 0.940, 0.100, 0.945);
+    -ms-transition-timing-function: cubic-bezier(0.095, 0.940, 0.100, 0.945);
+     -o-transition-timing-function: cubic-bezier(0.095, 0.940, 0.100, 0.945);
+        transition-timing-function: cubic-bezier(0.095, 0.940, 0.100, 0.945);
 }
 
 .tile.web .frame {
@@ -475,9 +553,9 @@ section.home {
        background-size: 325px auto;
 }
 
-.home a:first-child .frame {
-  width: 500px;
-  height: 325px;
+.home a .tile.blue .frame {
+  width: 540px;
+  height: 395px;
 }
 
 .tile:hover .frame {
@@ -499,9 +577,9 @@ section.home {
        background-size: 600px auto;
 }
 
-.home a:first-child .web .frame-inner {
-  width: 442px;
-  height: 237px;
+.home a .tile.blue.web .frame-inner {
+  width: 482px;
+  height: 307px;
 }
 
 .iphone .frame-inner {
