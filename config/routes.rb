@@ -1,6 +1,6 @@
 ThechallengeIo::Application.routes.draw do
   root :to => "entries#index"
-  
+
 
   resources :challenges
   resources :entries
@@ -14,7 +14,7 @@ ThechallengeIo::Application.routes.draw do
   match 'auth/failure' => redirect("/")
   match 'logout' => 'sessions#destroy', :as => 'signout'
   match 'about' => 'pages#about'
-  match 'rules' => 'pages#rules'
-  
-  put 'votes', :to => 'votes#vote', :as => :vote
+  match 'rules' => 'challenges#rules'
+
+  put "vote", :to => "votes#vote", :as => :vote
 end

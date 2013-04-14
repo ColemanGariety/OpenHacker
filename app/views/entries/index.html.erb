@@ -1,6 +1,7 @@
-<% @entries.each do |entry| %>
+<div class="section-header">Last week's challenge:</div>
+<% @entries.each_with_index do |entry, i| %>
   <%= link_to entry do %>
-    <div class="tile<%= entry.platform == "web" ? " web" : " iphone" %>">
+    <div class="tile<%= entry.platform == "web" ? " web" : " iphone" %><%= i % 3 == 0 || i % 3 == 1 ? (i % 3 == 0 ? " blue" : " red") : " yellow" %>">
       <div class="inner">
         <h1><%= entry.title %></h1>
         <p><%= entry.description %></p>
