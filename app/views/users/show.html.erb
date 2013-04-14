@@ -3,7 +3,7 @@
 <h1><%= @user.full_name %></h1>
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
 <%= 'Hireable' if @user.hireable%>
-<%= '- Moderator' if @is_moderator %>
+<%= '- Moderator' if is_moderator(@user) %>
 
 <p><%= @user.bio %></p>
 <div class="clearfix"></div>
@@ -11,7 +11,7 @@
 
 <h2>Submitted entries</h2>
 
-<% if @entries.count == 0 %>
+<% if @entries.nil? %>
  <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
 <% else %>
 	<ul>
@@ -20,7 +20,7 @@
 	    <span><%= link_to entry.title, entry %></span>
 	    <span><%= entry.description %></span>
 	    — <a href="<%= entry.demo_url %>">Demo</a>
-	    <% if current_user && current_user.level == 1 %>
+	    <% if current_user && is_moderator(current_user) %>
 	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
 	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
 	    <% end %>

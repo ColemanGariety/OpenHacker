@@ -12,11 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find_by_username(params[:id])
-
     @entries = Entry.where(:submitting_user_id => @user.id)
-
-    @challenges = Challenge.where(:submitting_user_id => @user.id)
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

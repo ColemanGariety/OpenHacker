@@ -1,6 +1,16 @@
 <h1>Editing entry</h1>
 
-<%= render 'form' %>
-
+<%= form_for(@entry) do |f| %>
+  <%= f.label :title %> <%= f.text_field :title %><br>
+  <%= f.label :description %> <%= f.text_field :description %><br>
+  <%= f.label :repo_url %> <%= f.text_field :repo_url %><br>
+  <%= f.label :thumb_url %> <%= f.text_field :thumb_url %><br>
+  <%= f.label :demo_url %> <%= f.text_field :demo_url %><br>
+  <%= f.label :github_repo_id %> <%= f.text_field :github_repo_id %><br>
+  <div class="actions">
+    <%= f.submit "Submit Entry" %>
+  </div>
+<% end %>
+<br>
 <%= link_to 'Show', @entry %> |
 <%= link_to 'Back', entries_path %>

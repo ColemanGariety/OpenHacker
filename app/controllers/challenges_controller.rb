@@ -45,7 +45,7 @@ class ChallengesController < ApplicationController
 
   # GET /challenge/1/edit
   def edit
-  	redirect_to root_url unless is_moderator
+  	redirect_to root_url unless is_moderator(current_user)
     @challenge = Challenge.find(params[:id])
   end
 
@@ -101,7 +101,6 @@ class ChallengesController < ApplicationController
   # DELETE /challenge/1
   # DELETE /challenge/1.json
   def destroy
- 	  redirect_to root_url unless is_moderator
     @challenge = Challenge.find(params[:id])
     @challenge.destroy
 
