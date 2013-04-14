@@ -16,7 +16,7 @@ header .inner .right a:last-child div, header .inner .left {
 	height: 50px;
 	position: absolute;
 	left: 50%;
-	margin-left: -110px;
+	margin-left: -50px;
 	line-height: 50px;
 	top: 0;
 }
@@ -49,6 +49,14 @@ header .inner .right a:last-child div, header .inner .left {
 
 #star-space .star-wrapper:hover .star, #star-space .star-wrapper:hover ~ .star-wrapper .star, #star-space .star-wrapper.voted .star, #star-space .star-wrapper.voted ~ .star-wrapper .star {
 	background-image: url("/assets/star_fill@2x.png");
+}
+
+#star-space .star-wrapper.cancelled .star {
+	background-image: url("/assets/star@2x.png") !important;
+}
+
+.star-wrapper:active .star {
+  opacity: .8;
 }
 
 #site.inner {

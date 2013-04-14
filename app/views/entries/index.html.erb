@@ -1,3 +1,5 @@
+<% content_for :section_class, "home" %>
+
 <div class="section-header">Last week's challenge:</div>
 <% @entries.each_with_index do |entry, i| %>
   <%= link_to entry do %>

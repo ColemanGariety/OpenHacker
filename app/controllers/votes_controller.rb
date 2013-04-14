@@ -8,8 +8,10 @@ class VotesController < ApplicationController
 
     respond_to do |format|
       if @vote.save
+        format.html { redirect_to next_entry }
         format.json { render json: @vote, status: :created, location: @vote }
       else
+        format.html { redirect_to Entry.find(params[:receiving_entry_id]) }
         format.json { render json: @vote.errors, status: :unprocessable_entity }
       end
     end

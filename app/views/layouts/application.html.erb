@@ -22,15 +22,13 @@
           <h2>The Challenge</h2>
           <h2 class="shadow">The Challenge</h2>
         </a>
-        <div id="star-space">
-        	<% 4.times do |i| %>
-        		<div class="star-wrapper"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => 4 - i, :receiving_entry_id => (request.env['PATH_INFO'].split("/").last)), :remote => true, :method => "put" %></div>
-        	<% end %>
+        <div class="middle">
+          <%= yield(:middle) %>
         </div>
         <div class="right">
           <% if current_user %>
               <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
-              <%= link_to '<div>Vote</div>'.html_safe, random_entry if current_voting_challenge %>
+              <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
               <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
               <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
           <% else %>
@@ -40,7 +38,7 @@
       </div>
     </header>
 
-    <section <%= "class=home" if params[:controller] == "entries" && params[:action] == "index" %>>
+    <section <%= "class=" + yield(:section_class) %>>
       <%= yield %>
     </section>
   </div>

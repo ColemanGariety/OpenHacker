@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
       format.json { render json: @entries }
     end
   end
-  
+
   def top
   	@entries = Entry.where(:receiving_challenge_id => current_closed_challenge.id)
   		.joins("LEFT JOIN votes ON entries.id = votes.receiving_entry_id")
@@ -29,7 +29,7 @@ class EntriesController < ApplicationController
   		)
       .group("entries.id")
       .order("sum(value) DESC")
-  	
+
     respond_to do |format|
       format.html
       format.json { render json: @entry }
@@ -41,8 +41,10 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 
+    @voted_value = Vote.find_by_receiving_entry_id_and_voting_user_id(@entry.id, current_user.id).value
+
     respond_to do |format|
-      format.html
+      format.html # show.html.erb
       format.json { render json: @entry }
     end
   end

@@ -1,1 +1,9 @@
+<% content_for :middle do %>
+  <div id="star-space">
+  	<% 4.times do |i| %>
+  		<div class="star-wrapper<%= " voted" if @voted_value == 4 - i %>"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => 4 - i, :receiving_entry_id => (request.env['PATH_INFO'].split("/").last)), :method => "put" %></div>
+  	<% end %>
+  </div>
+<% end %>
+
 <iframe src="<%= @entry.demo_url %>"></iframe>
