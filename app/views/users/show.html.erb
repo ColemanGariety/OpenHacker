@@ -28,39 +28,3 @@
 	<% end %>
 	</ul>
 <% end %>
-<!--
-
-<h2>Suggested challenges</h2>
-
-<% if @challenges.count == 0 %>
- <p><%= @user.full_name.split(" ").first %> has not suggested any challenges yet.</p>
-<% else %>
-<ul>
-<% @challenges.each do |challenge| %>
-  <li>
-    <span><%= link_to challenge.title, challenge %></span>
-    <span><%= challenge.description %></span>
-  </li>
-<% end %>
-</ul>
-<% end %>
-
-<<<<<<< HEAD
-<h2>Submitted entries</h2>
-
-<% if Entry.where(:submitting_user_id => @user.id).count == 0 %>
- <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
-<% else %>
-	<ul>
-	<% Entry.where(:submitting_user_id => @user.id).each do |entry| %>
-	  <li>
-	    <span><%= link_to entry.title, entry %></span>
-	    <span><%= entry.description %></span>
-	  </li>
-	<% end %>
-	</ul>
-<% end %>
-=======
-<<<<<<< HEAD
--->
->>>>>>> d41e69a67c41fa9f536fd56d9fdf61ce13369c13
