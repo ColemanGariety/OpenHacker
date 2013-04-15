@@ -4,8 +4,6 @@ class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.where("status = ? OR status = ?", 3, 4)
 
-    @user = User.find(challenge.user_id)
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @challenges }
@@ -28,9 +26,11 @@ class ChallengesController < ApplicationController
   def show
     @challenge = Challenge.find(params[:id])
 
-    @user = User.find(@challenge.user_id)
+    @user = @challenge.user
 
-    @entries = Entry.where(:challenge_id => @challenge.id)
+    @entries = @challenge.entries
+
+    @voted_percentage = (@entries.count / @entries.collect(&:id).collect {|i| current_user.votes.where(:entry_id => i) }.flatten.count) * 100
 
     respond_to do |format|
       format.html # show.html.erb

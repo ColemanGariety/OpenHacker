@@ -8,3 +8,7 @@ $(".star-wrapper").hover(function(){
 }, function(){
   $(this).prevAll().removeClass("cancelled")
 })
+
+$(window).load(function(){
+  var frame = document.getElementById("demo-frame")
+});

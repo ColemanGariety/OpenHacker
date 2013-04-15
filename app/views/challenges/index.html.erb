@@ -3,12 +3,10 @@
 <ol>
 <% @challenges.each do |challenge| %>
 
-  <% user = User.find(challenge.submitting_user_id) %>
-
   <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
     <span><%= link_to challenge.title, challenge %></span>
     <span><%= challenge.description %></span>
-    <span>Suggested by <%= link_to user.full_name, user %></span>
+    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
     <% if current_user && is_moderator(current_user) %>
     	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
     	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]

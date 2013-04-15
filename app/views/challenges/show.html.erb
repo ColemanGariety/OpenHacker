@@ -25,6 +25,10 @@
   <b>Challenge Ended:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
 <% end %>
 
+<p<%= " class=" + (@voted_percentage == 100 ? "green" : "red") %>>
+  You've voted on <b><%= @voted_percentage %>%</b> of the entries in this challenge
+</p>
+
 </div>
 
 <h2>Entries:</h2>

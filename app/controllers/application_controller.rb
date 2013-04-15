@@ -33,9 +33,9 @@ private
   end
 
   def next_entry
-    entries = (Entry.all.collect(&:id) - current_user.votes.collect(&:entry_id)).sample
-    unless entries.nil?
-      Entry.find(entries)
+    random_entries = (Entry.where(:challenge_id => current_voting_challenge).collect(&:id) - current_user.votes.collect(&:entry_id)).sample
+    unless random_entries.nil?
+      Entry.find(random_entries)
     else
       current_voting_challenge
     end

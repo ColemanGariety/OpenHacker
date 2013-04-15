@@ -4,11 +4,9 @@
 <ul>
 <% @challenges.each do |challenge| %>
 
-  <% @user = User.find(challenge.user_id) %>
-
   <li>
     <span><%= challenge.description %></span><br>
-    <span>Suggested by <%= link_to @user.full_name, @user %></span>
+    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
     <% if is_moderator(current_user) %>
   	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;,
   	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> or

@@ -11,6 +11,17 @@ header .inner .right a:last-child div, header .inner .left {
   border: 0;
 }
 
+header .inner .middle {
+  position: absolute;
+  width: 100%;
+}
+
+#note-button {
+  position: absolute;
+  left: 200px;
+  font-size: 1.25em;
+}
+
 #star-space {
 	display: inline-block;
 	height: 50px;
