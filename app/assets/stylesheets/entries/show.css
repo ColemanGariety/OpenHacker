@@ -1,17 +1,17 @@
-header {
+nav {
   position: absolute;
 }
 
-header .inner {
+nav .inner {
   max-width: none;
   border: 0;
 }
 
-header .inner .right a:last-child div, header .inner .left {
+nav .inner .right a:last-child div, nav .inner .left {
   border: 0;
 }
 
-header .inner .middle {
+nav .inner .middle {
   position: absolute;
   width: 100%;
 }
@@ -70,21 +70,19 @@ header .inner .middle {
   opacity: .8;
 }
 
-#site.inner {
-  position: relative;
-  min-width: 100%;
-  height: 100%;
-  padding: 0;
-  border: 0;
-}
-
-section {
+section .inner {
   position: absolute;
   min-width: 100%;
   padding: 0;
   border: 0;
   top: 50px;
   bottom: 0;
+  left: 0;
+}
+
+section {
+  max-width: none;
+  border: none;
 }
 
 footer {

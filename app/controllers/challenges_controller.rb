@@ -30,7 +30,9 @@ class ChallengesController < ApplicationController
 
     @entries = @challenge.entries
 
-    @voted_percentage = (@entries.count / @entries.collect(&:id).collect {|i| current_user.votes.where(:entry_id => i) }.flatten.count) * 100
+    votes = @entries.collect(&:votes).flatten
+
+    @voted_percentage = ((votes.select { |v| v.user_id == current_user.id }.flatten.count.to_f / @entries.count.to_f) * 100).to_i
 
     respond_to do |format|
       format.html # show.html.erb
@@ -91,20 +93,24 @@ class ChallengesController < ApplicationController
 
   # 12:00 PM Sunday, PST
   def cron
+
+    # Open approved challenge
   	open_challenge = Challenge.find_by_status(1)
-  	if open_challenge && Entry.find_by_challenge_id(open_challenge.id)
+  	if open_challenge && !open_challenge.entries.empty?
     	open_challenge.update_attributes(:status => 2, :opened_at => Time.now)
     	open_challenge.save
   	end
 
+  	# Move open challenge into voting
   	voting_challenge = Challenge.find_by_status(2)
-  	if voting_challenge && Entry.find_by_challenge_id(voting_challenge.id)
+  	if voting_challenge && !voting_challenge.entries.empty?
     	voting_challenge.status = 3
     	voting_challenge.save
   	end
 
+  	# Close the voting challenge
   	closed_challenge = Challenge.find_by_status(3)
-  	if closed_challenge && Entry.find_by_challenge_id(closed_challenge.id)
+  	if closed_challenge && !closed_challenge.entries.empty?
   	  closed_challenge.status = 4
   	  closed_challenge.save
   	end

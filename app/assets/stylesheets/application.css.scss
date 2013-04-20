@@ -33,10 +33,9 @@ body {
   margin: 0;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
-/*   -webkit-font-smoothing: antialiased; */
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #333;
-  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -49,7 +48,7 @@ body:before {
   margin-top:-32767px;
 }
 
-#site.inner {
+section {
   padding: 0;
   width: 100%;
   background: #FFF;
@@ -60,16 +59,16 @@ body:before {
   min-height: 100%;
 }
 
-header .inner, section, footer{
+nav .inner, section .inner, footer{
   padding: 20px;
   margin: 0 auto;
 }
 
-section, footer {
-  max-width: 860px;
+nav .inner, section, footer {
+  max-width: 900px;
 }
 
-section {
+section .inner {
   padding-top: 70px;
   overflow: auto;
 	padding-bottom: 50px;
@@ -82,17 +81,20 @@ footer {
 	clear: both;
 	padding: 0;
   color: #999;
-	padding-left: 20px;
-  padding-right: 20px;
   line-height: 50px;
   font-family: "ITC Franklin Condensed";
   font-size: 1.4em;
   border-top: 1px solid #DDD;
 }
 
-/* Header */
+footer .inner {
+	padding-left: 20px;
+  padding-right: 20px;
+}
 
-header {
+/* nav */
+
+nav {
   background-color: #FF7400;
   color: #FFF;
   height: 50px;
@@ -100,24 +102,23 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   width: 100%;
   font-family: "ITC Franklin Condensed";
   -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
      -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
           box-shadow: 0 1px 5px rgba(20,20,20,.2);
   overflow: hidden;
+  z-index: 1;
 }
 
-header .inner {
+nav .inner {
   height: 50px;
   padding: 0;
   position: relative;
   background-color: #FF7400;
-  max-width: 900px;
 }
 
-header .inner .left {
+nav .inner .left {
   position: absolute;
   height: 50px;
   width: 159px;
@@ -127,7 +128,7 @@ header .inner .left {
   border-left: 1px solid #FF9640;
 }
 
-header .inner h2 {
+nav .inner h2 {
   margin: 0;
   font-size: 36px;
   width: 159px;
@@ -153,30 +154,30 @@ header .inner h2 {
           transition-timing-function: cubic-bezier(0.920, 0.015, 0.610, 1.430);
 }
 
-header .inner h2.shadow {
+nav .inner h2.shadow {
   position: absolute;
   top: 55px;
   left: 20px;
 }
 
-header .inner .left:hover h2 {
+nav .inner .left:hover h2 {
   top: -55px;
 }
 
-header .inner .left:hover h2.shadow {
+nav .inner .left:hover h2.shadow {
   top: 0;
 }
 
-header .inner .left:active h2 {
+nav .inner .left:active h2 {
   color: #444;
 }
 
-header .inner .right, header .inner .left {
+nav .inner .right, nav .inner .left {
   font-size: 0;
   height: 50px;
 }
 
-header .inner .right div {
+nav .inner .right div {
   font-size: 22px;
   border-left: 1px solid #FF9640;
   border-right: 1px solid #FF9640;
@@ -186,31 +187,31 @@ header .inner .right div {
   display: inline-block;
 }
 
-header .inner .right a:last-child div {
+nav .inner .right a:last-child div {
   margin-right: 0;
 }
 
-header .inner .right a:hover div {
+nav .inner .right a:hover div {
   background-color: #FFF;
   color: #FF7400;
   border-color: transparent;
 }
 
-header .inner .right a:hover + a div {
+nav .inner .right a:hover + a div {
   border-left-color: transparent;
 }
 
-header .inner .right a:last-child:hover div {
+nav .inner .right a:last-child:hover div {
   border-right-color: #FF7400;
 }
 
-header .inner .right a:active div {
+nav .inner .right a:active div {
   background-color: #FFF;
   color: #444;
   border-color: transparent;
 }
 
-header .inner .right a:active + a div {
+nav .inner .right a:active + a div {
   border-left-color: transparent;
 }
 
@@ -268,12 +269,12 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* Headers */
+/* navs */
 
 h1, h2, h3 {
   margin: 0;
   font-family: "ITC Franklin Condensed";
-  -webkit-font-smoothing: subpixel-antialiased;
+/*   -webkit-font-smoothing: subpixel-antialiased; */
 }
 
 h1 {
@@ -284,7 +285,7 @@ h1 {
 
 /* Anchors */
 
-header a:link, header a, header a div, header a h2 {
+nav a:link, nav a, nav a div, nav a h2 {
   color: #FFF;
   text-decoration: none;
 }
@@ -321,7 +322,7 @@ a:active:after {
   border-color: #333;
 }
 
-header a:after {
+nav a:after {
   display: none;
 }
 
@@ -374,11 +375,6 @@ footer a:after {
   pointer-events: all;
 }
 
-#step-2.focused {
-  margin-top: -100px;
-  padding-top: 100px;
-}
-
 #check {
   list-style: none;
 }
@@ -389,11 +385,11 @@ footer a:after {
   font-size: 1.5em;
   color: green;
   opacity: 0;
-  -webkit-transition: -webkit-transform .2s, opacity .2s;
-     -moz-transition: -moz-transform .2s, opacity .2s;
-      -ms-transition: -ms-transform .2s, opacity .2s;
-       -o-transition: -o-transform .2s, opacity .2s;
-          transition: transform .2s, opacity .2s;
+  -webkit-transition: -webkit-transform .2s;
+     -moz-transition: -moz-transform .2s;
+      -ms-transition: -ms-transform .2s;
+       -o-transition: -o-transform .2s;
+          transition: transform .2s;
   -webkit-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1); /* older webkit */
   -webkit-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1.650);
      -moz-transition-timing-function: cubic-bezier(0.090, 0.220, 0.225, 1.650);
@@ -455,9 +451,13 @@ footer a:after {
   vertical-align: top;
 }
 
+#repos select {
+  outline: none;
+}
+
 /* Homepage */
 
-section.home {
+section .inner.home {
   padding-left: 0;
   padding-right: 0;
   padding-top: 50px;
@@ -472,7 +472,7 @@ section.home {
   border-top: 1px solid #DDD;
   margin-top: -1px;
   font-family: "ITC Franklin Condensed";
-  font-size: 1.5em
+  font-size: 1.5em;
 }
 
 .tile {
@@ -633,7 +633,7 @@ section.home {
 }
 
 @media only screen and (max-width: 900px) {
-  .inner, header .inner .left, header a:last-child {
+  .inner, nav .inner .left, nav a:last-child {
     border: none !important;
   }
 }

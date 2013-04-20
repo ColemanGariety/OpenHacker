@@ -12,3 +12,28 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+
+// Update user data
+if ($("#user").attr("data-username")) {
+  setTimeout(function(){
+    $.ajax({
+      url: "https://api.github.com/user?access_token=" + $("#user").attr("data-token"),
+      type: "GET",
+      dataType: "JSONP",
+      success: function(data) {
+        console.log(data)
+        $.ajax({
+          url: "http://" + document.location.hostname + "/auth/github/update",
+          type: "POST",
+          data: {
+            auth: data
+          },
+          success: function(data) {
+            console.log(data)
+          }
+        })
+      }
+    })
+  }, 3000)
+}

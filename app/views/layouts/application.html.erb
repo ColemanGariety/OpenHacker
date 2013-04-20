@@ -15,39 +15,40 @@
   <![endif]-->
 </head>
 <body>
-  <div class="inner" id="site">
-    <header>
-      <div class="inner">
-        <a href="/" class="left">
-          <h2>The Challenge</h2>
-          <h2 class="shadow">The Challenge</h2>
-        </a>
-        <div class="middle">
-          <%= yield(:middle) %>
-        </div>
-        <div class="right">
-          <% if current_user %>
-              <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
-              <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
-              <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
-              <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
-          <% else %>
-            <a href="/auth/github"><div>Sign in with GitHub</div></a>
-          <% end %>
-        </div>
+  <nav>
+    <div class="inner">
+      <a href="/" class="left">
+        <h2>The Challenge</h2>
+        <h2 class="shadow">The Challenge</h2>
+      </a>
+      <div class="middle">
+        <%= yield(:middle) %>
       </div>
-    </header>
-
-    <section <%= "class=" + yield(:section_class) %>>
+      <div class="right">
+        <% if current_user %>
+            <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+            <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
+            <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+            <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
+        <% else %>
+          <a href="/auth/github"><div>Sign in with GitHub</div></a>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <div class="inner <%= yield(:section_class) %>">
       <%= yield %>
-    </section>
-  </div>
+    </div>
+  </section>
   <footer>
-    <%= link_to "News", "http://thelist.io/", :target => "_blank" %><span>&nbsp;•&nbsp;</span>
-    <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;•&nbsp;</span>
-    <%= link_to "Archives", challenges_path %><span>&nbsp;•&nbsp;</span>
-    <%= link_to "About", about_path %><span>&nbsp;•&nbsp;</span>
-    <%= link_to "Rules", rules_path %>
+    <div class="inner">
+      <%= link_to "News", "http://thelist.io/", :target => "_blank" %><span>&nbsp;•&nbsp;</span>
+      <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;•&nbsp;</span>
+      <%= link_to "Archives", challenges_path %><span>&nbsp;•&nbsp;</span>
+      <%= link_to "About", about_path %><span>&nbsp;•&nbsp;</span>
+      <%= link_to "Rules", rules_path %>
+    </div>
   </footer>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "#{params[:controller]}/#{params[:action]}.js" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>

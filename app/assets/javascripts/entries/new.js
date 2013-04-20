@@ -51,6 +51,9 @@ function validateRepo() {
       type: "GET",
       dataType: "JSONP",
       success: function(data) {
+        // Fix WebKit flickering
+        $("nav").css("-webkit-backface-visibility", "hidden")
+
         contents = data.data
 
         console.log(contents, "Contents")
@@ -210,6 +213,5 @@ function validateRepo() {
 }
 
 $(function(){
-
   $("#repos select").change(validateRepo);
 })
