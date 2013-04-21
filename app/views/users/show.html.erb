@@ -1,5 +1,5 @@
 <div id="profile-header">
-<img src="http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=500&d=http://thelist.io/assets/profile.jpg" id="default">
+<div style="background-image: url(http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default"></div>
 <h1><%= @user.full_name %></h1>
 <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
 <%= 'Hireable' if @user.hireable%>
@@ -9,8 +9,6 @@
 <div class="clearfix"></div>
 </div>
 
-<h1>Entries:</h1>
-
 <% if @entries.nil? %>
  <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
 <% else %>
@@ -18,7 +16,7 @@
     <%= link_to entry do %>
       <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
         <div class="item">
-            <h1><%= entry.title %></h1>
+            <h1 class="little"><%= entry.title %></h1>
           <p><%= entry.description %></p>
           <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
         </div>
