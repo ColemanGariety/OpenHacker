@@ -1,0 +1,31 @@
+
+<script>
+function goBack() {
+    if (window.history.previous == undefined) {
+        window.location = "/" }
+            else window.history.back()
+        {
+    }
+}
+</script>
+  <style type="text/css">
+    .dialog { color: #666; text-align: center; }
+    div.dialog {
+      width: 25em;
+      padding: 0 4em;
+      margin: 4em auto 0 auto;
+      border-right-color: #999;
+      border-bottom-color: #999;
+    }
+
+    a.dialog { font-size: 2em;}
+    imput[type='button'] { font-size: 100%; color: #f00; line-height: 1.5em; }
+  </style>
+
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+  	<h1>We're sorry</h1>
+  	<h4>The page you were looking for cannot be found. <br>In other words, this is a <span style="color:#FF7400;">404</span>.</h4>
+    <br>
+    <input type="button" value="Back" onclick="goBack()">
+  </div>

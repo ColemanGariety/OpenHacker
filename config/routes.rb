@@ -15,6 +15,8 @@ ThechallengeIo::Application.routes.draw do
   match 'auth/failure' => redirect("/")
   match 'logout' => 'sessions#destroy', :as => 'signout'
   match 'about' => 'pages#about'
+  match "/404", :to => "errors#not_found"
+  match "/500", :to => "errors#server_error"
   match 'rules' => 'challenges#rules'
   put 'users/:username/ban' => 'users#ban', :as => "ban"
   put "vote", :to => "votes#vote", :as => :vote
