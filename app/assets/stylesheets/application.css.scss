@@ -38,6 +38,7 @@ body {
   color: #333;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 body:before {
@@ -91,6 +92,10 @@ footer {
 footer .inner {
 	padding-left: 20px;
   padding-right: 20px;
+}
+
+footer .inner span {
+  margin-left: 5px;
 }
 
 /* nav */
@@ -209,7 +214,7 @@ footer {
 /* Generic Elements */
 
 select {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .clearfix {
@@ -240,7 +245,7 @@ hr {
   float: right;
 }
 
-ul {
+ul, ol {
   padding-left: 20px;
 }
 
@@ -289,7 +294,7 @@ a:link:after, a:after {
   content: "";
   width: 100%;
   height: 1px;
-  bottom: 1px;
+  bottom: 0;
   left: 0;
   position: absolute;
   border-top: 1px dashed #666;
@@ -316,7 +321,7 @@ nav a:after {
 }
 
 footer a:after {
-  bottom: 15px !important;
+  bottom: 14px !important;
 }
 
 /* About */

@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate
-
 private
 
   def current_user
@@ -33,7 +31,8 @@ private
   end
 
   def next_entry
-    random_entries = (Entry.where(:challenge_id => current_voting_challenge).collect(&:id) - current_user.votes.collect(&:entry_id)).sample
+      random_entries = (Entry.where(:challenge_id => current_voting_challenge).collect(&:id) - (current_user ? current_user.votes.collect(&:entry_id) : [])).sample
+
     unless random_entries.nil?
       Entry.find(random_entries)
     else

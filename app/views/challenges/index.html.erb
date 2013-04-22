@@ -1,6 +1,9 @@
-<h1>Past Challenges</h1>
+<div id="profile-header">
+  <h1>Past Challenges</h1>
+  <p>A list of ended challenges in chronological order.</p>
+</div>
 
-<ol>
+<ul>
 <% @challenges.each do |challenge| %>
 
   <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
@@ -13,4 +16,4 @@
     <% end %>
   </li>
 <% end %>
-</ol>
+</ul>

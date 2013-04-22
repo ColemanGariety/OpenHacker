@@ -25,12 +25,15 @@
       </div>
       <div class="right">
         <% if current_user %>
-            <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
-            <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
-            <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
-            <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
+          <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
+          <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
+          <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+          <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
         <% else %>
-          <a href="/auth/github"><div>Sign in with GitHub</div></a>
+          <%= link_to '<div>About</div>'.html_safe, about_path %>
+          <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
+          <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+          <%= link_to '<div>Sign in with GitHub</div>'.html_safe, auth_path %>
         <% end %>
       </div>
     </div>
@@ -42,12 +45,17 @@
   </section>
   <footer>
     <div class="inner">
-      <%= link_to "News", "http://thelist.io/", :target => "_blank" %><span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Top Entries", top_path %><span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Past Challenges", challenges_path %><span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Rules", rules_path %><span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "About", about_path %>
+      <%= link_to "News", "http://thelist.io/", :target => "_blank" %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Top Entries", top_path %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Suggestions", challenge_suggestions_path %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Past Challenges", challenges_path %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Rules", rules_path %>
+      <%= "<span>&nbsp;&#8226;&nbsp;</span>".html_safe if current_user %>
+      <%= (link_to "About".html_safe, about_path) if current_user %>
     </div>
   </footer>
   <%= javascript_include_tag "application" %>

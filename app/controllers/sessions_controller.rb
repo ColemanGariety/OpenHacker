@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  skip_before_filter :authenticate, :only => :create
-
   # POST /auth/github/callback
   def create
     # raise env['omniauth.auth'].to_yaml

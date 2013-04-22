@@ -1,5 +1,7 @@
-<h1>Challenge Suggestions</h1>
-<p>Tell us your challenge idea <%= link_to 'here', new_challenge_path %>.</p>
+<div id="profile-header">
+  <h1>Challenge Suggestions</h1>
+  <p>Tell us your challenge idea <%= link_to 'here', new_challenge_path %>.</p>
+</div>
 
 <ul>
 <% @challenges.each do |challenge| %>
@@ -7,7 +9,7 @@
   <li>
     <span><%= challenge.description %></span><br>
     <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
-    <% if is_moderator(current_user) %>
+    <% if current_user && is_moderator(current_user) %>
   	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;,
   	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> or
   	  <td><%= link_to 'Approve', challenge, method: :approve %></td> ]

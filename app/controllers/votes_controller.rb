@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+  before_filter :authenticate
+
   # POST /votes
   # POST /votes.json
   def vote

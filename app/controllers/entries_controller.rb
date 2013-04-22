@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  skip_before_filter :authenticate, :only => :index
+  before_filter :authenticate, :only => :new
 
   # GET /entries
   # GET /entries.json
@@ -41,8 +41,10 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 
-    vote = Vote.find_by_entry_id_and_user_id(@entry.id, current_user.id)
-    @voted_value = vote ? vote.value : 0
+    if current_user
+      vote = Vote.find_by_entry_id_and_user_id(@entry.id, current_user.id)
+      @voted_value = vote ? vote.value : 0
+    end
 
     respond_to do |format|
       format.html # show.html.erb

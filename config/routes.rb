@@ -12,6 +12,7 @@ ThechallengeIo::Application.routes.draw do
   match 'top' => 'entries#top', :as => 'top'
   match 'submit' => "entries#new", :as => 'submit'
   match 'auth/github/callback' => 'sessions#create'
+  match "auth/github", :as => "auth"
   match "auth/github/update" => "sessions#update"
   match 'auth/failure' => redirect("/")
   match 'logout' => 'sessions#destroy', :as => 'signout'
