@@ -42,11 +42,12 @@
   </section>
   <footer>
     <div class="inner">
-      <%= link_to "News", "http://thelist.io/", :target => "_blank" %><span>&nbsp;•&nbsp;</span>
-      <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;•&nbsp;</span>
-      <%= link_to "Archives", challenges_path %><span>&nbsp;•&nbsp;</span>
-      <%= link_to "About", about_path %><span>&nbsp;•&nbsp;</span>
-      <%= link_to "Rules", rules_path %>
+      <%= link_to "News", "http://thelist.io/", :target => "_blank" %><span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Top Entries", top_path %><span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Suggestions", challenge_suggestions_path %><span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Past Challenges", challenges_path %><span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Rules", rules_path %><span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "About", about_path %>
     </div>
   </footer>
   <%= javascript_include_tag "application" %>

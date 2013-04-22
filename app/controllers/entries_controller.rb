@@ -21,7 +21,7 @@ class EntriesController < ApplicationController
         "description," +
         "repo_url," +
         "thumb_url," +
-        "user_id," +
+        "entries.user_id," +
         "challenge_id," +
         "entries.created_at," +
         "github_repo_id," +

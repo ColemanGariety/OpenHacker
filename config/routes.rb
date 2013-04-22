@@ -8,16 +8,16 @@ ThechallengeIo::Application.routes.draw do
   resources :votes
 
   get 'suggestions' => 'challenges#suggestions', :as => 'challenge_suggestions'
+
   match 'top' => 'entries#top', :as => 'top'
   match 'submit' => "entries#new", :as => 'submit'
   match 'auth/github/callback' => 'sessions#create'
   match "auth/github/update" => "sessions#update"
   match 'auth/failure' => redirect("/")
   match 'logout' => 'sessions#destroy', :as => 'signout'
-  match 'about' => 'pages#about'
-  match "/404", :to => "errors#not_found"
-  match "/500", :to => "errors#server_error"
+  match 'about' => 'challenges#about'
   match 'rules' => 'challenges#rules'
+
   put 'users/:username/ban' => 'users#ban', :as => "ban"
   put "vote", :to => "votes#vote", :as => :vote
 end

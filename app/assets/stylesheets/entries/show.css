@@ -1,5 +1,8 @@
 nav {
   position: absolute;
+  max-width: 100%;
+  left: 0;
+  margin-left: auto;
 }
 
 nav .inner {
@@ -54,7 +57,6 @@ nav .inner .middle {
 #star-space .star-wrapper {
 	height: 25px;
 	width: 25px;
-	margin-top: 5px;
 	float: right;
 }
 

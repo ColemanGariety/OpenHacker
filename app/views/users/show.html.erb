@@ -1,25 +1,23 @@
 <div id="profile-header">
-<div style="background-image: url(http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default"></div>
-<h1><%= @user.full_name %></h1>
-<%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
-<%= 'Hireable' if @user.hireable%>
-<%= '- Moderator' if is_moderator(@user) %>
-<%= link_to 'Ban', "/users/#{@user.username}/ban", :method => "put", :remote => true, data: { confirm: 'Are you sure? This user will be banned for seven days.' }  %>
-<p class="bio"><%= @user.bio %></p>
-<div class="clearfix"></div>
+  <div style="background-image: url(http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default"></div>
+  <h1><%= @user.full_name %></h1>
+  <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
+  <%= 'Hireable' if @user.hireable%>
+  <%= '- Moderator' if is_moderator(@user) %>
+  <%= link_to 'Ban', "/users/#{@user.username}/ban", :method => "put", :remote => true, data: { confirm: 'Are you sure? This user will be banned for seven days.' }  %>
+  <p class="bio"><%= @user.bio %></p>
+  <div class="clearfix"></div>
 </div>
 
-<% if @entries.nil? %>
+<% if @entries.empty? %>
  <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
 <% else %>
   <% @entries.each do |entry| %>
-    <%= link_to entry do %>
+    <%= link_to entry, :class => "item" do %>
       <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
-        <div class="item">
-            <h1 class="little"><%= entry.title %></h1>
-          <p><%= entry.description %></p>
-          <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
-        </div>
+        <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
+        <h1 class="little"><%= entry.title %></h1>
+        <p><%= entry.description %></p>
       </div>
     </a>
     <% end %>

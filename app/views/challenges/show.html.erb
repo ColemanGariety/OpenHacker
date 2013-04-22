@@ -31,22 +31,17 @@
 
 </div>
 
-<h2>Entries:</h2>
-
-<% if @entries.nil? %>
+<% if @entries.empty? %>
  <p>No entries have been submitted yet.</p>
 <% else %>
-	<ul>
-	<% @entries.each do |entry| %>
-	  <li>
-	    <span><%= link_to entry.title, entry %></span>
-	    <span><%= entry.description %></span>
-	    <%= link_to "Vote", entry %>
-	    <% if current_user && is_moderator(current_user) %>
-	    	[Mod: <span><%= link_to 'Edit', edit_entry_path(entry) %></span> or
-	    	<span><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
-	    <% end %>
-	  </li>
-	<% end %>
-	</ul>
+  <% @entries.each do |entry| %>
+    <%= link_to entry, :class => "item" do %>
+      <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
+        <div class="top-frame"><div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
+        <h1 class="little"><%= entry.title %></h1>
+        <p><%= entry.description %></p>
+      </div>
+    </a>
+    <% end %>
+  <% end %>
 <% end %>

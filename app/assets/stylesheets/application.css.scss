@@ -48,6 +48,10 @@ body:before {
   margin-top:-32767px;
 }
 
+nav, section, footer {
+  max-width: 900px;
+}
+
 section {
   padding: 0;
   width: 100%;
@@ -57,6 +61,7 @@ section {
   max-width: 898px;
   margin: 0 auto;
   min-height: 100%;
+  margin-top: -60px;
 }
 
 nav .inner, section .inner, footer{
@@ -64,13 +69,9 @@ nav .inner, section .inner, footer{
   margin: 0 auto;
 }
 
-nav .inner, section, footer {
-  max-width: 900px;
-}
-
 section .inner {
-  padding-top: 70px;
   overflow: auto;
+	padding-top: 70px;
 	padding-bottom: 50px;
 }
 
@@ -95,19 +96,16 @@ footer .inner {
 /* nav */
 
 nav {
-  background-color: #FF7400;
   color: #FFF;
   height: 50px;
   line-height: 50px;
-  position: fixed;
+  position: relative;
   top: 0;
-  left: 0;
+  margin: 0 auto;
   width: 100%;
   font-family: "ITC Franklin Condensed";
-  -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
-     -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
-          box-shadow: 0 1px 5px rgba(20,20,20,.2);
   overflow: hidden;
+  padding-bottom: 10px;
   z-index: 1;
 }
 
@@ -116,6 +114,9 @@ nav .inner {
   padding: 0;
   position: relative;
   background-color: #FF7400;
+  -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
+     -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
+          box-shadow: 0 1px 5px rgba(20,20,20,.2);
 }
 
 nav .inner .left {
@@ -145,7 +146,7 @@ nav .inner h2 {
 }
 
 nav .inner .left:hover h2 {
-  text-shadow: 0 0 4px rgba(255,255,255,.5);
+  text-shadow: 0 0 5px rgba(255,255,255,.5);
 }
 
 nav .inner .left:active h2 {
@@ -181,13 +182,13 @@ nav .inner .right a:hover + a div {
   border-left-color: transparent;
 }
 
-nav .inner .right a:last-child:hover div {
-  border-right-color: #FF7400;
+nav .inner .right a:last-child:hover div, nav .inner .right a:last-child:active div {
+  border-right-color: #DDD;
 }
 
 nav .inner .right a:active div {
   background-color: #FFF;
-  color: #444;
+  color: #666;
   border-color: transparent;
 }
 
@@ -263,10 +264,10 @@ h1, h2, h3 {
 h1 {
   font-size: 3.25em;
   font-weight: 100;
-  font-weight: 700;
+  font-weight: 900;
 }
 
-h1 + p {
+h1 + p, h1 + span, h1 + a, h1 + h2 {
   margin-top: 15px;
 }
 
@@ -281,6 +282,7 @@ a:link, a {
   color: #666;
   text-decoration: none;
   position: relative;
+  display: inline-block;
 }
 
 a:link:after, a:after {
@@ -314,7 +316,7 @@ nav a:after {
 }
 
 footer a:after {
-  bottom: 3px !important;
+  bottom: 15px !important;
 }
 
 /* About */
@@ -461,8 +463,7 @@ section .inner.home {
   border-bottom: 1px solid #DDD;
   border-top: 1px solid #DDD;
   margin-top: -1px;
-  font-family: "ITC Franklin Condensed";
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .tile {
@@ -474,6 +475,14 @@ section .inner.home {
   min-height: 300px;
   position: relative;
   overflow: hidden;
+}
+
+.home a {
+  display: block;
+}
+
+.home a:after {
+  display: none;
 }
 
 .tile.blue {
@@ -602,9 +611,18 @@ section .inner.home {
 /* Top page */
 
 .item {
+	border-top: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
 	width: 100%;
 	text-decoration: none;
+	margin-left: -20px;
+	padding-right: 40px;
+	padding-top: 20px;
+	margin-top: -1px;
+}
+
+.item:after {
+  display: none;
 }
 
 .top-frame-inner {
@@ -614,8 +632,15 @@ section .inner.home {
 }
 
 .item .top-frame {
-  width: 300px;
-  height: 175px;
+  border-right: 1px solid #DDD;
+  margin-right: 20px;
+  margin-top: -20px;
+  padding-bottom: 20px;
+  background-position: 0 10px;
+  width: 350px;
+  height: 250px;
+  float: left;
+  background-repeat: no-repeat;
   background-image: url('/assets/frame_web@2x.png');
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
@@ -623,7 +648,7 @@ section .inner.home {
 }
 
 @media only screen and (max-width: 900px) {
-  .inner, nav .inner .left, nav a:last-child {
+  section, .inner, nav .inner .left, nav a:last-child div {
     border: none !important;
   }
 }
