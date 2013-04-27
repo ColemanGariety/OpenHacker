@@ -1,0 +1,45 @@
+<h2>Stats on <%= @entry.title %></h2>
+
+<% unless @entry.user_id == current_user.id %>
+<p>
+	<b>Submitted by:</b>
+	<%= link_to @user.username, @user %>
+</p>
+<% end %>
+
+<p>
+	<b>Total votes:</b>
+	<%= @vote.count %>
+</p>
+
+<% unless @vote.count == 0 %>
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.2.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.2.min.js"></script>
+<div id="chart" style="height: 250px;"></div>
+<script>
+
+new Morris.Bar({
+  // ID of the element in which to draw the chart.
+  element: 'chart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    { amount: '1', value: <%= count_votes(1, @entry.id) %>},
+    { amount: '2', value: <%= count_votes(2, @entry.id) %>},
+    { amount: '3', value: <%= count_votes(3, @entry.id) %>},
+    { amount: '4', value: <%= count_votes(4, @entry.id) %>},
+  ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'amount',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['value'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['Votes']
+  
+
+});
+</script>
+<% end %>

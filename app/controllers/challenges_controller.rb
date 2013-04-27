@@ -91,7 +91,7 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # 12:00 PM Sunday, PST
+  # 11:59 PM Sunday, PST
   def cron
 
     # Open approved challenge

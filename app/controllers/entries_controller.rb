@@ -51,6 +51,20 @@ class EntriesController < ApplicationController
       format.json { render json: @entry }
     end
   end
+  
+  # GET /entries/1/track
+  # GET /entries/1/track.json
+  def track
+    @entry = Entry.find(params[:id])
+
+    @vote = Vote.where(:entry_id => @entry.id)
+    @user = User.find(@entry.user_id)
+
+    respond_to do |format| # if current_user.id == @entry.user_id : redirect_to root_path end
+      format.html # show.html.erb
+      format.json { render json: @entry }
+    end
+  end
 
   # GET /entries/new
   # GET /entries/new.json

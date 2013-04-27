@@ -11,7 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require raphael
+//= require morris
 //= require jquery_ujs
+
 
 
 // Update user data

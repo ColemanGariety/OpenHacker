@@ -18,6 +18,7 @@ ThechallengeIo::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => 'signout'
   match 'about' => 'challenges#about'
   match 'rules' => 'challenges#rules'
+  match 'entries/:id/track' => 'entries#track'
 
   put 'users/:username/ban' => 'users#ban', :as => "ban"
   put "vote", :to => "votes#vote", :as => :vote
