@@ -1,6 +1,6 @@
 <% content_for :section_class, "home" %>
 
-<div class="section-header">Last week's challenge:</div>
+<div class="section-header"><span>Winners of the <b>"<%= current_closed_challenge.title %>"</b> challenge:</span></div>
 <% @entries.each_with_index do |entry, i| %>
   <%= link_to entry do %>
     <div class="tile<%= entry.platform == "web" ? " web" : " iphone" %><%= i % 3 == 0 || i % 3 == 1 ? (i % 3 == 0 ? " blue" : " red") : " yellow" %>">

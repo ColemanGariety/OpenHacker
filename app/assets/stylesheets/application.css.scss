@@ -15,12 +15,12 @@
 /* Selection */
 
 ::selection {
-  background: #FF7400;
+  background: #ff8d00;
   color: #FFF;
 }
 
 ::-moz-selection {
-  background: #FF7400;
+  background: #ff8d00;
   color: #FFF;
 }
 
@@ -84,7 +84,7 @@ footer {
 	padding: 0;
   color: #999;
   line-height: 50px;
-  font-family: "ITC Franklin Condensed";
+  font-family: "Proxima Nova Alt Condensed";
   font-size: 1.4em;
   border-top: 1px solid #DDD;
 }
@@ -92,10 +92,6 @@ footer {
 footer .inner {
 	padding-left: 20px;
   padding-right: 20px;
-}
-
-footer .inner span {
-  margin-left: 5px;
 }
 
 /* nav */
@@ -108,17 +104,21 @@ nav {
   top: 0;
   margin: 0 auto;
   width: 100%;
-  font-family: "ITC Franklin Condensed";
+  font-family: "Proxima Nova Alt Condensed";
   overflow: hidden;
   padding-bottom: 10px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav .inner {
   height: 50px;
   padding: 0;
   position: relative;
-  background-color: #FF7400;
+  background-color: #ff8d00;
   -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
      -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
           box-shadow: 0 1px 5px rgba(20,20,20,.2);
@@ -136,17 +136,12 @@ nav .inner .left {
 
 nav .inner h2 {
   margin: 0;
-  font-size: 36px;
-  width: 300px;
+  font-size: 38px;
   height: 50px;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 50px;
   display: inline-block;
   top: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: relative;
 }
 
@@ -164,7 +159,7 @@ nav .inner .right, nav .inner .left {
 }
 
 nav .inner .right div {
-  font-size: 22px;
+  font-size: 24px;
   border-left: 1px solid #FF9640;
   border-right: 1px solid #FF9640;
   margin-right: -1px;
@@ -179,7 +174,7 @@ nav .inner .right a:last-child div {
 
 nav .inner .right a:hover div {
   background-color: #FFF;
-  color: #FF7400;
+  color: #ff8d00;
   border-color: transparent;
 }
 
@@ -268,8 +263,8 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3.25em;
-  font-weight: 100;
-  font-weight: 900;
+  font-weight: 500;
+  font-family: "Proxima Nova Alt Condensed";
 }
 
 h1 + p, h1 + span, h1 + a, h1 + h2 {
@@ -301,11 +296,11 @@ a:link:after, a:after {
 }
 
 a:hover {
-  color: #FF7400;
+  color: #ff8d00;
 }
 
 a:hover:after {
-  border-color: #FF7400;
+  border-color: #ff8d00;
 }
 
 a:active {
@@ -448,6 +443,10 @@ footer a:after {
   vertical-align: top;
 }
 
+#repos {
+  padding-left: 20px;
+}
+
 #repos select {
   outline: none;
 }
@@ -462,13 +461,18 @@ section .inner.home {
 }
 
 .section-header {
-  padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #DDD;
   border-top: 1px solid #DDD;
   margin-top: -1px;
   font-size: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-header span {
+  padding-left: 20px;
 }
 
 .tile {
@@ -507,7 +511,7 @@ section .inner.home {
 }
 
 .tile h1, h1.little {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 .tile a:link, .tile a, .tile h1, .tile, p {
@@ -528,7 +532,7 @@ section .inner.home {
 
 .home a .tile.blue h1 {
   width: 350px;
-  font-size: 3.5em;
+  font-size: 4em;
 }
 
 .home a .tile.blue p {
@@ -574,7 +578,7 @@ section .inner.home {
 }
 
 .home a .tile.blue .frame {
-  width: 540px;
+  width: 541px;
   height: 395px;
 }
 
@@ -598,7 +602,7 @@ section .inner.home {
 }
 
 .home a .tile.blue.web .frame-inner {
-  width: 482px;
+  width: 483px;
   height: 307px;
 }
 
@@ -650,6 +654,33 @@ section .inner.home {
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
        background-size: 600px auto;
+}
+
+/* Buttons */
+
+button, input[type="submit"] {
+  border: 0;
+  background: #ff8d00;
+  color: #FFF;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #ff991d;
+}
+
+button:active, input[type="submit"]:active {
+  background-color: #f18600;
+  position: relative;
+  top: 2px;
 }
 
 @media only screen and (max-width: 900px) {

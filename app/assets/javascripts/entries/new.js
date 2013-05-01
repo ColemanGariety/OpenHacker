@@ -162,7 +162,7 @@ function validateRepo() {
                             $("#entry_demo_url").val(found_demo)
                             $("#entry_github_repo_id").val(selected_repo.id)
                           } else {
-                            $("#check").append("<li id=\"refresh-message\"><br><i><span>Fix the problems and <a href='javascript:;' id='refresh-button'>refresh</a>, or <a href='javascript:;' id='change-repo-button'>pick a different repo</a>.</span></i></li>")
+                            $("#check").append("<li id=\"refresh-message\"><br><button id=\"refresh-button\">Refresh</button><button id=\"change-repo-button\">Choose a Different Repo</button></li>")
 
                             $("#refresh-button").click(function(){
                               $("#refresh-message").remove()
