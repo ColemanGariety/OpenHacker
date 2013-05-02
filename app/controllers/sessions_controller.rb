@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     # raise env['omniauth.auth'].to_yaml
     user = User.from_omniauth(env['omniauth.auth'])
     cookies.permanent[:user_id] = user.id
-    redirect_to root_url, :notice => "Signed in with GitHub."
+    redirect_to request.env['omniauth.origin'], :notice => "Signed in with GitHub."
   end
 
   # PUT /auth/github/update
