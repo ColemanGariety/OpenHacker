@@ -1,6 +1,6 @@
 <% if current_open_challenge %>
 
-  <div id="profile-header">
+  <header>
     <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
     <p>
       <b>Description:</b>
@@ -31,7 +31,7 @@
     <b>Time Remaining:</b>
     <%= distance_of_time_in_words(Time.now, current_open_challenge.opened_at + 1.week, true) %>
     </p>
-  </div>
+  </header>
 
   <div id="step-1" class="step focused">
     <h2>1. Choose a repository:</h2>
