@@ -15,12 +15,12 @@
 /* Selection */
 
 ::selection {
-  background: #ff8d00;
+  background: #FF7400;
   color: #FFF;
 }
 
 ::-moz-selection {
-  background: #ff8d00;
+  background: #FF7400;
   color: #FFF;
 }
 
@@ -84,7 +84,7 @@ footer {
 	padding: 0;
   color: #999;
   line-height: 50px;
-  font-family: "Proxima Nova Alt Condensed";
+  font-family: "ITC Franklin Condensed";
   font-size: 1.4em;
   border-top: 1px solid #DDD;
 }
@@ -104,7 +104,7 @@ nav {
   top: 0;
   margin: 0 auto;
   width: 100%;
-  font-family: "Proxima Nova Alt Condensed";
+  font-family: "ITC Franklin Condensed";
   overflow: hidden;
   padding-bottom: 10px;
   z-index: 1;
@@ -118,7 +118,7 @@ nav .inner {
   height: 50px;
   padding: 0;
   position: relative;
-  background-color: #ff8d00;
+  background-color: #FF7400;
   -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
      -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
           box-shadow: 0 1px 5px rgba(20,20,20,.2);
@@ -174,7 +174,7 @@ nav .inner .right a:last-child div {
 
 nav .inner .right a:hover div {
   background-color: #FFF;
-  color: #ff8d00;
+  color: #FF7400;
   border-color: transparent;
 }
 
@@ -250,7 +250,7 @@ h1 + p, p:first-child {
   margin-top: 0;
 }
 
-p:last-child {
+p:last-child, p.last {
   margin-bottom: 0;
 }
 
@@ -264,7 +264,7 @@ h1, h2, h3 {
 h1 {
   font-size: 3.25em;
   font-weight: 500;
-  font-family: "Proxima Nova Alt Condensed";
+  font-family: "ITC Franklin Condensed";
 }
 
 h1 + p, h1 + span, h1 + a, h1 + h2 {
@@ -296,11 +296,11 @@ a:link:after, a:after {
 }
 
 a:hover {
-  color: #ff8d00;
+  color: #FF7400;
 }
 
 a:hover:after {
-  border-color: #ff8d00;
+  border-color: #FF7400;
 }
 
 a:active {
@@ -660,7 +660,7 @@ section .inner.home {
 
 button, input[type="submit"] {
   border: 0;
-  background: #ff8d00;
+  background: #FF7400;
   color: #FFF;
   font-size: 1em;
   padding-left: 10px;
@@ -673,12 +673,17 @@ button, input[type="submit"] {
   margin-right: 15px;
 }
 
-button:hover, input[type="submit"]:hover {
-  background-color: #ff991d;
+button:hover, input[type="submit"]:hover, button:active, input[type="submit"]:active {
+  background-color: #FFF;
+  color: #FF7400;
+  border: 2px solid #FF7400;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 button:active, input[type="submit"]:active {
-  background-color: #f18600;
   position: relative;
   top: 2px;
 }
