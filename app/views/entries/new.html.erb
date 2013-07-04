@@ -21,18 +21,26 @@
       <li id="contributor_check"><span class="mark">&#10003;</span>Has valid collaborators</li>
       <li id="demo_check"><span class="mark">&#10003;</span>Has a valid demo URL</li>
       <li id="uniqueness_check"><span class="mark">&#10003;</span>Hasn't been submitted before</li>
+      <li id=\"refresh-message\">
+        <br>
+        <button id="refresh-button" disabled>Re-check</button>
+        <button class="change-repo-button" disabled>Choose a Different Repo</button>
+      </li>
     </ul>
   </div>
 
   <div id="step-3" class="step">
     <h2>3. Preview your entry:</h2>
-    <div id="preview">
-      <div class="image-wrap">
+    <br>
+    <a class="item">
+      <div class="web">
+        <div class="top-frame"><div class="top-frame-inner" style="background-image: url('foo');"></div></div>
+        <h1 class="little" id="repo-title"></h1>
+        <p id="repo-desc"></p>
       </div>
-      <h3>Title: </h3><span id="repo-title"></span><br><br>
-      <h3>Description: </h3><span id="repo-desc"></span><br><br>
-      <h3>URL: </h3><span id="repo-url"></span>
-    </div><br><br>
+    </a>
+    
+    <br><br>
 
     <%= form_for(@entry) do |f| %>
       <%= f.hidden_field :title %>
@@ -42,7 +50,8 @@
       <%= f.hidden_field :demo_url %>
       <%= f.hidden_field :github_repo_id %>
       <div class="actions">
-        <%= f.submit "Submit Entry" %>
+        <%= f.submit "Submit Entry", :disabled => "true" %>
+        <button class="change-repo-button" disabled>Choose a Different Repo</button>
       </div>
     <% end %>
   </div>

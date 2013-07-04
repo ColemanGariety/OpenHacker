@@ -7,7 +7,7 @@ validateRepo = ->
     $(".mark").html("&#10003;").attr "class", "mark"
     $("#step-2").removeClass "focused"
     $("#step-1").addClass "focused"
-    found_screenshot_jpg = false
+    found_screenshot_jpg = true
     found_description = false
     found_commits = false
     found_collaborators = []
@@ -23,8 +23,8 @@ validateRepo = ->
       dataType: "JSONP"
       success: (data) ->
         
-        # Fix WebKit flickering
-        $("nav").css "-webkit-backface-visibility", "hidden"
+        $("nav").css "-webkit-backface-visibility", "hidden" # Fix WebKit flickering
+        
         contents = data.data
         console.log contents, "Contents"
         i = 0
@@ -99,9 +99,15 @@ validateRepo = ->
                             $("#uniqueness_check").find(".mark").addClass "done"
                           else
                             $("#uniqueness_check").find(".mark").html("&#10006;").addClass("red").addClass "done"
+                          
+                          $("#step-2 button").removeAttr "disabled" # Enable buttons
+
                           if found_screenshot_jpg isnt false and found_description isnt false and found_commits isnt false and found_collaborators isnt false and found_demo isnt false and found_unique is true
                             $("#step-2").removeClass "focused"
                             $("#step-3").addClass "focused"
+                            $("#step-2 button").attr "disabled", "true" # Disable buttons
+                            $('#step-3 input[type="submit"], #step-3 button').removeAttr "disabled"
+                            alert selected_repo.name
                             $("#repo-title").html selected_repo.name
                             $("#repo-desc").html found_description
                             $("#repo-url").html "<a target=\"_blank\" href=\"" + found_demo + "\">" + found_demo + "</a>"
@@ -112,37 +118,37 @@ validateRepo = ->
                             $("#entry_thumb_url").val found_screenshot_jpg
                             $("#entry_demo_url").val found_demo
                             $("#entry_github_repo_id").val selected_repo.id
-                          else
-                            $("#check").append "<li id=\"refresh-message\"><br><button id=\"refresh-button\">Refresh</button><button id=\"change-repo-button\">Choose a Different Repo</button></li>"
-                            $("#refresh-button").click ->
-                              $("#refresh-message").remove()
-                              $("#refresh-button").off "click"
-                              $("#collaborators_list").html ""
-                              $(".mark").html("&#10003;").attr "class", "mark"
-                              found_screenshot_jpg = false
-                              found_description = false
-                              found_commits = false
-                              found_collaborators = []
-                              found_demo = false
-                              found_unique = true
-                              validateRepo()
 
-                            $("#change-repo-button").click ->
-                              $("#repos select").val "Pick one..."
-                              $("#refresh-message").remove()
-                              $("#refresh-button").off "click"
-                              $("#collaborators_list").html ""
-                              $(".mark").html("&#10003;").attr "class", "mark"
-                              $("#step-2").removeClass "focused"
-                              $("#step-1").addClass "focused"
-                              found_screenshot_jpg = false
-                              found_description = false
-                              found_commits = false
-                              found_collaborators = []
-                              found_demo = false
-                              found_unique = true
-
-
+                          $("#refresh-button").click ->
+                            $("#step-2 button").attr "disabled", "true" # Disable buttons
+                            $("#refresh-message").remove()
+                            $("#refresh-button").off "click"
+                            $("#collaborators_list").html ""
+                            $(".mark").html("&#10003;").attr "class", "mark"
+                            found_screenshot_jpg = false
+                            found_description = false
+                            found_commits = false
+                            found_collaborators = []
+                            found_demo = false
+                            found_unique = true
+                            validateRepo()
+                          
+                          $(".change-repo-button").click ->
+                            $('button, input[type="submit"]').attr "disabled", "true" # Disable buttons
+                            $("#repos select").val "null"
+                            $("#refresh-message").remove()
+                            $("#refresh-button").off "click"
+                            $("#collaborators_list").html ""
+                            $(".mark").html("&#10003;").attr "class", "mark"
+                            $("#step-2").removeClass "focused"
+                            $("#step-3").removeClass "focused"
+                            $("#step-1").addClass "focused"
+                            found_screenshot_jpg = false
+                            found_description = false
+                            found_commits = false
+                            found_collaborators = []
+                            found_demo = false
+                            found_unique = true
                     ), 250
                   ), 250
 

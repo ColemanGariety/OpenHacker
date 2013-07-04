@@ -80,7 +80,7 @@ header#about {
   border-style: none;
   padding: 0;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -629,14 +629,14 @@ section .inner.home {
 /* Top page */
 
 .item {
-	border-top: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
+	border: 1px solid #DDD;
 	width: 100%;
 	text-decoration: none;
-	margin-left: -20px;
-	padding-right: 40px;
-	padding-top: 20px;
 	margin-top: -1px;
+	
+	p {
+  	margin: 0;
+	}
 }
 
 .item:after {
@@ -652,7 +652,7 @@ section .inner.home {
 .item .top-frame {
   border-right: 1px solid #DDD;
   margin-right: 20px;
-  margin-top: -20px;
+  margin-top: 0;
   padding-bottom: 20px;
   background-position: 0 10px;
   width: 350px;
@@ -663,6 +663,16 @@ section .inner.home {
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
        background-size: 600px auto;
+}
+
+#step-3 .item {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 818px;
+}
+
+#step-3 .actions {
+  padding-left: 20px;
 }
 
 /* Buttons */
@@ -680,21 +690,41 @@ button, input[type="submit"] {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   margin-right: 15px;
-}
 
-button:hover, input[type="submit"]:hover, button:active, input[type="submit"]:active {
-  background-color: #FFF;
-  color: #FF7400;
-  border: 2px solid #FF7400;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
+  &:hover, input[type="submit"]:hover, &:active, input[type="submit"]:active {
+    background-color: #FFF;
+    color: #FF7400;
+    border: 2px solid #FF7400;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  &:active, input[type="submit"]:active {
+    position: relative;
+    top: 2px;
+  }
 
-button:active, input[type="submit"]:active {
-  position: relative;
-  top: 2px;
+  &:disabled {
+    background: #CCC;
+    
+    &:hover, input[type="submit"]:hover, &:active, input[type="submit"]:active {
+      background: #CCC;
+      border: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      color: #FFF;
+      cursor: default;
+    }
+    
+    &:active, input[type="submit"]:active {
+      position: static;
+      top: auto;
+    }
+  }
 }
 
 /* Moderator Tools */
