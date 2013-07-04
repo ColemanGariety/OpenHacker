@@ -1,6 +1,9 @@
 <% content_for :section_class, "home" %>
 
-<div class="section-header"><span>Winners of the <b>"<%= current_closed_challenge.title %>"</b> challenge:</span></div>
+<header id="section">
+  <span>Winners of the <b><%= link_to "#{current_closed_challenge.title}", current_closed_challenge %></b> challenge:</span>
+</header>
+
 <% @entries.each_with_index do |entry, i| %>
   <%= link_to entry do %>
     <div class="tile<%= entry.platform == "web" ? " web" : " iphone" %><%= i % 3 == 0 || i % 3 == 1 ? (i % 3 == 0 ? " blue" : " red") : " yellow" %>">
@@ -13,3 +16,7 @@
   </a>
   <% end %>
 <% end %>
+
+<header id="section">
+  <span><%= link_to "View more entries&hellip;".html_safe, challenges_url %></span>
+</header>

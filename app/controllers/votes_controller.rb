@@ -34,4 +34,10 @@ class VotesController < ApplicationController
       end
     end
   end
+
+private
+
+  def vote_params
+    params.require(:vote).permit(:entry_id, :value, :user_id)
+  end
 end

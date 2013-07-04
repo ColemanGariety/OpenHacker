@@ -70,6 +70,42 @@ nav .inner, section .inner, footer{
   margin: 0 auto;
 }
 
+header {
+	border: 1px dashed #DDD;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+header#about {
+  border-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header#section {
+  padding: 0;
+  border: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin-top: -1px;
+  font-size: 1.15em;
+  display: inline-block;
+  width: 100%;
+  
+  a {
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  span {
+    padding-left: 20px;
+  }
+}
+
 section .inner {
   overflow: auto;
 	padding-top: 70px;
@@ -319,14 +355,6 @@ footer a:after {
   bottom: 14px !important;
 }
 
-/* About */
-
-#about-header {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 /* Profiles */
 
 #default {
@@ -342,12 +370,6 @@ footer a:after {
   -webkit-border-radius: 180px;
   	 -moz-border-radius: 180px;
   		    border-radius: 180px;
-}
-
-#profile-header {
-	border: 1px dashed #DDD;
-	padding: 20px;
-	margin-bottom: 20px;
 }
 
 .bio {
@@ -458,21 +480,6 @@ section .inner.home {
   padding-right: 0;
   padding-top: 50px;
   max-width: 900px;
-}
-
-.section-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DDD;
-  border-top: 1px solid #DDD;
-  margin-top: -1px;
-  font-size: 1em;
-  display: inline-block;
-  width: 100%;
-}
-
-.section-header span {
-  padding-left: 20px;
 }
 
 .tile {

@@ -1,35 +1,35 @@
-<div id="profile-header">
+<header>
 <h1><%= @challenge.title %></h1>
 
-<p>
-  <b>Description:</b> <%= @challenge.description %>
-</p>
+  <p>
+    <b>Description:</b> <%= @challenge.description %>
+  </p>
+  
+  <p>
+    <b>Suggested by:</b> <%= link_to @user.full_name, @user %>
+  </p>
+  
+  <p>
+    <b>Rules:</b> <%= current_open_challenge.rules %>
+  </p>
+  
+  <p>
+    <b>Prizes:</b> <%= current_open_challenge.prize %>
+  </p>
+  
+  <% if @challenge.status == 2 %>
+    <b>Submission deadline:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
+  <% elsif @challenge.status == 3 %>
+    <b>Voting deadline:</b> <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+  <% elsif @challenge.status == 4 %>
+    <b>Challenge Ended:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
+  <% end %>
+  
+  <p<%= " class=" + (@voted_percentage == 100 ? "green" : "red") %>>
+    You've voted on <b><%= @voted_percentage %>%</b> of the entries in this challenge
+  </p>
 
-<p>
-  <b>Suggested by:</b> <%= link_to @user.full_name, @user %>
-</p>
-
-<p>
-  <b>Rules:</b> <%= current_open_challenge.rules %>
-</p>
-
-<p>
-  <b>Prizes:</b> <%= current_open_challenge.prize %>
-</p>
-
-<% if @challenge.status == 2 %>
-  <b>Submission deadline:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
-<% elsif @challenge.status == 3 %>
-  <b>Voting deadline:</b> <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
-<% elsif @challenge.status == 4 %>
-  <b>Challenge Ended:</b> <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
-<% end %>
-
-<p<%= " class=" + (@voted_percentage == 100 ? "green" : "red") %>>
-  You've voted on <b><%= @voted_percentage %>%</b> of the entries in this challenge
-</p>
-
-</div>
+</header>
 
 <% if @entries.empty? %>
  <p>No entries have been submitted yet.</p>

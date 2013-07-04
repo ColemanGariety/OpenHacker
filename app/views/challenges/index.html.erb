@@ -1,19 +1,19 @@
-<div id="profile-header">
-  <h1>Past Challenges</h1>
+<header>
+  <h1>Challenge Archives</h1>
   <p>A list of ended challenges in chronological order.</p>
-</div>
+</header>
 
 <ul>
-<% @challenges.each do |challenge| %>
-
-  <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
-    <span><%= link_to challenge.title, challenge %></span>
-    <span><%= challenge.description %></span>
-    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
-    <% if current_user && is_moderator(current_user) %>
-    	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
-    	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
-    <% end %>
-  </li>
-<% end %>
+  <% @challenges.each do |challenge| %>
+  
+    <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
+      <span><%= link_to challenge.title, challenge %></span>
+      <span><%= challenge.description %></span>
+      <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
+      <% if current_user && is_moderator(current_user) %>
+      	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
+      	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
+      <% end %>
+    </li>
+  <% end %>
 </ul>
