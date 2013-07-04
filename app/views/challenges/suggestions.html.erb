@@ -7,13 +7,12 @@
 <% @challenges.each do |challenge| %>
 
   <li>
-    <span><%= challenge.description %></span><br>
-    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
+    <span><%= challenge.description %></span>
     <% if current_user && is_moderator(current_user) %>
-  	  [Mod: <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>&nbsp;,
-  	  <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td> or
-  	  <td><%= link_to 'Approve', challenge, method: :approve %></td> ]
+  	  <span class="mod"> &mdash; <%= link_to 'Edit', edit_challenge_path(challenge) %>, <%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %>, or <%= link_to 'Approve', challenge, method: :approve %></span>
     <% end %>
+    <br>
+    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
   </li>
 <% end %>
 </ul>

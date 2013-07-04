@@ -1,11 +1,20 @@
 <header>
   <div style="background-image: url(http://www.gravatar.com/avatar/<%= @user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default"></div>
-  <h1><%= @user.full_name %></h1>
+  <h1>
+    <%= @user.full_name %>
+    <% if current_user && is_moderator(current_user) %>
+      <span class="mod">&mdash; <%= link_to 'Ban', "/users/#{@user.username}/ban", :method => "put", :remote => true, data: { confirm: 'Are you sure? This user will be banned for seven days.' }  %></span>
+    <% end %>
+  </h1>
+  
+  <%= "<span>Moderator</span><br>".html_safe if is_moderator(@user) %><br>
+  
   <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
-  <%= 'Hireable' if @user.hireable%>
-  <%= '- Moderator' if is_moderator(@user) %>
-  <%= link_to 'Ban', "/users/#{@user.username}/ban", :method => "put", :remote => true, data: { confirm: 'Are you sure? This user will be banned for seven days.' }  %>
+  
+  <%= 'Hireable' if @user.hireable %>
+  
   <p class="bio"><%= @user.bio %></p>
+  
   <div class="clearfix"></div>
 </header>
 

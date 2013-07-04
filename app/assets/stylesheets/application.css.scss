@@ -697,6 +697,13 @@ button:active, input[type="submit"]:active {
   top: 2px;
 }
 
+/* Moderator Tools */
+
+.mod {
+  font-size: 16px;
+  opacity: .5;
+}
+
 @media only screen and (max-width: 900px) {
   section, .inner, nav .inner .left, nav a:last-child div {
     border: none !important;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield(:title) or "The Dojo" %></title>
+  <title><%= yield(:title) or "OpenChallenge" %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "#{params[:controller]}/#{params[:action]}.css" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.css") %>
   <%= csrf_meta_tags %>
@@ -18,7 +18,7 @@
   <nav>
     <div class="inner">
       <a href="/" class="left">
-        <h2>The Dojo</h2>
+        <h2>Open Hacker</h2>
       </a>
       <div class="middle">
         <%= yield(:middle) %>
@@ -47,15 +47,19 @@
     <div class="inner">
       <%= link_to "News", "http://thelist.io/", :target => "_blank" %>
       <span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Top Entries", top_path %>
+      <%= link_to "Hall of Fame", top_path %>
       <span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Suggestions", challenge_suggestions_path %>
+      <%= link_to "Ideas", challenge_suggestions_path %>
       <span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Challenge Archives", challenges_path %>
+      <%= link_to "Archives", challenges_path %>
       <span>&nbsp;&#8226;&nbsp;</span>
       <%= link_to "Rules", rules_path %>
-      <%= "<span>&nbsp;&#8226;&nbsp;</span>".html_safe if current_user %>
-      <%= (link_to "About".html_safe, about_path) if current_user %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Source Code", "https://github.com/jacksonGariety/the-challenge", :target => "_blank" %>
+      <% if current_user %>
+        <span>&nbsp;&#8226;&nbsp;</span>
+        <%= link_to "About".html_safe, about_path%>
+      <% end %>
     </div>
   </footer>
   <%= javascript_include_tag "application" %>
