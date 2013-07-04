@@ -40,6 +40,6 @@ class User < ActiveRecord::Base
   end
 
   def to_param
-    username
+    username.to_s
   end
 end

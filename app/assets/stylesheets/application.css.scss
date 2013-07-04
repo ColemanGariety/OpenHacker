@@ -569,6 +569,7 @@ section .inner.home {
 .tile.web .frame {
   width: 350px;
   height: 225px;
+  -webkit-transform: translateZ(0);
   background-image: url('/assets/frame_web@2x.png');
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;

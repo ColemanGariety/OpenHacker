@@ -72,6 +72,8 @@ class EntriesController < ApplicationController
     @entry = Entry.new
 
     @suggested_by = User.find(current_open_challenge.user_id)
+    
+    @challenge = current_open_challenge
 
     respond_to do |format|
       format.html # new.html.erb

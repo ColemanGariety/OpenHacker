@@ -1,37 +1,6 @@
 <% if current_open_challenge %>
 
-  <header>
-    <h1 id="challenge" data-opened-at="<%= current_open_challenge.opened_at.strftime("%FT%T%:z") %>">Submit to "<%= current_open_challenge.title %>"</h1>
-    <p>
-      <b>Description:</b>
-      <%= current_open_challenge.description %>
-    </p>
-
-    <% if current_open_challenge.rules %>
-    <p>
-      <b>Rules:</b>
-      <%= current_open_challenge.rules %>
-    </p>
-    <% end %>
-
-
-    <% if current_open_challenge.prize %>
-    <p>
-      <b>Prizes:</b>
-      <%= current_open_challenge.prize %>
-    </p>
-    <% end %>
-
-    <p>
-      <b>Challenge Started:</b>
-      <%= time_ago_in_words(current_open_challenge.created_at) %> ago
-    </p>
-
-    <p>
-    <b>Time Remaining:</b>
-    <%= distance_of_time_in_words(Time.now, current_open_challenge.opened_at + 1.week, true) %>
-    </p>
-  </header>
+  <%= render "challenges/header" %>
 
   <div id="step-1" class="step focused">
     <h2>1. Choose a repository:</h2>

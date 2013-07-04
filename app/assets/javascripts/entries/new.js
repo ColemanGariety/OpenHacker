@@ -89,7 +89,7 @@ function validateRepo() {
 
           setTimeout(function(){
             // Check initial commit
-            var opened_at = new Date($("#challenge").attr("data-opened-at"))
+            var opened_at = new Date($("h1").attr("data-opened-at"))
             var created_at = new Date(selected_repo.created_at)
 
             console.log(opened_at + ":" + created_at)

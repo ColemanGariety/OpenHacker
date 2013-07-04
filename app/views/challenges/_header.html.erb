@@ -1,0 +1,74 @@
+<header>
+  <h1 data-opened-at="<%= @challenge.opened_at.strftime("%FT%T%:z") %>">
+    <%=
+      case @challenge.status
+      when 2
+        "Submit to #{@challenge.title}"
+      when 3
+        "Vote on #{@challenge.title}"
+      else
+        @challenge.title
+      end
+    %>
+  </h1>
+  
+  <p>
+    <b>Description:</b>
+    <%= @challenge.description %>
+  </p>
+
+  <p>
+    <b>Suggested by:</b>
+    <%= link_to @challenge.user.full_name, @challenge.user %> 
+  </p>
+
+  <% if @challenge.rules %>
+    <p>
+      <b>Rules:</b>
+      <%= @challenge.rules %>
+    </p>
+  <% end %>
+
+  <% if @challenge.prize %>
+    <p>
+      <b>Prizes:</b>
+      <%= @challenge.prize %>
+    </p>
+  <% end %>
+  
+  <% 
+    case @challenge.status
+    when 2
+  %>
+    <p>
+      <b>Challenge Started:</b>
+      <%= time_ago_in_words(@challenge.created_at) %> ago
+    </p>
+    
+    <p>
+      <b>Submission Deadline:</b>
+      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %>
+    </p>
+  <% when 3 %>
+    <p>
+      <b>Voting Began:</b>
+      <%= time_ago_in_words(@challenge.opened_at + 1.week) %> ago
+    </p>
+    
+    <p>
+      <b>Voting Deadline:</b>
+      <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+    </p>
+  <% when 4 %>
+    <p>
+      <b>Challenge Ended:</b>
+      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> ago
+    </p>
+  <% end %>
+  
+  <% if @challenge.status == 3 %>
+    <p<%= " class=" + (@challenge.voted_percentage == 100 ? "green" : "red") %>>
+      You've voted on <b><%= @challenge.voted_percentage %>%</b> of the entries in this challenge
+    </p>
+  <% end %>
+</header>

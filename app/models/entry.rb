@@ -5,5 +5,4 @@ class Entry < ActiveRecord::Base
   has_many :votes
   
   validates_uniqueness_of :github_repo_id
-  
 end

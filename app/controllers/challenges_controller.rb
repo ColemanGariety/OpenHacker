@@ -25,14 +25,8 @@ class ChallengesController < ApplicationController
   # GET /challenge/1.json
   def show
     @challenge = Challenge.find(params[:id])
-
-    @user = @challenge.user
-
-    @entries = @challenge.entries
-
-    votes = @entries.collect(&:votes).flatten
-
-    @voted_percentage = ((votes.select { |v| v.user_id == current_user.id }.flatten.count.to_f / @entries.count.to_f) * 100).to_i
+    @challenge.votes = @challenge.entries.collect(&:votes).flatten
+    @challenge.voted_percentage = ((@challenge.votes.select { |v| v.user_id == current_user.id }.flatten.count.to_f / @challenge.entries.count.to_f) * 100).to_i
 
     respond_to do |format|
       format.html # show.html.erb
@@ -93,7 +87,6 @@ class ChallengesController < ApplicationController
 
   # 11:59 PM Sunday, PST
   def cron
-
     # Open approved challenge
   	open_challenge = Challenge.find_by_status(1)
   	if open_challenge && !open_challenge.entries.empty?
@@ -138,6 +131,6 @@ class ChallengesController < ApplicationController
 private
 
   def challenge_params
-    params.require(:challenge).permit(:description, :user_id, :title)
+    params.require(:challenge).permit(:description, :user_id, :title, :voted_percentage)
   end
 end
