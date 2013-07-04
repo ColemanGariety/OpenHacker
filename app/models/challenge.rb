@@ -1,5 +1,5 @@
 class Challenge < ActiveRecord::Base
-  attr_accessible :description, :user_id, :title
+  attr_accessible :description, :user_id, :title, :prize, :status
 
   belongs_to :user
 
