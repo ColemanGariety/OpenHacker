@@ -88,23 +88,23 @@ class ChallengesController < ApplicationController
   # 11:59 PM Sunday, PST
   def cron
     # Open approved challenge
-  	open_challenge = Challenge.find_by_status(1)
+  	open_challenge = Challenge.find_by_status(Challenge::STATUSES[:approved])
   	if open_challenge && !open_challenge.entries.empty?
-    	open_challenge.update_attributes(:status => 2, :opened_at => Time.now)
+    	open_challenge.update_attributes(:status => Challenge::STATUSES[:open], :opened_at => Time.now)
     	open_challenge.save
   	end
 
   	# Move open challenge into voting
-  	voting_challenge = Challenge.find_by_status(2)
+  	voting_challenge = Challenge.find_by_status(Challenge::STATUSES[:open])
   	if voting_challenge && !voting_challenge.entries.empty?
-    	voting_challenge.status = 3
+    	voting_challenge.status = Challenge::STATUSES[:voting]
     	voting_challenge.save
   	end
 
   	# Close the voting challenge
-  	closed_challenge = Challenge.find_by_status(3)
+  	closed_challenge = Challenge.find_by_status(Challenge::STATUSES[:voting])
   	if closed_challenge && !closed_challenge.entries.empty?
-  	  closed_challenge.status = 4
+  	  closed_challenge.status = Challenge::STATUSES[:closed]
   	  closed_challenge.save
   	end
   end

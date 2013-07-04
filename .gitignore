@@ -18,5 +18,5 @@
 /config/local_env.yml
 /config/database.yml
 
-Ignore API keys
+# Ignore API keys & config
 /config/variables.yml

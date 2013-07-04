@@ -69,15 +69,21 @@ class EntriesController < ApplicationController
   # GET /entries/new
   # GET /entries/new.json
   def new
-    @entry = Entry.new
-
-    @suggested_by = User.find(current_open_challenge.user_id)
-    
     @challenge = current_open_challenge
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @entry }
+    submission = Entry.find_by_challenge_id_and_user_id(@challenge.id, current_user.id)
+    
+    if submission.blank?
+      @entry = Entry.new
+    
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @entry }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to submission }
+        format.json { render json: submission }
+      end
     end
   end
 
@@ -95,13 +101,22 @@ class EntriesController < ApplicationController
     @entry.user_id = current_user.id
     @entry.challenge_id = current_open_challenge.id
 
-    respond_to do |format|
-      if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render json: @entry, status: :created, location: @entry }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
+    submission = Entry.find_by_challenge_id_and_user_id(@entry.challenge_id, @entry.user_id)
+    
+    if submission.blank?
+      respond_to do |format|
+        if @entry.save
+          format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+          format.json { render json: @entry, status: :created, location: @entry }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @entry.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to submission }
+        format.json { render json: submission }
       end
     end
   end
