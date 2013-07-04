@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-if(Rails.env.development?)
+if ENV['RAILS_ENV'] == 'development'
 	User.create()
 
 	user = User.first
 	puts 'created a blank user'
 	(1..5).each do |n|
-		Challenge.create(title: "Entry #{n}", description: "I am challenge #{n}", user_id: user.id, prize: "#{n + 1} unicorns", status: n - 1)
+		Challenge.create(title: "Challenge #{n}", description: "I am challenge #{n}", user_id: user.id, prize: "#{n + 1} unicorns", status: n - 1)
 		puts "created challenge #{n}"
 	end
 	Challenge.last(4).each do |challenge|
