@@ -132,4 +132,10 @@ class EntriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+
+  def entry_params
+    params.require(:entry).permit(:description, :challenge_id, :repo_url, :user_id, :thumb_url, :title, :demo_url, :github_repo_id)
+  end
 end

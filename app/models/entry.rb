@@ -1,6 +1,4 @@
 class Entry < ActiveRecord::Base
-  attr_accessible :description, :challenge_id, :repo_url, :user_id, :thumb_url, :title, :demo_url, :github_repo_id
-
   belongs_to :user
   belongs_to :challenge
 

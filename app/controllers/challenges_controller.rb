@@ -60,7 +60,7 @@ class ChallengesController < ApplicationController
   # POST /challenge
   # POST /challenge.json
   def create
-    @challenge = Challenge.new(params[:challenge])
+    @challenge = Challenge.new(challenge_params)
 
     @challenge.user_id = current_user.id
 
@@ -81,7 +81,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
 
     respond_to do |format|
-      if @challenge.update_attributes(params[:challenge])
+      if @challenge.update_attributes(challenge_params)
         format.html { redirect_to @challenge, notice: 'Challenge was successfully updated.' }
         format.json { head :no_content }
       else
@@ -133,5 +133,11 @@ class ChallengesController < ApplicationController
   end
 
   def about
+  end
+
+private
+
+  def challenge_params
+    params.require(:challenge).permit(:description, :user_id, :title)
   end
 end

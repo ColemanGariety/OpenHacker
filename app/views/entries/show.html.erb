@@ -3,7 +3,7 @@
   <div id="note-button">Leave a Note</div>
   <div id="star-space">
   	<% 4.times do |i| %>
-  		<div class="star-wrapper<%= " voted" if @voted_value == 4 - i %>"><%= link_to "<div class=\"star\"></div>".html_safe, vote_path(:value => 4 - i, :entry_id => entry_id), :method => "put" %></div>
+  		<div class="star-wrapper<%= " voted" if @voted_value == 4 - i %>"><%= link_to "<div class=\"star\"></div>".html_safe, cast_path(:value => 4 - i, :entry_id => entry_id), :method => "put" %></div>
   	<% end %>
   </div>
 <% end %>

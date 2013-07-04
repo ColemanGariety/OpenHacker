@@ -1,7 +1,6 @@
 ThechallengeIo::Application.routes.draw do
   root :to => "entries#index"
 
-
   resources :challenges
   resources :entries
   resources :users
@@ -9,17 +8,17 @@ ThechallengeIo::Application.routes.draw do
 
   get 'suggestions' => 'challenges#suggestions', :as => 'challenge_suggestions'
 
-  match 'top' => 'entries#top', :as => 'top'
-  match 'submit' => "entries#new", :as => 'submit'
-  match 'auth/github/callback' => 'sessions#create'
-  match "auth/github", :as => "auth"
-  match "auth/github/update" => "sessions#update"
-  match 'auth/failure' => redirect("/")
-  match 'logout' => 'sessions#destroy', :as => 'signout'
-  match 'about' => 'challenges#about'
-  match 'rules' => 'challenges#rules'
-  match 'entries/:id/track' => 'entries#track'
+  get 'top' => 'entries#top', :as => 'top'
+  get 'submit' => "entries#new", :as => 'submit'
+  get 'auth/github/callback' => 'sessions#create'
+  get "auth/github", :as => "auth"
+  get "auth/github/update" => "sessions#update"
+  get 'auth/failure' => redirect("/")
+  get 'logout' => 'sessions#destroy', :as => 'signout'
+  get 'about' => 'challenges#about'
+  get 'rules' => 'challenges#rules'
+  get 'entries/:id/track' => 'entries#track'
 
   put 'users/:username/ban' => 'users#ban', :as => "ban"
-  put "vote", :to => "votes#vote", :as => :vote
+  put "vote", :to => "votes#vote", :as => :cast
 end
