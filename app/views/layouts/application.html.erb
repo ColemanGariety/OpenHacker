@@ -27,7 +27,7 @@
         <% if current_user %>
           <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
           <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
-          <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+          <%= link_to Entry.find_by_challenge_id_and_user_id(current_open_challenge.id, current_user.id).present? ? '<div>Your Entry</div>'.html_safe : '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
           <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
         <% else %>
           <%= link_to '<div>About</div>'.html_safe, about_path %>
@@ -55,7 +55,7 @@
       <span>&nbsp;&#8226;&nbsp;</span>
       <%= link_to "Rules", rules_path %>
       <span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Source Code", "https://github.com/jacksonGariety/the-challenge", :target => "_blank" %>
+      <%= link_to "Source Code", "https://github.com/JacksonGariety/OpenHacker", :target => "_blank" %>
       <% if current_user %>
         <span>&nbsp;&#8226;&nbsp;</span>
         <%= link_to "About".html_safe, about_path%>

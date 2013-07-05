@@ -1,3 +1,2 @@
-PERIOD: '10080' # Minutes between cronjob executions, default is 1 week (10080 minutes)
 GITHUB_KEY: 'YOUR_GITHUB_KEY'
 GITHUB_SECRET: 'YOUR_GITHUB_SECRET'
