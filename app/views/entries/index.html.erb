@@ -5,7 +5,7 @@
 </header>
 
 <% @entries.each_with_index do |entry, i| %>
-  <%= link_to entry do %>
+  <%= link_to entry.demo_url, :target => "_blank" do %>
     <div class="tile<%= entry.platform == "web" ? " web" : " iphone" %><%= i % 3 == 0 || i % 3 == 1 ? (i % 3 == 0 ? " blue" : " red") : " yellow" %>">
       <div class="inner">
         <h1><%= entry.title %></h1>
