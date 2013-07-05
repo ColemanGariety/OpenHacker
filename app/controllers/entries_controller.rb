@@ -96,6 +96,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
+    params.permit!
     @entry = Entry.new(params[:entry])
 
     @entry.user_id = current_user.id
