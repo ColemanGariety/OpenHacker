@@ -1,0 +1,25 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: thechallenge.dev
+  pool: 5
+  socket: /tmp/mysql.sock
+  username: root
+  password: root
+# 
+# test:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: tc-test
+#   pool: 5
+#   socket: /tmp/mysql.sock
+# 
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: tc-production
+#   pool: 5
+#   socket: /tmp/mysql.sock
