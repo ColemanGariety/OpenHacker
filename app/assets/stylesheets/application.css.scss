@@ -647,20 +647,31 @@ section .inner.home {
 	h1 {
   	padding-top: 20px;
   	padding-bottom: 20px;
+  	color: #444;
 	}
 	
 	p {
   	margin: 0;
     margin-right: 20px;
 	}
-}
-
-.item:last-child {
-  margin-bottom: 20px;
-}
-
-.item:after {
-  display: none;
+	
+  &:last-child {
+    margin-bottom: 20px;
+  }
+  
+  &:after {
+    display: none;
+  }
+  
+  &:hover {
+    .top-frame {
+      opacity: .8;
+    }
+  
+    h1, p {
+      color: #888;
+    }
+  }
 }
 
 .top-frame-inner {

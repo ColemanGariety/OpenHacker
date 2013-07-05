@@ -4,11 +4,17 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @entries }
+    if current_closed_challenge.present?
+      @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
+  
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @entries }
+      end
+    else
+      respond_to do |format|
+        format.html { render "challenges/about" }
+      end
     end
   end
 
