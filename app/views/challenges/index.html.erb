@@ -6,8 +6,8 @@
 <ul>
   <% @challenges.each do |challenge| %>
     <li>
-      <b><%= challenge.description %></b><%= render "mod", :challenge => challenge %><br>
-      <span>Ended <%= time_ago_in_words(challenge.opened_at + 1.week) %> ago by <%= link_to challenge.user.full_name, challenge.user %></span>
+      <b><%= challenge.description %></b><br>
+      <span>Ended <%= time_ago_in_words(challenge.opened_at + 1.week) %> ago</span>
     </li><br>
   <% end %>
 </ul>
