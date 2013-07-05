@@ -1,18 +1,18 @@
 <header>
-  <h1>Ideas</h1>
+  <h1>Challenge Suggestions</h1>
   <p>Tell us your challenge idea <%= link_to 'here', new_challenge_path %>.</p>
 </header>
 
-<ul>
-<% @challenges.each do |challenge| %>
 
-  <li>
-    <span><%= challenge.description %></span>
-    <% if current_user && is_moderator(current_user) %>
-  	  <span class="mod"> &mdash; <%= link_to 'Edit', edit_challenge_path(challenge) %>, <%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %>, or <%= link_to 'Approve', challenge, method: :approve %></span>
+<% if @challenges.empty? %>
+  <p>No new ideas right now...</p>
+<% else %>
+  <ul>
+    <% @challenges.each do |challenge| %>
+      <li>
+        <b><%= challenge.description %></b><%= render "mod", :challenge => challenge %><br>
+        <span>Suggested <%= time_ago_in_words(challenge.created_at) %> ago by <%= link_to challenge.user.full_name, challenge.user %></span>
+      </li><br>
     <% end %>
-    <br>
-    <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
-  </li>
+  </ul>
 <% end %>
-</ul>

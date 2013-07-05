@@ -121,7 +121,7 @@ footer {
 	padding: 0;
   color: #999;
   line-height: 50px;
-  font-family: "ITC Franklin Condensed";
+  font-family: "ITC Franklin Condensed", sans-serif;
   font-size: 1.4em;
   border-top: 1px solid #DDD;
 }
@@ -141,7 +141,7 @@ nav {
   top: 0;
   margin: 0 auto;
   width: 100%;
-  font-family: "ITC Franklin Condensed";
+  font-family: "ITC Franklin Condensed", sans-serif;
   overflow: hidden;
   padding-bottom: 10px;
   z-index: 1;
@@ -301,7 +301,7 @@ h1, h2, h3 {
 h1 {
   font-size: 3.25em;
   font-weight: 500;
-  font-family: "ITC Franklin Condensed";
+  font-family: "ITC Franklin Condensed", sans-serif;
 }
 
 h1 + p, h1 + span, h1 + a, h1 + h2 {

@@ -1,19 +1,13 @@
 <header>
-  <h1>Archives</h1>
+  <h1>Challenge Archives</h1>
   <p>A list of ended challenges in chronological order.</p>
 </header>
 
 <ul>
   <% @challenges.each do |challenge| %>
-  
-    <li><b><%= challenge.opened_at.strftime("Started on %m/%d/%Y") %></b>
-      <span><%= link_to challenge.title, challenge %></span>
-      <span><%= challenge.description %></span>
-      <span>Suggested by <%= link_to challenge.user.full_name, challenge.user %></span>
-      <% if current_user && is_moderator(current_user) %>
-      	[Mod: <span><%= link_to 'Edit', edit_challenge_path(challenge) %></span> or
-      	<span><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
-      <% end %>
-    </li>
+    <li>
+      <b><%= challenge.description %></b><%= render "mod", :challenge => challenge %><br>
+      <span>Ended <%= time_ago_in_words(challenge.opened_at + 1.week) %> ago by <%= link_to challenge.user.full_name, challenge.user %></span>
+    </li><br>
   <% end %>
 </ul>

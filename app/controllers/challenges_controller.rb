@@ -13,7 +13,7 @@ class ChallengesController < ApplicationController
   # GET /suggestions
   # GET /suggestions.json
   def suggestions
-    @challenges = Challenge.all
+    @challenges = Challenge.where("status = #{Challenge::STATUSES[:suggested]} or status = #{Challenge::STATUSES[:approved]}")
 
     respond_to do |format|
       format.html
@@ -55,7 +55,7 @@ class ChallengesController < ApplicationController
   # POST /challenge.json
   def create
     @challenge = Challenge.new(challenge_params)
-
+    @challenge.status = 0
     @challenge.user_id = current_user.id
 
     respond_to do |format|

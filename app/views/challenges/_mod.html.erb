@@ -1,0 +1,3 @@
+<% if current_user && is_moderator(current_user) %>
+  <span class="mod"> &mdash; <%= link_to 'Edit', edit_challenge_path(challenge) %>, <%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %>, or <%= link_to 'Approve', challenge, method: :approve %></span>
+<% end %>
