@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130419060029) do
+ActiveRecord::Schema.define(version: 20130705201438) do
 
   create_table "challenges", force: true do |t|
     t.string   "title"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20130419060029) do
     t.integer  "status"
     t.datetime "opened_at"
   end
+
+  add_index "challenges", ["status", "opened_at"], name: "index_challenges_on_status_and_opened_at", using: :btree
 
   create_table "entries", force: true do |t|
     t.string   "title"
@@ -39,9 +41,11 @@ ActiveRecord::Schema.define(version: 20130419060029) do
     t.string   "platform"
   end
 
+  add_index "entries", ["challenge_id", "user_id"], name: "index_entries_on_challenge_id_and_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "github_uid"
-    t.string   "username",     default: "", null: false
+    t.string   "username"
     t.string   "email"
     t.string   "full_name"
     t.string   "gravatar_id"
@@ -50,8 +54,8 @@ ActiveRecord::Schema.define(version: 20130419060029) do
     t.string   "location"
     t.boolean  "hireable"
     t.text     "bio"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.text     "ribbon_array"
     t.string   "github_token"
     t.string   "banned_at"
@@ -65,5 +69,7 @@ ActiveRecord::Schema.define(version: 20130419060029) do
     t.datetime "updated_at",                 null: false
     t.boolean  "ignore",     default: false
   end
+
+  add_index "votes", ["value", "entry_id", "user_id"], name: "index_votes_on_value_and_entry_id_and_user_id", using: :btree
 
 end
