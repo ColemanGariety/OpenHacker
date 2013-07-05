@@ -1,5 +1,7 @@
-<h1>Suggest a Challenge</h1>
-<p>Tell us your challenge idea in 1024 UTF-32 bytes or less...</p>
+<header>
+  <h1>Suggest a Challenge</h1>
+  <p>Tell us your challenge idea in 1024 UTF-32 bytes or less...</p>
+</header>
 
 <%= form_for(@challenge) do |f| %>
 
@@ -15,11 +17,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Suggest Challenge" %>
-  </div>
+  <%= f.text_area :description %><br>
+  
+  <%= f.submit "Submit" %>
 <% end %>

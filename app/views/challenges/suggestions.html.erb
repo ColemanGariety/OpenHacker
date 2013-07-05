@@ -1,6 +1,9 @@
 <header>
   <h1>Challenge Suggestions</h1>
-  <p>Tell us your challenge idea <%= link_to 'here', new_challenge_path %>.</p>
+  <p>Community-suggested ideas for challenges.</p>
+  <%= link_to new_challenge_path, :class => "noline" do %>
+    <button>Suggest a Challenge</button>
+  <% end %>
 </header>
 
 

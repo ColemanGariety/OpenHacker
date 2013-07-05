@@ -73,7 +73,7 @@ nav .inner, section .inner, footer{
 }
 
 header {
-	border: 1px dashed #AAA;
+	border: 1px dashed #888;
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -249,6 +249,10 @@ footer {
 
 select {
   font-size: 1em;
+}
+
+.noline:after {
+  display: none;
 }
 
 .clearfix {
@@ -631,7 +635,7 @@ section .inner.home {
 /* Top page */
 
 .item {
-	border: 1px dashed #DDD;
+	border: 1px dashed #CCC;
 	width: 100%;
 	text-decoration: none;
 	margin-top: -1px;
@@ -745,6 +749,21 @@ button, input[type="submit"] {
   font-size: 16px;
   opacity: .5;
 }
+
+/* Forms */
+
+textarea {
+  outline: 0;
+  border: 1px solid #CCC;
+  width: 400px;
+  height: 125px;
+}
+
+textarea:focus {
+  border-color: #888;
+}
+
+/* Responsiveness */
 
 @media only screen and (max-width: 900px) {
   section, .inner, nav .inner .left, nav a:last-child div {
