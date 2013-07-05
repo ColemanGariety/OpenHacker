@@ -107,6 +107,6 @@ class ChallengesController < ApplicationController
 private
 
   def challenge_params
-    params.require(:challenge).permit(:description, :user_id, :title, :voted_percentage)
+    params.require(:challenge).permit(:description, :user_id, :title)
   end
 end

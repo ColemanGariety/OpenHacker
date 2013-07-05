@@ -102,8 +102,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    params.permit!
-    @entry = Entry.new(params[:entry])
+    @entry = Entry.new(entry_params)
 
     @entry.user_id = current_user.id
     @entry.challenge_id = current_open_challenge.id
@@ -134,7 +133,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
 
     respond_to do |format|
-      if @entry.update_attributes(params[:entry])
+      if @entry.update_attributes(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { head :no_content }
       else

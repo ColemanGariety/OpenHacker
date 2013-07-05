@@ -663,7 +663,7 @@ section .inner.home {
     display: none;
   }
   
-  &:hover {
+  &:hover:not(:active) {
     .top-frame {
       opacity: .8;
     }

@@ -6,7 +6,7 @@
 <ul>
   <% @challenges.each do |challenge| %>
     <li>
-      <b><%= challenge.description %></b><br>
+      <h3><%= link_to challenge.description, challenge %></h3>
       <span>Ended <%= time_ago_in_words(challenge.opened_at + 1.week) %> ago</span>
     </li><br>
   <% end %>
