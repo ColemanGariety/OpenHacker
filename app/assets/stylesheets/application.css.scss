@@ -71,7 +71,7 @@ nav .inner, section .inner, footer{
 }
 
 header {
-	border: 1px dashed #DDD;
+	border: 1px dashed #AAA;
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -629,14 +629,24 @@ section .inner.home {
 /* Top page */
 
 .item {
-	border: 1px solid #DDD;
+	border: 1px dashed #DDD;
 	width: 100%;
 	text-decoration: none;
 	margin-top: -1px;
 	
+	h1 {
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+	}
+	
 	p {
   	margin: 0;
+    margin-right: 20px;
 	}
+}
+
+.item:last-child {
+  margin-bottom: 20px;
 }
 
 .item:after {
@@ -650,7 +660,7 @@ section .inner.home {
 }
 
 .item .top-frame {
-  border-right: 1px solid #DDD;
+  border-right: 1px dashed #DDD;
   margin-right: 20px;
   margin-top: 0;
   padding-bottom: 20px;

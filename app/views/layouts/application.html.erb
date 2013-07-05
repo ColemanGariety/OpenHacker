@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield(:title) or "OpenChallenge" %></title>
+  <title><%= @title or "OpenHacker" %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "#{params[:controller]}/#{params[:action]}.css" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.css") %>
   <%= csrf_meta_tags %>
@@ -18,7 +18,7 @@
   <nav>
     <div class="inner">
       <a href="/" class="left">
-        <h2>Open Hacker</h2>
+        <h2>OpenHacker</h2>
       </a>
       <div class="middle">
         <%= yield(:middle) %>

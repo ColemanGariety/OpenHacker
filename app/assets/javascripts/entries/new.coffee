@@ -107,7 +107,6 @@ validateRepo = ->
                             $("#step-3").addClass "focused"
                             $("#step-2 button").attr "disabled", "true" # Disable buttons
                             $('#step-3 input[type="submit"], #step-3 button').removeAttr "disabled"
-                            alert selected_repo.name
                             $("#repo-title").html selected_repo.name
                             $("#repo-desc").html found_description
                             $("#repo-url").html "<a target=\"_blank\" href=\"" + found_demo + "\">" + found_demo + "</a>"
