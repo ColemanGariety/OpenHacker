@@ -16,7 +16,10 @@ nav .inner .right a:last-child div, nav .inner .left {
 
 nav .inner .middle {
   position: absolute;
-  width: 100%;
+  width: 300px;
+  left: 50%;
+  margin-left: -125px;
+  height: 50px;
 }
 
 #note-button {
@@ -28,9 +31,6 @@ nav .inner .middle {
 #star-space {
 	display: inline-block;
 	height: 50px;
-	position: absolute;
-	left: 50%;
-	margin-left: -50px;
 	line-height: 50px;
 	top: 0;
 }
@@ -58,6 +58,7 @@ nav .inner .middle {
 	height: 25px;
 	width: 25px;
 	float: right;
+	margin-left: 5px;
 }
 
 #star-space .star-wrapper:hover .star, #star-space .star-wrapper:hover ~ .star-wrapper .star, #star-space .star-wrapper.voted .star, #star-space .star-wrapper.voted ~ .star-wrapper .star {
@@ -66,6 +67,23 @@ nav .inner .middle {
 
 #star-space .star-wrapper.cancelled .star {
 	background-image: url("/assets/star@2x.png") !important;
+}
+
+#star-space .star-wrapper:hover .star:after, #star-space .star-wrapper:hover ~ .star-wrapper .star:after, #star-space .star-wrapper.voted .star:after, #star-space .star-wrapper.voted ~ .star-wrapper .star:after {
+	content: attr(data-value);
+	position: relative;
+	left: 45%;
+	top: -56%;
+	color: #FF7400;
+	font-size: 8px;
+}
+
+.star-wrapper:hover .star {
+  -webkit-transform: scale(1.5);
+}
+
+.star-wrapper:first-child .star:after {
+  left: 40% !important;
 }
 
 .star-wrapper:active .star {
