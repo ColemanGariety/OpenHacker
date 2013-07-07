@@ -16,9 +16,9 @@ nav .inner .right a:last-child div, nav .inner .left {
 
 nav .inner .middle {
   position: absolute;
-  width: 300px;
+  width: 150px;
   left: 50%;
-  margin-left: -125px;
+  margin-left: -75px;
   height: 50px;
 }
 
@@ -79,15 +79,19 @@ nav .inner .middle {
 }
 
 .star-wrapper:hover .star {
-  -webkit-transform: scale(1.5);
-}
-
-.star-wrapper:first-child .star:after {
-  left: 40% !important;
+  -webkit-transform: scale(1.35);
+     -moz-transform: scale(1.35);
+      -ms-transform: scale(1.35);
+       -o-transform: scale(1.35);
+          transform: scale(1.35);
 }
 
 .star-wrapper:active .star {
-  opacity: .8;
+  -webkit-transform: scale(.9);
+     -moz-transform: scale(.9);
+      -ms-transform: scale(.9);
+       -o-transform: scale(.9);
+          transform: scale(.9);
 }
 
 section .inner {
