@@ -10,6 +10,7 @@
       <div class="inner">
         <h1><%= entry.title %></h1>
         <p><%= entry.description %></p>
+        <img class="ribbon" src="/assets/ribbon_<%= i == 0 ? "blue" : i == 1 ? "red" : "yellow" %>.png" width="<%= i == 0 ? 75 : 45 %>">
         <div class="frame"><div class="frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div></div>
       </div>
     </div>

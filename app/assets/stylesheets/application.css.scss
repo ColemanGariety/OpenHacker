@@ -544,7 +544,7 @@ section .inner.home {
   color: #111;
 }
 
-.tile:active .frame {
+.tile:active .frame, .tile:active .ribbon {
   opacity: 1 !important;
 }
 
@@ -603,6 +603,10 @@ section .inner.home {
 
 .tile:hover .frame {
   bottom: 0;
+  opacity: .8;
+}
+
+.tile:hover .ribbon {
   opacity: .8;
 }
 
@@ -678,9 +682,15 @@ section .inner.home {
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 292px;
+  height: 172px;
+  -moz-background-size: 500px auto;
+    -o-background-size: 500px auto;
+       background-size: 500px auto;
 }
 
 .item .top-frame {
+  position: relative;
   border-right: 1px dashed #DDD;
   margin-right: 20px;
   margin-top: 0;
@@ -792,6 +802,14 @@ textarea {
 textarea:focus {
   border-color: #888;
   color: #444;
+}
+
+/* Ribbons */
+
+.ribbon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 /* Responsiveness */
