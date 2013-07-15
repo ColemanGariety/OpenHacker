@@ -6,6 +6,6 @@
   		<div class="star-wrapper<%= " voted" if @voted_value == 5 - i %>"><%= link_to "<div class=\"star\" data-value=\"#{5 - i}\"></div>".html_safe, cast_path(:value => 5 - i, :entry_id => entry_id), :method => "put" %></div>
   	<% end %>
   </div>
-<% end %>
+<% end unless @entry.user == current_user %>
 
 <iframe src="<%= @entry.demo_url %>" id="demo-frame"></iframe>

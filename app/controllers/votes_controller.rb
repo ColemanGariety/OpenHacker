@@ -26,7 +26,7 @@ class VotesController < ApplicationController
     @vote.value = params[:value]
 
     respond_to do |format|
-      if @vote.save! && @previous_votes.each { |v| v.save! }
+      if @entry.user != current_user && @vote.save! && @previous_votes.each { |v| v.save! }
         format.html { redirect_to next_entry }
         format.json { render json: @vote, status: :created, location: @vote }
       else
