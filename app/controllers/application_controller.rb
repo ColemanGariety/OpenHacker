@@ -37,7 +37,7 @@ private
     end
   end
 
-  helper_method :current_user, :is_moderator, :current_open_challenge, :current_voting_challenge, :current_closed_challenge, :next_entry
+  helper_method :current_user, :is_moderator, :is_banned, :current_open_challenge, :current_voting_challenge, :current_closed_challenge, :next_entry
 
   def authenticate
     redirect_to "/auth/github" unless current_user

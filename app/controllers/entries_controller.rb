@@ -6,6 +6,8 @@ class EntriesController < ApplicationController
   def index
     if current_closed_challenge.present?
       @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
+      
+      @closed_challenge_count = Challenge.where("status = ? OR status = ?", 3, 4).count
   
       respond_to do |format|
         format.html # index.html.erb
@@ -110,7 +112,6 @@ class EntriesController < ApplicationController
     submission = Entry.find_by_challenge_id_and_user_id(@entry.challenge_id, @entry.user_id)
     
     if submission.blank?
-      raise @entry.inspect
       respond_to do |format|
         if @entry.save
           format.html { redirect_to @entry, notice: 'Entry was successfully created.' }

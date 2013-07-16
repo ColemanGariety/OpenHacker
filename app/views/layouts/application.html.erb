@@ -29,7 +29,7 @@
         <% if current_user %>
           <%= link_to "<div id=\"user\" data-username=\"#{current_user.username}\" data-token=\"#{current_user.github_token}\">#{current_user.full_name.split(" ").first}</div>".html_safe, current_user %>
           <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
-          <%= link_to Entry.find_by_challenge_id_and_user_id(current_open_challenge.id, current_user.id).present? ? '<div>Your Entry</div>'.html_safe : '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+          <%= link_to your_entry.present? ? "<div>#{your_entry.title[0..10] + (your_entry.title.length > 10 ? "&hellip;" : "")}</div>".html_safe : '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
           <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
         <% else %>
           <%= link_to '<div>About</div>'.html_safe, about_path %>

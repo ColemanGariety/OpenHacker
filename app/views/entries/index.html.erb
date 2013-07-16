@@ -19,6 +19,8 @@
   <% end %>
 <% end %>
 
-<header id="section">
-  <span><%= link_to "View past challenges&hellip;".html_safe, challenges_url %></span>
-</header>
+<% if @closed_challenge_count > 1 %>
+  <header id="section">
+    <span><%= link_to "View past challenges&hellip;".html_safe, challenges_url %></span>
+  </header>
+<% end %>
