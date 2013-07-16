@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_username(params[:id])
 
-    @entries = Entry.where(:user_id => @user.id)
+    @entries = Entry.where(:user_id => @user.id).sort_by { |entry| -entry.score }
 
     @challenges = Challenge.where(:user_id => @user.id)
 

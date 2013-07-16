@@ -12,16 +12,18 @@
  *= require typography
  */
 
+@import 'variables';
+
 /* Selection */
 
 ::selection {
-  background: #FF7400;
+  background: $primary;
   color: #FFF;
   border-color: #FFF;
 }
 
 ::-moz-selection {
-  background: #FF7400;
+  background: $primary;
   color: #FFF;
   border-color: #FFF;
 }
@@ -31,7 +33,7 @@
 html { height: 100%; }
 
 body {
-  background-color: #f8f6f3;
+  background-color: $background;
   margin: 0;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
@@ -161,7 +163,7 @@ nav .inner {
   height: 50px;
   padding: 0;
   position: relative;
-  background-color: #FF7400;
+  background-color: $primary;
   -webkit-box-shadow: 0 1px 5px rgba(20,20,20,.2);
      -moz-box-shadow: 0 1px 5px rgba(20,20,20,.2);
           box-shadow: 0 1px 5px rgba(20,20,20,.2);
@@ -174,7 +176,7 @@ nav .inner .left {
   left: 0;
   top: 0;
   padding-left: 20px;
-  border-left: 1px solid #FF9640;
+  border-left: 1px solid $secondary;
 }
 
 nav .inner h2 {
@@ -203,8 +205,8 @@ nav .inner .right, nav .inner .left {
 
 nav .inner .right div {
   font-size: 24px;
-  border-left: 1px solid #FF9640;
-  border-right: 1px solid #FF9640;
+  border-left: 1px solid $secondary;
+  border-right: 1px solid $secondary;
   margin-right: -1px;
   padding-left: 20px;
   padding-right: 20px;
@@ -217,7 +219,7 @@ nav .inner .right a:last-child div {
 
 nav .inner .right a:hover div {
   background-color: #FFF;
-  color: #FF7400;
+  color: $primary;
   border-color: transparent;
 }
 
@@ -272,7 +274,7 @@ select {
 }
 
 .blue {
-  color: #3086df !important;
+  color: #487EBD !important;
 }
 
 .yellow {
@@ -351,11 +353,11 @@ a:link:after, a:after {
 }
 
 a:hover {
-  color: #FF7400;
+  color: $primary;
 }
 
 a:hover:after {
-  border-color: #FF7400;
+  border-color: $primary;
 }
 
 a:active {
@@ -552,7 +554,7 @@ section .inner.home {
   color: #111;
 }
 
-.tile:active .frame, .tile:active .ribbon {
+.tile:active .frame, .tile:active .ribbon, .item:active .ribbon {
   opacity: 1 !important;
 }
 
@@ -609,7 +611,7 @@ section .inner.home {
   height: 395px;
 }
 
-.tile:hover {
+.tile:hover, .item:hover {
   .frame {
     bottom: 0;
   }
@@ -652,7 +654,7 @@ section .inner.home {
 /* Top page */
 
 .item {
-	border: 1px dashed #CCC;
+	border: 1px solid #DDD;
 	width: 100%;
 	text-decoration: none;
 	margin-top: -1px;
@@ -701,7 +703,7 @@ section .inner.home {
 
 .item .top-frame {
   position: relative;
-  border-right: 1px dashed #DDD;
+  border-right: 1px solid #DDD;
   margin-right: 20px;
   margin-top: 0;
   padding-bottom: 20px;
@@ -736,7 +738,7 @@ section .inner.home {
 
 button, input[type="submit"] {
   border: 0;
-  background: #FF7400;
+  background: $primary;
   color: #FFF;
   font-size: 1em;
   padding-left: 10px;
@@ -750,8 +752,8 @@ button, input[type="submit"] {
 
   &:hover, input[type="submit"]:hover, &:active, input[type="submit"]:active {
     background-color: #FFF;
-    color: #FF7400;
-    border: 2px solid #FF7400;
+    color: $primary;
+    border: 2px solid $primary;
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 5px;

@@ -1,3 +1,5 @@
+@import 'variables';
+
 nav {
   position: absolute;
   max-width: 100%;
@@ -74,7 +76,7 @@ nav .inner .middle {
 	position: relative;
 	left: 45%;
 	top: -56%;
-	color: #FF7400;
+	color: $primary;
 	font-size: 8px;
 }
 
