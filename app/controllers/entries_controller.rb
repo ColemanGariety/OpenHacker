@@ -9,7 +9,7 @@ class EntriesController < ApplicationController
   
       respond_to do |format|
         format.html # index.html.erb
-        format.json { render json: @entries }
+        format.json { render json: Entry.all }
       end
     else
       respond_to do |format|
@@ -110,6 +110,7 @@ class EntriesController < ApplicationController
     submission = Entry.find_by_challenge_id_and_user_id(@entry.challenge_id, @entry.user_id)
     
     if submission.blank?
+      raise @entry.inspect
       respond_to do |format|
         if @entry.save
           format.html { redirect_to @entry, notice: 'Entry was successfully created.' }

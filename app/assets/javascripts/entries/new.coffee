@@ -93,7 +93,7 @@ validateRepo = ->
                           i = 0
 
                           while i < data.length
-                            found_unique = false  if data[i].github_repo_id is selected_repo.id
+                            found_unique = false if data[i].github_repo_id is selected_repo.id
                             i++
                           if found_unique is true
                             $("#uniqueness_check").find(".mark").addClass "done"
