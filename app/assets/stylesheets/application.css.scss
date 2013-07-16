@@ -45,7 +45,7 @@ body {
   overflow-y: scroll;
 }
 
-body:before {
+body::before {
   content:"";
   height:100%;
   float:left;
@@ -257,7 +257,7 @@ select {
   font-size: 1em;
 }
 
-.noline:after {
+.noline::after {
   display: none;
 }
 
@@ -342,7 +342,7 @@ a:link, a {
   display: inline-block;
 }
 
-a:link:after, a:after {
+a:link::after, a::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -356,7 +356,7 @@ a:hover {
   color: $primary;
 }
 
-a:hover:after {
+a:hover::after {
   border-color: $primary;
 }
 
@@ -364,15 +364,15 @@ a:active {
   color: #333;
 }
 
-a:active:after {
+a:active::after {
   border-color: #333;
 }
 
-nav a:after {
+nav a::after {
   display: none;
 }
 
-footer a:after {
+footer a::after {
   bottom: 14px !important;
 }
 
@@ -518,7 +518,7 @@ section .inner.home {
   display: block;
 }
 
-.home a:after {
+.home a::after {
   display: none;
 }
 
@@ -675,7 +675,7 @@ section .inner.home {
     margin-bottom: 20px;
   }
   
-  &:after {
+  &::after {
     display: none;
   }
   
@@ -762,7 +762,7 @@ button, input[type="submit"] {
   
   &:active, input[type="submit"]:active {
     position: relative;
-    top: 2px;
+    top: 1px;
   }
 
   &:disabled {

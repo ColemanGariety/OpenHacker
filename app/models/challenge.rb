@@ -36,6 +36,12 @@ class Challenge < ActiveRecord::Base
   	if closed_challenge && !closed_challenge.entries.empty?
   	  closed_challenge.status = Challenge::STATUSES[:closed]
   	  closed_challenge.save
+  	  
+  	  # Award ribbons
+  	  winners = closed_challenge.entries.sort_by { |entry| -entry.score }.take(3)
+  	  winners.each_width_index do |winner, i|
+  	    ribbon = Ribbon.new(:name => (i == 0 ? "blue" : i == 1 ? "yellow" : "red"), :user_id => winner.user_id, :entry_id => winner.id)
+  	  end
   	end
   end
 end
