@@ -264,11 +264,19 @@ select {
 }
 
 .red {
-  color: red !important;
+  color: #df3a30 !important;
 }
 
 .green {
   color: green !important;
+}
+
+.blue {
+  color: #3086df !important;
+}
+
+.yellow {
+  color: #ecce39 !important;
 }
 
 hr {
@@ -601,13 +609,14 @@ section .inner.home {
   height: 395px;
 }
 
-.tile:hover .frame {
-  bottom: 0;
-  opacity: .8;
-}
-
-.tile:hover .ribbon {
-  opacity: .8;
+.tile:hover {
+  .frame {
+    bottom: 0;
+  }
+  
+  .ribbon, .frame, .ribbon-before {
+    opacity: .8
+  }
 }
 
 .frame-inner {
@@ -810,6 +819,27 @@ textarea:focus {
   position: absolute;
   bottom: 20px;
   left: 20px;
+}
+
+.tile {
+  .ribbon-before {
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+  
+  &.blue .ribbon-before {
+    left: 44px;
+    bottom: 93px;
+  }
+  
+  &.red, &.yellow {
+    .ribbon-before {
+      font-size: .75em;
+      bottom: 62px;
+      left: 34px;
+    }
+  }
 }
 
 /* Responsiveness */
