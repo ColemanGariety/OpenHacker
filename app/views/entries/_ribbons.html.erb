@@ -1,0 +1,8 @@
+<div class="ribbons">
+  <% entry.ribbons.each do |ribbon| %>
+    <div class="ribbon <%= ribbon.name %>">
+      <span class="before"><%= entry.score.round(1) %></span>
+      <img src="/assets/ribbon_<%= ribbon.name %>.png" />
+    </div>
+  <% end %>
+</div>

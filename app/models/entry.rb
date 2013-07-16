@@ -25,4 +25,8 @@ class Entry < ActiveRecord::Base
   def score
     Vote.where(:entry_id => self.id).map {|e| e.value }.inject { |sum, el| sum + el }.to_f
   end
+  
+  def ribbons
+    Ribbon.where(:entry_id => self.id)
+  end
 end

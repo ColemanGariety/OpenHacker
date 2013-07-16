@@ -193,7 +193,7 @@ nav .inner .left:hover h2 {
 }
 
 nav .inner .left:active h2 {
-  top: 2px;
+  top: 1px;
 }
 
 nav .inner .right, nav .inner .left {
@@ -614,7 +614,7 @@ section .inner.home {
     bottom: 0;
   }
   
-  .ribbon, .frame, .ribbon-before {
+  .ribbon, .frame {
     opacity: .8
   }
 }
@@ -659,8 +659,9 @@ section .inner.home {
 	
 	h1 {
   	padding-top: 20px;
-  	padding-bottom: 20px;
+  	padding-bottom: 45px;
   	color: #444;
+  	display: inline-block;
 	}
 	
 	p {
@@ -815,29 +816,49 @@ textarea:focus {
 
 /* Ribbons */
 
-.ribbon {
+.ribbons {
   position: absolute;
   bottom: 20px;
   left: 20px;
 }
 
-.tile {
-  .ribbon-before {
+.tile.blue {
+  .ribbon {
+    .before {
+      left: 21px;
+      top: 19px;
+      font-size: 1.45em;
+    }
+  
+    img {
+      width: 75px;
+    }
+  }
+}
+
+.ribbon {  
+  .before {
     position: absolute;
     font-weight: 900;
-    font-size: 1.2em;
+    font-size: .85em;
+    top: 14px;
+    left: 15px;
   }
   
-  &.blue .ribbon-before {
-    left: 44px;
-    bottom: 93px;
+  img {
+    width: 50px;
   }
-  
-  &.red, &.yellow {
-    .ribbon-before {
-      font-size: .75em;
-      bottom: 62px;
-      left: 34px;
+}
+
+.item {
+  .ribbons {
+    bottom: auto;
+    left: auto;
+    top: 20px;
+    right: 20px;
+    
+    .ribbon {
+      float: right;
     }
   }
 }

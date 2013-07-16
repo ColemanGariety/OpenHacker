@@ -1,0 +1,11 @@
+<%= link_to entry, :class => "item" do %>
+  <div class="<%= entry.platform == "web" ? " web" : " iphone" %>">
+    <div class="top-frame">
+      <div class="top-frame-inner" style="background-image: url('<%= entry.thumb_url %>');"></div>
+    </div>
+    <h1 class="little"><%= entry.title %></h1>
+    <%= render 'entries/ribbons', :entry => entry %>
+    <p><%= entry.description %></p>
+  </div>
+</a>
+<% end %>
