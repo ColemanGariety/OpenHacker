@@ -17,8 +17,6 @@ class UsersController < ApplicationController
 
     @challenges = Challenge.where(:user_id => @user.id)
 
-    @is_moderator = @user.ribbon_array.include?(1) ? true : false
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

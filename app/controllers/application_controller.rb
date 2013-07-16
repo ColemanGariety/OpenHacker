@@ -9,9 +9,6 @@ private
 
   def is_moderator(user)
 	  user = User.find(cookies[:user_id]) if cookies[:user_id].present?
-
-    user.ribbon_array ||= []
-    user.ribbon_array.include?(1) ? true : false
 	end
 
 	def is_banned(user)
