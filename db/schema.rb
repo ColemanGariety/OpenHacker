@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130705201438) do
+ActiveRecord::Schema.define(version: 20130716012804) do
 
   create_table "challenges", force: true do |t|
     t.string   "title"
@@ -43,9 +43,17 @@ ActiveRecord::Schema.define(version: 20130705201438) do
 
   add_index "entries", ["challenge_id", "user_id"], name: "index_entries_on_challenge_id_and_user_id", using: :btree
 
+  create_table "ribbons", force: true do |t|
+    t.string   "type"
+    t.string   "user_id"
+    t.string   "entry_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "github_uid"
-    t.string   "username"
+    t.string   "username",     default: "", null: false
     t.string   "email"
     t.string   "full_name"
     t.string   "gravatar_id"
@@ -54,9 +62,8 @@ ActiveRecord::Schema.define(version: 20130705201438) do
     t.string   "location"
     t.boolean  "hireable"
     t.text     "bio"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.text     "ribbon_array"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "github_token"
     t.string   "banned_at"
   end

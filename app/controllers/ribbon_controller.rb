@@ -1,0 +1,2 @@
+class RibbonController < ApplicationController
+end
