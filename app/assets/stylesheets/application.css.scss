@@ -391,7 +391,7 @@ footer a::after {
   width: 150px;
   height: 150px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid #777;
   -moz-background-size: 150px 150px;
     -o-background-size: 150px 150px;
@@ -620,6 +620,7 @@ section .inner.home {
 }
 
 .tile:hover, .item:hover {
+  color: #AAA;
   .frame {
     bottom: 0;
   }
@@ -667,11 +668,13 @@ section .inner.home {
 	text-decoration: none;
 	margin-top: -1px;
 	
+	.score {
+  	padding-bottom: 20px;
+	}
+	
 	h1 {
   	padding-top: 20px;
-  	padding-bottom: 45px;
   	color: #444;
-  	display: inline-block;
 	}
 	
 	p {

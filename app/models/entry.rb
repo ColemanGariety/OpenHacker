@@ -15,11 +15,7 @@ class Entry < ActiveRecord::Base
   validates_presence_of :github_repo_id
   
   def url
-    if self.challenge.status == Challenge::STATUSES[:closed]
-      self.demo_url
-    else
-      url_for(self)
-    end
+    self.challenge.status == Challenge::STATUSES[:closed] ? self.demo_url : self
   end
   
   def score

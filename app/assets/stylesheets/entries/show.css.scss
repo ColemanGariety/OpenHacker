@@ -120,4 +120,14 @@ iframe {
   height: 100%;
   border: 0;
   vertical-align: top;
+  position: absolute;
+  top: 0;
+}
+
+#source {
+  display: none;
+}
+
+#source.active {
+  display: block;
 }

@@ -8,4 +8,11 @@
   </div>
 <% end unless @entry.user == current_user %>
 
+<% content_for :right do %>
+  <%= link_to @entry.repo_url, :target => "_blank", :id => "source-link" do %>
+    <div>View Source</div>
+  <% end %>
+<% end %>
+
 <iframe src="<%= @entry.demo_url %>" id="demo-frame"></iframe>
+<iframe src="<%= @entry.repo_url %>" id="source"></iframe>
