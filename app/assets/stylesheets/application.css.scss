@@ -185,13 +185,21 @@ nav .inner h2 {
   height: 50px;
   font-weight: 400;
   line-height: 50px;
+  padding-left: 30px;
   display: inline-block;
   top: 0;
   position: relative;
+  background-image: url('/assets/logo_nav.png');
+  -moz-background-size: auto 35px;
+    -o-background-size: auto 35px;
+       background-size: auto 35px;
+  background-repeat: no-repeat;
+  background-position-y: 8px;
+  
 }
 
 nav .inner .left:hover h2 {
-  text-shadow: 0 0 5px rgba(255,255,255,.5);
+  opacity: .8;
 }
 
 nav .inner .left:active h2 {
@@ -384,7 +392,7 @@ footer a::after {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border: 1px solid #555;
+  border: 1px solid #777;
   -moz-background-size: 150px 150px;
     -o-background-size: 150px 150px;
        background-size: 150px 150px;

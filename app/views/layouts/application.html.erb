@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "#{params[:controller]}/#{params[:action]}.css" if Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.css") %>
   <%= csrf_meta_tags %>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <!--[if !IE 7]>
   	<style type="text/css">
   		.wrapper {
