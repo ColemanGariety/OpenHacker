@@ -11,9 +11,9 @@
 # WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 # GO AFTER THE REQUIRES BELOW.
 #
-
 #= require jquery
 #= require jquery_ujs
+#= require countdown
 
 # Update user data
 if $("#user").attr("data-username")
@@ -33,3 +33,19 @@ if $("#user").attr("data-username")
           success: (data) ->
             console.log data
   ), 3000
+
+doTime = ->
+  now = new Date()
+  daysToAdd = 7 - (new Date()).getDay()
+  sunday = new Date()
+  sunday.setDate(now.getDate() + daysToAdd)
+  sunday.setHours(0)
+  sunday.setMinutes(0)
+  sunday.setSeconds(0)
+  sunday.setMilliseconds(0)
+  
+  $("#ticker").html(countdown(new Date(), sunday).toString())
+
+# Ticker
+setInterval(doTime, 1000)
+doTime()

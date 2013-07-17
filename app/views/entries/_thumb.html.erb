@@ -5,6 +5,11 @@
     </div>
     <h1 class="little"><%= entry.title %></h1>
     <div class="score"><b>Score:</b> <%= entry.score %></div>
+    <% if your_vote(entry).present? %>
+      <div class="your-vote"><b>Your vote:</b> <%= your_vote(entry).value %></div>
+    <% else %>
+      <br>
+    <% end %>
     <%= render 'entries/ribbons', :entry => entry %>
     <p><%= entry.description %></p>
   </div>

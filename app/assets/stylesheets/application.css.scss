@@ -668,10 +668,6 @@ section .inner.home {
 	text-decoration: none;
 	margin-top: -1px;
 	
-	.score {
-  	padding-bottom: 20px;
-	}
-	
 	h1 {
   	padding-top: 20px;
   	color: #444;
@@ -874,6 +870,22 @@ textarea:focus {
       float: right;
     }
   }
+}
+
+/* Realtime */
+
+#realtime {
+  font-family: "Open Sans";
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  width: 100px;
+  margin-left: -140px;
+  line-height: 1;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 0;
 }
 
 /* Responsiveness */
