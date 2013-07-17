@@ -49,3 +49,12 @@ doTime = ->
 # Ticker
 setInterval(doTime, 1000)
 doTime()
+
+# Sidebar
+$("html, body").add(document).scroll(->
+  console.log "foo"
+  if $(document).scrollTop() > 47
+    $("aside").addClass("active")
+  else
+    $("aside").removeClass("active")
+)

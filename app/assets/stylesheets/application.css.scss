@@ -872,20 +872,23 @@ textarea:focus {
   }
 }
 
-/* Realtime */
+/* Aside */
 
-#realtime {
-  font-family: "Open Sans";
-  font-size: 10px;
+aside {
   position: absolute;
-  top: 0;
-  width: 100px;
-  margin-left: -140px;
-  line-height: 1;
-  height: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-left: 0;
+  width: 110px;
+  padding: 15px;
+  font-size: .75em;
+  left: 50%;
+  border: 1px solid #DDD;
+  margin-left: 449px;
+  top: 70px;
+  background: #FFF;
+  
+  &.active {
+    position: fixed;
+    top: 20px;
+  }
 }
 
 /* Responsiveness */

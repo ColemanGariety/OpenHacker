@@ -27,11 +27,6 @@
       </div>
       
       <div class="right">
-        <div id="realtime">
-          Next challenge in:<br><br>
-          <span id="ticker"></span>
-        </div>
-      
         <%= yield(:right) %>
       
         <% if current_user %>
@@ -48,6 +43,14 @@
       </div>
     </div>
   </nav>
+  
+  <aside>
+    <div>
+      <div>Next challenge in:</div><br>
+      <span id="ticker"></span>
+    </div>
+  </aside>
+  
   <section>
     <div class="inner <%= yield(:section_class) %>">
       <%= yield %>
