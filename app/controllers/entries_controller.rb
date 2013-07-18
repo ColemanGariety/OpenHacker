@@ -157,6 +157,18 @@ class EntriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def get_screen
+    begin
+      driver = Selenium::WebDriver.for(:firefox)
+      driver.get("https://www.google.com")
+      driver.save_screenshot('public/shots/screen.jpg')
+    ensure
+      driver.quit
+    end
+    
+    render :text => "http://openhacker.io.dev/shots/screen.jpg"
+  end
 
 private
 

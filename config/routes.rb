@@ -18,6 +18,8 @@ ThechallengeIo::Application.routes.draw do
   get 'about' => 'challenges#about'
   get 'rules' => 'challenges#rules'
   get 'entries/:id/track' => 'entries#track'
+  
+  get 'get_screen' => "entries#get_screen"
 
   put 'users/:username/ban' => 'users#ban', :as => "ban"
   put "vote", :to => "votes#vote", :as => :cast

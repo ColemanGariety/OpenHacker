@@ -53,7 +53,7 @@ doTime()
 # Sidebar
 $("html, body").add(document).scroll(->
   console.log "foo"
-  if $(document).scrollTop() > 47
+  if $(document).scrollTop() > 50
     $("aside").addClass("active")
   else
     $("aside").removeClass("active")
