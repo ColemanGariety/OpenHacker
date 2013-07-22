@@ -61,8 +61,8 @@ section {
   padding: 0;
   width: 100%;
   background: #FFF;
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
   max-width: 898px;
   margin: 0 auto;
   min-height: 100%;
@@ -87,22 +87,49 @@ header {
 header#about {
   border-style: none;
   padding: 0;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: -20px;
+  margin-bottom: 40px;
   text-align: center;
+  margin-left: -20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  background-image: image-url('header.jpg');
+  background-size: 900px auto;
+  background-position: center center;
+  width: 100%;
+  color: #FFF !important;
+  border-bottom: 1px solid #CCC;
+  text-shadow: 0 0 3px rgba(50,50,50,.66);
 }
+
+
 
 #call-to-action {
   width: 100%;
   text-align: center;
-  height: 90px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   
   button {
-    font-size: 1.2em;
+    font-size: 1.33em;
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 8px;
     padding-bottom: 8px;
+    
+    &:hover, &:active {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+    
+    &:active {
+      position: relative;
+      top: 1px;
+    }
   }
   
   a::after {
@@ -345,7 +372,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.25em;
+  font-size: 4em;
   font-weight: 500;
   font-family: "ITC Franklin Condensed", sans-serif;
 }
@@ -638,7 +665,7 @@ section .inner.home {
 }
 
 .tile:hover, .item:hover {
-  color: #AAA;
+  color: #CCC;
   .frame {
     bottom: 0;
   }
@@ -783,7 +810,7 @@ button, input[type="submit"] {
     padding-right: 8px;
     padding-top: 5px;
     padding-bottom: 5px;
-  }
+  }f
   
   &:active, input[type="submit"]:active {
     position: relative;
@@ -898,7 +925,7 @@ aside {
   padding: 15px;
   font-size: .75em;
   left: 50%;
-  border: 1px solid #DDD;
+  border: 1px solid #CCC;
   margin-left: 449px;
   top: 70px;
   background: #FFF;

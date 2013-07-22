@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     user.blog_url = auth["data"]["blog"]
     user.company = auth["data"]["company"]
     user.location = auth["data"]["location"]
-    user.hireable = auth["data"]["hireable"]
+    user.hireable = auth["data"]["hireable"] || 0
     user.bio = auth["data"]["bio"]
     user.save
   end
@@ -29,14 +29,18 @@ class User < ActiveRecord::Base
       user.github_token = auth["credentials"]["token"]
       user.username = auth["info"]["nickname"]
       user.email = auth["info"]["email"]
-      user.full_name = auth["info"]["name"]
+      user.full_name = auth["info"]["name"] || user.username
       user.gravatar_id = auth["extra"]["raw_info"]["gravatar_id"]
       user.blog_url = auth["extra"]["raw_info"]["blog"]
       user.company = auth["extra"]["raw_info"]["company"]
       user.location = auth["extra"]["raw_info"]["location"]
-      user.hireable = auth["extra"]["raw_info"]["hireable"]
+      user.hireable = auth["extra"]["raw_info"]["hireable"] || 0
       user.bio = auth["extra"]["raw_info"]["bio"]
     end
+  end
+  
+  def first_name
+    self.full_name ? self.full_name.split(" ").first : self.username
   end
 
   def to_param

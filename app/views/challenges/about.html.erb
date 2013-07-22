@@ -3,18 +3,24 @@
 	<h2>A weekly competition for problem solvers.</h2>
 </header>
 
+<% if current_open_challenge.present? %>
+  <header style="text-align: center; margin-left: 100px; margin-right: 100px;">
+    <h2>This week's challenge:</h2>
+    <p><%= current_open_challenge.description %></p>
+  </header>
+<% end %>
+
 <div id="call-to-action">
   <%= link_to submit_path do %>
     <button>Sign in with GitHub</button>
   <% end %>
 </div>
 
-<header>
-  <h3>Why?</h3>
-  <p>To make solving the world's problems fun and organized.</p>
-</header>
-
 <ul>
+  <li>
+    <h3>Why?</h3>
+    <p>To make solving the world's problems fun and organized.</p>
+  </li><br>
   <li>
     <h3>How does it work?</h3>
     <p>Every week a community-decided "challenge" is presented to the members of OpenHacker.</p>

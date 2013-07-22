@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 
   # PUT /auth/github/update
   def update
-    render :nothing => true
     user = User.update_omniauth(params[:auth])
+    render :nothing => true
   end
 
   # GET /logout
