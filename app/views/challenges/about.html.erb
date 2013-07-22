@@ -3,13 +3,11 @@
 	<h2>A weekly competition for problem solvers.</h2>
 </header>
 
-<% if current_open_challenge.present? %>
-  <div id="call-to-action">
-    <%= link_to submit_path do %>
-      <button>Enter the '<%= current_open_challenge.title %>' challenge.</button>
-    <% end %>
-  </div>
-<% end %>
+<div id="call-to-action">
+  <%= link_to submit_path do %>
+    <button>Sign in with GitHub</button>
+  <% end %>
+</div>
 
 <header>
   <h3>Why?</h3>
@@ -28,5 +26,10 @@
 	  <p>Of course!</p>
 	  <p>Challenge entries can be anything: videos, documents, paintings, music, etc.</p>
 	  <p>The only requirement is that it's accessible somewhere on the web.</p>
+  </li><br>
+	<li>
+	  <h3>Can I help the open hacking movement?</h3>
+	  <p>The entire website is OpenSource. If you know Ruby, you can help make OpenHacker better right now.</p>
+	  <p><a href="https://github.com/jacksonGariety/OpenHacker" target="_blank">Contribute on GitHub.</a></p>
   </li>
 </ul>

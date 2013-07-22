@@ -6,8 +6,6 @@ class EntriesController < ApplicationController
   def index
     if current_closed_challenge.present?
       @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
-      
-      @closed_challenge_count = Challenge.where("status = ? OR status = ?", 3, 4).count
   
       respond_to do |format|
         format.html # index.html.erb
