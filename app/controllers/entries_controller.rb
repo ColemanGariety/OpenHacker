@@ -16,6 +16,7 @@ class EntriesController < ApplicationController
     else
       respond_to do |format|
         format.html { render "challenges/about" }
+        format.json { render json: Entry.all }
       end
     end
   end

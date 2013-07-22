@@ -35,7 +35,7 @@
           <%= link_to your_entry.present? ? "<div>#{your_entry.title[0..10] + (your_entry.title.length > 10 ? "&hellip;" : "")}</div>".html_safe : '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
           <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
         <% else %>
-          <%= link_to '<div>About</div>'.html_safe, about_path %>
+          <%= link_to '<div>About</div>'.html_safe, about_path if current_closed_challenge.present?  %>
           <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
           <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
           <%= link_to '<div>Sign in with GitHub</div>'.html_safe, auth_path %>
@@ -46,7 +46,7 @@
   
   <aside>
     <div>
-      <div>Next challenge in:</div><br>
+      <div>Challenge begins in:</div><br>
       <span id="ticker"></span>
     </div>
   </aside>
@@ -69,9 +69,9 @@
       <%= link_to "Rules", rules_path %>
       <span>&nbsp;&#8226;&nbsp;</span>
       <%= link_to "Source Code", "https://github.com/JacksonGariety/OpenHacker", :target => "_blank" %>
-      <% if current_user %>
+      <% if current_user and current_closed_challenge.present? %>
         <span>&nbsp;&#8226;&nbsp;</span>
-        <%= link_to "About".html_safe, about_path%>
+        <%= link_to "About".html_safe, about_path %>
       <% end %>
     </div>
   </footer>
