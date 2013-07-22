@@ -20,3 +20,6 @@
 
 # Ignore API keys & config
 /config/variables.yml
+
+# Ignore saved screenshots
+/public/shots

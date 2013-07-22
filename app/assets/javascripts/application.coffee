@@ -36,7 +36,7 @@ if $("#user").attr("data-username")
 
 doTime = ->
   now = new Date()
-  daysToAdd = 7 - (new Date()).getDay()
+  daysToAdd = 1 - (new Date()).getDay()
   sunday = new Date()
   sunday.setDate(now.getDate() + daysToAdd)
   sunday.setHours(0)
