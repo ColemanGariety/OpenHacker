@@ -62,10 +62,10 @@
     <div class="inner">
       <%= link_to "News", "http://thelist.io/", :target => "_blank" %>
       <span>&nbsp;&#8226;&nbsp;</span>
-      <%= link_to "Hall of Fame", top_path %>
-      <span>&nbsp;&#8226;&nbsp;</span>
       <%= link_to "Suggestions", challenge_suggestions_path %>
       <% if closed_challenge_count > 1 %>
+        <span>&nbsp;&#8226;&nbsp;</span>
+        <%= link_to "Hall of Fame", top_path %>
         <span>&nbsp;&#8226;&nbsp;</span>
         <%= link_to "Archives", challenges_path  %>
       <% end %>

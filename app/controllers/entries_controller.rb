@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  require 'screencap'
+
   before_filter :authenticate, :only => :new
 
   # GET /entries
@@ -158,15 +160,9 @@ class EntriesController < ApplicationController
   end
   
   def get_screen
-    begin
-      driver = Selenium::WebDriver.for(:firefox)
-      driver.get("https://www.google.com")
-      driver.save_screenshot('public/shots/screen.jpg')
-    ensure
-      driver.quit
-    end
-    
-    render :text => "http://openhacker.io.dev/shots/screen.jpg"
+    phantom = Screencap::Fetcher.new(params[:repo])
+    screenshot = phantom.fetch(:output => "public/shots/#{params[:repo_id]}.png", :div => 'body')
+    render :text => "http://openhacker.co/shots/#{params[:repo_id]}.png"
   end
 
 private

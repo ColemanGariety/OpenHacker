@@ -15,11 +15,11 @@
   <div id="step-2" class="step">
     <h2>2. Make sure everything checks out:</h2>
     <ul id="check">
-      <li id="screenshot_check"><span class="mark">&#10003;</span>Has a `screenshot.jpg` file in the root directory</li>
-      <li id="description_check"><span class="mark">&#10003;</span>Has a description</li>
+      <li id="description_check"><span class="mark">&#10003;</span>Has a description on GitHub</li>
       <li id="commit_date_check"><span class="mark">&#10003;</span>Created after challenge start</li>
-      <li id="contributor_check"><span class="mark">&#10003;</span>Has valid collaborators</li>
-      <li id="demo_check"><span class="mark">&#10003;</span>Has a valid demo URL</li>
+      <li id="contributor_check"><span class="mark">&#10003;</span>Has valid collaborators on GitHub</li>
+      <li id="demo_check"><span class="mark">&#10003;</span>Has a valid website URL on GitHub</li>
+      <li id="screenshot_check"><span class="mark">&#10003;</span>Website is accessible</li>
       <li id="uniqueness_check"><span class="mark">&#10003;</span>Hasn't been submitted before</li>
       <li id=\"refresh-message\">
         <br>
@@ -36,7 +36,7 @@
     <!-- This is a totally custom implementation of the entries/thumb partial with special IDs and class names. Fuck me I guess. -->
     <a class="item">
       <div class="web">
-        <div class="top-frame"><div class="top-frame-inner" style="background-image: url('foo');"></div></div>
+        <div class="top-frame"><div class="top-frame-inner"></div></div>
         <h1 class="little" id="repo-title"></h1>
         <p id="repo-desc"></p>
       </div>
@@ -48,7 +48,6 @@
       <%= f.hidden_field :title %>
       <%= f.hidden_field :description %>
       <%= f.hidden_field :repo_url %>
-      <%= f.hidden_field :thumb_url %>
       <%= f.hidden_field :demo_url %>
       <%= f.hidden_field :github_repo_id %>
       <div class="actions">

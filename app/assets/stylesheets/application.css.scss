@@ -97,7 +97,7 @@ header#about {
   padding-bottom: 45px;
   background-color: #315765;
   background-image: url('/assets/header.jpg');
-  background-size: 900px auto;
+  background-size: cover;
   background-position: center center;
   width: 100%;
   color: #FFF !important;
@@ -922,6 +922,7 @@ textarea:focus {
 
 aside {
   position: absolute;
+  overflow: hidden;
   width: 100px;
   padding: 15px;
   font-size: .75em;
@@ -942,6 +943,16 @@ aside {
 @media only screen and (max-width: 900px) {
   section, .inner, nav .inner .left, nav a:last-child div {
     border: none !important;
+  }
+  aside {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav h2 {
+    width: 0;
+    overflow: hidden;
   }
 }
 

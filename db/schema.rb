@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716222854) do
+ActiveRecord::Schema.define(version: 20130723051923) do
 
   create_table "challenges", force: true do |t|
     t.string   "title"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20130716222854) do
     t.string   "title"
     t.text     "description"
     t.string   "repo_url"
-    t.string   "thumb_url"
     t.integer  "user_id"
     t.integer  "challenge_id"
     t.datetime "created_at"

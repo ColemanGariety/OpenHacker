@@ -36,7 +36,7 @@ if $("#user").attr("data-username")
 
 doTime = ->
   now = new Date()
-  daysToAdd = 1 - (new Date()).getDay()
+  daysToAdd = 8 - (new Date()).getDay()
   sunday = new Date()
   sunday.setDate(now.getDate() + daysToAdd)
   sunday.setHours(0)
@@ -52,7 +52,6 @@ doTime()
 
 # Sidebar
 $("html, body").add(document).scroll(->
-  console.log "foo"
   if $(document).scrollTop() > 50
     $("aside").addClass("active")
   else
