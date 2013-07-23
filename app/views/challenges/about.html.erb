@@ -5,14 +5,14 @@
 
 <% if current_open_challenge.present? %>
   <header style="text-align: center; margin-left: 100px; margin-right: 100px;">
-    <h2>This week's challenge:</h2>
+    <h2>Current challenge, '<%= current_open_challenge.title %>':</h2>
     <p><%= current_open_challenge.description %></p>
   </header>
 <% end %>
 
 <div id="call-to-action">
   <%= link_to submit_path do %>
-    <button>Sign in with GitHub</button>
+    <button><%= current_user && current_open_challenge ? "Submit to '#{current_open_challenge.title}'" : "Sign in with GitHub" %></button>
   <% end %>
 </div>
 

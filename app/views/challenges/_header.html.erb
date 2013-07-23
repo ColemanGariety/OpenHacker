@@ -47,7 +47,7 @@
     
     <p>
       <b>Submission Deadline:</b>
-      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %>
+      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> from now
     </p>
   <% when Challenge::STATUSES[:voting] %>
     <p>
@@ -57,7 +57,7 @@
     
     <p>
       <b>Voting Deadline:</b>
-      <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+      <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %> from now
     </p>
     
     <p<%= " class=" + (@challenge.voted_percentage == 100 ? "green" : "red") %>>

@@ -7,21 +7,13 @@
     <% end %>
   </h1>
   
-  <%= "<span>Moderator</span><br>".html_safe if is_moderator(@user) %><br>
-  
+  <%= "<span>Moderator</span><br>".html_safe if is_moderator(@user) %>
   <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
-  
   <%= 'Hireable' if @user.hireable %>
-  
-  <p class="bio"><%= @user.bio %></p>
   
   <div class="clearfix"></div>
 </header>
 
-<% if @entries.empty? %>
- <p><%= @user.full_name.split(" ").first %> has not submitted anything yet.</p>
-<% else %>
-  <% @entries.each do |entry| %>
-    <%= render 'entries/thumb', :entry => entry %>
-  <% end %>
+<% @entries.each do |entry| %>
+  <%= render 'entries/thumb', :entry => entry %>
 <% end %>

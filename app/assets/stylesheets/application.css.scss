@@ -95,7 +95,8 @@ header#about {
   padding-left: 20px;
   padding-top: 35px;
   padding-bottom: 45px;
-  background-image: image-url('header.jpg');
+  background-color: #315765;
+  background-image: url('/assets/header.jpg');
   background-size: 900px auto;
   background-position: center center;
   width: 100%;
@@ -437,7 +438,6 @@ footer a::after {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 0;
-  border: 1px solid #777;
   -moz-background-size: 150px 150px;
     -o-background-size: 150px 150px;
        background-size: 150px 150px;
@@ -793,6 +793,7 @@ button, input[type="submit"] {
   background: $primary;
   color: #FFF;
   font-size: 1em;
+  font-weight: 900;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 7px;
@@ -921,7 +922,7 @@ textarea:focus {
 
 aside {
   position: absolute;
-  width: 110px;
+  width: 100px;
   padding: 15px;
   font-size: .75em;
   left: 50%;
@@ -942,4 +943,10 @@ aside {
   section, .inner, nav .inner .left, nav a:last-child div {
     border: none !important;
   }
+}
+
+/* @2x */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  header#about { background-image: url('/assets/header@2x.jpg'); }
 }
