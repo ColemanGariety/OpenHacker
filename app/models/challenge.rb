@@ -16,7 +16,7 @@ class Challenge < ActiveRecord::Base
   }
 
   # 12:00 AM Monday, PST
-  def weekly
+  def self.weekly
     # Open approved challenge
   	open_challenge = Challenge.find_by_status(Challenge::STATUSES[:approved])
   	if open_challenge && !open_challenge.entries.empty?
@@ -43,5 +43,13 @@ class Challenge < ActiveRecord::Base
   	    ribbon = Ribbon.new(:name => (i == 0 ? "blue" : i == 1 ? "yellow" : "red"), :user_id => winner.user_id, :entry_id => winner.id)
   	  end
   	end
+  end
+  
+  def rules_array
+    self.rules.split(',')
+  end
+
+  def prizes_array
+    self.prize.split(',')
   end
 end

@@ -10,5 +10,6 @@ gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 gem 'phantomjs'
 gem 'screencap'
+gem "rmagick"
 
 gem 'bullet', :group => "development"

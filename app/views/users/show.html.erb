@@ -15,5 +15,7 @@
 </header>
 
 <% @entries.each do |entry| %>
-  <%= render 'entries/thumb', :entry => entry %>
+  <% if entry.challenge.status == 4 %>
+    <%= render 'entries/thumb', :entry => entry %>
+  <% end %>
 <% end %>

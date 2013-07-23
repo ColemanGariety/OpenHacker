@@ -82,6 +82,14 @@ header {
 	p {
   	font-size: 1.15em;
 	}
+	
+	ul {
+  	margin-top: -15px;
+  	
+  	li {
+    	list-style: circle;
+  	}
+	}
 }
 
 header#about {
@@ -105,7 +113,18 @@ header#about {
   text-shadow: 0 0 3px rgba(50,50,50,.66);
 }
 
+header#current-challenge {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 
+  ul {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
 
 #call-to-action {
   width: 100%;

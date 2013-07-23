@@ -4,9 +4,18 @@
 </header>
 
 <% if current_open_challenge.present? %>
-  <header style="text-align: center; margin-left: 100px; margin-right: 100px;">
+  <header id="current-challenge">
     <h2>Current challenge, '<%= current_open_challenge.title %>':</h2>
     <p><%= current_open_challenge.description %></p>
+    <p>
+      <b>Prizes:</b>
+      <ul>
+        <li>Your project featured on the OpenHacker homepage</li>
+        <% current_open_challenge.prizes_array.each do |prize| %>
+          <li><%= prize.html_safe %></li>
+        <% end %>
+      </ul>
+    </p>
   </header>
 <% end %>
 

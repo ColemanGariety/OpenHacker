@@ -44,7 +44,6 @@ validateRepo = ->
                 $("#repo-title").html selected_repo.name
                 $("#repo-desc").html found_description
                 $("#repo-url").html "<a target=\"_blank\" href=\"" + found_demo + "\">" + found_demo + "</a>"
-                $(".top-frame-inner").css("background-image", "url('#{found_screenshot_jpg}')")
                 $("#entry_title").val selected_repo.name
                 $("#entry_description").val found_description
                 $("#entry_repo_url").val selected_repo.html_url
@@ -75,6 +74,7 @@ validateRepo = ->
                 $(".mark").html("&#10003;").attr "class", "mark"
                 $("#step-2").removeClass "focused"
                 $("#step-3").removeClass "focused"
+                $(".top-frame-inner").css("background-image", "none")
                 $("#step-1").addClass "focused"
                 found_screenshot_jpg = false
                 found_description = false
@@ -137,6 +137,7 @@ validateRepo = ->
                     success: (data) ->
                       $("#screenshot_check").find(".mark").addClass "done"
                       found_screenshot_jpg = data
+                      $(".top-frame-inner").css("background-image", "url('#{found_screenshot_jpg}')")
                       uniqueness()
                 else
                   $("#screenshot_check").find(".mark").html("&#10006;").addClass("red").addClass "done"

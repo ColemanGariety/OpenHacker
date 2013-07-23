@@ -18,7 +18,8 @@ class Entry < ActiveRecord::Base
   end
   
   def score
-    Vote.where(:entry_id => self.id).map {|e| e.value }.inject { |sum, el| sum + el }.to_f
+    arr = Vote.where(:entry_id => self.id).map {|e| e.value }
+    arr.inject { |sum, el| sum + el }.to_f / arr.size
   end
   
   def ribbons
@@ -26,6 +27,6 @@ class Entry < ActiveRecord::Base
   end
   
   def screenshot_url
-    "http://openhacker.co/shots/#{self.github_repo_id}"
+    "http://openhacker.co/shots/#{self.github_repo_id}.jpg"
   end
 end

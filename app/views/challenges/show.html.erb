@@ -1,9 +1,5 @@
 <%= render "header" %>
 
-<% if @challenge.entries.empty? %>
- <p>No entries have been submitted yet.</p>
-<% else %>
-  <% @challenge.entries.each do |entry| %>
-    <%= render 'entries/thumb', :entry => entry %>
-  <% end %>
+<% @challenge.entries.each do |entry| %>
+  <%= render 'entries/thumb', :entry => entry %>
 <% end %>

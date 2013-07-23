@@ -1,6 +1,4 @@
 class EntriesController < ApplicationController
-  require 'screencap'
-
   before_filter :authenticate, :only => :new
 
   # GET /entries
@@ -149,6 +147,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.json
   def destroy
+  
   	redirect_to root_url unless is_moderator(current_user)
     @entry = Entry.find(params[:id])
     @entry.destroy
@@ -160,9 +159,20 @@ class EntriesController < ApplicationController
   end
   
   def get_screen
-    phantom = Screencap::Fetcher.new(params[:repo])
-    screenshot = phantom.fetch(:output => "public/shots/#{params[:repo_id]}.png", :div => 'body')
-    render :text => "http://openhacker.co/shots/#{params[:repo_id]}.png"
+    require 'screencap'
+    require 'RMagick'
+    
+    # Grab the screenshot
+    phantom = Screencap::Fetcher.new params[:repo]
+    screenshot = phantom.fetch :output => "public/shots/#{params[:repo_id]}.jpg", :width => 2880, :div => "html"
+
+    # Size dat shit
+    image = Magick::Image.read(Rails.root.join('public', 'shots', "#{params[:repo_id]}.jpg")).first
+    image.crop!(Magick::NorthGravity, 1000, 700)
+    image.format = "JPEG"
+    image.write Rails.root.join('public', 'shots', "#{params[:repo_id]}.jpg") { self.quality = 90 }
+    
+    render :text => "http://openhacker.co/shots/#{params[:repo_id]}.jpg"
   end
 
 private

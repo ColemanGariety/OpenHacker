@@ -25,12 +25,17 @@ class ChallengesController < ApplicationController
   # GET /challenge/1.json
   def show
     @challenge = Challenge.find(params[:id])
-    @challenge.votes = @challenge.entries.collect(&:votes).flatten
-    @challenge.voted_percentage = ((@challenge.votes.select { |v| v.user_id == current_user.id }.flatten.count.to_f / @challenge.entries.count.to_f) * 100).to_i
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @challenge }
+    
+    unless @challenge == current_open_challenge
+      @challenge.votes = @challenge.entries.collect(&:votes).flatten
+      @challenge.voted_percentage = ((@challenge.votes.select { |v| v.user_id == current_user.id }.flatten.count.to_f / @challenge.entries.count.to_f) * 100).to_i
+      
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @challenge }
+      end
+    else
+      redirect_to submit_path
     end
   end
 

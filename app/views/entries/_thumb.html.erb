@@ -4,7 +4,9 @@
       <div class="top-frame-inner" style="background-image: url('<%= entry.screenshot_url %>');"></div>
     </div>
     <h1 class="little"><%= entry.title %></h1>
-    <div class="score"><b>Score:</b> <%= entry.score %></div>
+    <% unless entry.score.nan? %>
+      <div class="score"><b>Score:</b> <%= entry.score %></div>
+    <% end %>
     <% if your_vote(entry).present? %>
       <div class="your-vote"><b>Your vote:</b> <%= your_vote(entry).value %></div>
     <% else %>
