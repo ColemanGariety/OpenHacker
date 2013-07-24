@@ -7,8 +7,16 @@
     <% end %>
   </h1>
   
-  <%= "<span>Moderator</span><br>".html_safe if is_moderator(@user) %>
-  <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
+  <span>Joined <%= time_ago_in_words @user.created_at %> ago</span><br>
+  
+  <% if is_moderator(@user) %>
+    <span>Moderator</span><br>
+  <% end %>
+  
+  <% if @user.blog_url.present? %>
+    <%= link_to @user.blog_url, @user.blog_url,  :target => "_blank" %><br>
+  <% end %>
+  
   <%= 'Hireable' if @user.hireable %>
   
   <div class="clearfix"></div>
