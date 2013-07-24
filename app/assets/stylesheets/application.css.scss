@@ -261,6 +261,11 @@ nav .inner h2 {
   background-repeat: no-repeat;
   background-position-y: 8px;
   
+  span.small {
+    font-size: 16px !important;
+    opacity: .75;
+    margin-left: 3px;
+  }
 }
 
 nav .inner .left:hover h2 {
