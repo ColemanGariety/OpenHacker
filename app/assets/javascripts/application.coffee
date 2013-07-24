@@ -15,6 +15,9 @@
 #= require jquery_ujs
 #= require countdown
 
+if location.hash == "#tweet"
+  $("#overlay").addClass("active")
+
 # Update user data
 if $("#user").attr("data-username")
   setTimeout (->
@@ -32,7 +35,7 @@ if $("#user").attr("data-username")
 
           success: (data) ->
             console.log data
-  ), 3000
+  ), 10000
 
 doTime = ->
   now = new Date()
@@ -44,7 +47,10 @@ doTime = ->
   sunday.setSeconds(0)
   sunday.setMilliseconds(0)
   
-  $("#ticker").html(countdown(new Date(), sunday).toString())
+  $(".ticker").html(countdown(new Date(), sunday).toString())
+
+$("#ex").click ->
+  $("#overlay").removeClass("active")
 
 # Ticker
 setInterval(doTime, 1000)

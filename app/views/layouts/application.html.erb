@@ -44,11 +44,21 @@
     </div>
   </nav>
   
+  <div id="overlay">
+    <div>
+      <span id="ex">&#x2715;</span>
+      <h3>Thanks for signing up!</h3><br>
+      <p>The submissions deadline is <b><span class="ticker"></span></b> away.</p>
+      <p>But before you get started on your awesome project...</p><br>
+      <a class="noline" href="https://twitter.com/intent/tweet?text=I'm%20helping%20people%20learn%20to%20code%20on%20%23OpenHacker,%20the%20weekly%20competition%20for%20hackers.%20http%3A%2F%2Fopenhacker.co%2F&tw_p=tweetbutton&url=http%3A%2F%2Fhttp%3A%2F%2Fopenhacker.co%2F" target="_blank"><button>Spread the love...</button></a>
+    </div>
+  </div>
+  
   <% if current_open_challenge %>
     <aside>
       <div>
         <div>'<%= current_open_challenge.title %>' begins in:</div><br>
-        <span id="ticker"></span>
+        <span class="ticker"></span>
       </div>
     </aside>
   <% end %>
@@ -77,6 +87,8 @@
         <span>&nbsp;&#8226;&nbsp;</span>
         <%= link_to "About".html_safe, about_path %>
       <% end %>
+      <span>&nbsp;&#8226;&nbsp;</span>
+      <%= link_to "Contact", "mailto:personal@jacksongariety.com?subject=OpenHacker%20Inquiry" %>
     </div>
   </footer>
   <%= javascript_include_tag "application" %>
