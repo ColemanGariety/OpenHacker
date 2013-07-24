@@ -189,7 +189,7 @@ nav .inner h2 {
   display: inline-block;
   top: 0;
   position: relative;
-  background-image: url('/assets/logo_nav.png');
+  background-image: image-url('/logo_nav.png');
   -moz-background-size: auto 35px;
     -o-background-size: auto 35px;
        background-size: auto 35px;
@@ -599,7 +599,7 @@ section .inner.home {
   width: 350px;
   height: 225px;
   -webkit-transform: translateZ(0);
-  background-image: url('/assets/frame_web@2x.png');
+  background-image: image-url('/frame_web@2x.png');
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
        background-size: 600px auto;
@@ -608,7 +608,7 @@ section .inner.home {
 .tile.iphone .frame {
   width: 261px;
   height: 410px;
-  background-image: url('/assets/frame_iphone@2x.png');
+  background-image: image-url('/frame_iphone@2x.png');
   -moz-background-size: 325px auto;
     -o-background-size: 325px auto;
        background-size: 325px auto;
@@ -719,7 +719,7 @@ section .inner.home {
   height: 250px;
   float: left;
   background-repeat: no-repeat;
-  background-image: url('/assets/frame_web@2x.png');
+  background-image: image-url('frame_web@2x.png');
   -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
        background-size: 600px auto;
