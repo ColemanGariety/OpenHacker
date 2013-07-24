@@ -13,7 +13,7 @@
   <ul>
     <% @challenges.each do |challenge| %>
       <li>
-        <b><%= challenge.description %></b><%= render "mod", :challenge => challenge %><br>
+        <h3><%= challenge.description %></h3><%= render "mod", :challenge => challenge %>
         <span>Suggested <%= time_ago_in_words(challenge.created_at) %> ago by <%= link_to challenge.user.full_name, challenge.user %></span>
       </li><br>
     <% end %>
