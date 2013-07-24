@@ -10,7 +10,6 @@ class Entry < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :description
   validates_presence_of :repo_url
-  validates_presence_of :thumb_url
   validates_presence_of :demo_url
   validates_presence_of :github_repo_id
   
@@ -19,10 +18,15 @@ class Entry < ActiveRecord::Base
   end
   
   def score
-    Vote.where(:entry_id => self.id).map {|e| e.value }.inject { |sum, el| sum + el }.to_f
+    arr = Vote.where(:entry_id => self.id).map {|e| e.value }
+    arr.inject { |sum, el| sum + el }.to_f / arr.size
   end
   
   def ribbons
     Ribbon.where(:entry_id => self.id)
+  end
+  
+  def screenshot_url
+    "http://openhacker.co/shots/#{self.github_repo_id}.jpg"
   end
 end

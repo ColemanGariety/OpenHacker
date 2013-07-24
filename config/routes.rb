@@ -12,7 +12,7 @@ ThechallengeIo::Application.routes.draw do
   get 'submit' => "entries#new", :as => 'submit'
   get 'auth/github/callback' => 'sessions#create'
   get "auth/github", :as => "auth"
-  get "auth/github/update" => "sessions#update"
+  get 'auth/github/update' => "sessions#update"
   get 'auth/failure' => redirect("/")
   get 'logout' => 'sessions#destroy', :as => 'signout'
   get 'about' => 'challenges#about'

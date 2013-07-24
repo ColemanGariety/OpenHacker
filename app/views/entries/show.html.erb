@@ -6,7 +6,7 @@
   		<div class="star-wrapper<%= " voted" if @voted_value == 5 - i %>"><%= link_to "<div class=\"star\" data-value=\"#{5 - i}\"></div>".html_safe, cast_path(:value => 5 - i, :entry_id => entry_id), :method => "put" %></div>
   	<% end %>
   </div>
-<% end unless @entry.user == current_user %>
+<% end unless @entry.user == current_user or @entry.challenge != current_voting_challenge %>
 
 <% content_for :right do %>
   <%= link_to @entry.repo_url, :target => "_blank", :id => "source-link" do %>

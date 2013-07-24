@@ -61,8 +61,8 @@ section {
   padding: 0;
   width: 100%;
   background: #FFF;
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
   max-width: 898px;
   margin: 0 auto;
   min-height: 100%;
@@ -82,14 +82,72 @@ header {
 	p {
   	font-size: 1.15em;
 	}
+	
+	ul {
+  	margin-top: -15px;
+  	
+  	li {
+    	list-style: circle;
+  	}
+	}
 }
 
 header#about {
   border-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: -20px;
   margin-bottom: 40px;
   text-align: center;
+  margin-left: -20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  background-color: #315765;
+  background-image: url('/assets/header.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  color: #FFF !important;
+  border-bottom: 1px solid #CCC;
+  text-shadow: 0 0 3px rgba(50,50,50,.66);
+}
+
+header#current-challenge {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  ul {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+#call-to-action {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+  button {
+    font-size: 1.33em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+  
+  a::after {
+    display: none;
+  }
 }
 
 header#section {
@@ -196,6 +254,11 @@ nav .inner h2 {
   background-repeat: no-repeat;
   background-position-y: 8px;
   
+  span.small {
+    font-size: 16px !important;
+    opacity: .75;
+    margin-left: 3px;
+  }
 }
 
 nav .inner .left:hover h2 {
@@ -257,6 +320,61 @@ nav .inner .right a:active + a div {
 
 footer {
 	text-align: right;
+}
+
+/* Overlay */
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.66);
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  display: none;
+  
+  #ex {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    font-weight: 700;
+    color: #888;
+    font-size: 1.25em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    
+    &:hover {
+      color: #999;
+    }
+    
+    &:active {
+      color: #777;
+    }
+  }
+  
+  &.active {
+    display: block;
+  }
+  
+  div {
+    background: #FFF;
+    display: inline-block;
+    padding: 40px;
+    text-align: center;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -145px;
+    -webkit-box-shadow: 0 1px 9px rgba(20,20,20,.75);
+       -moz-box-shadow: 0 1px 9px rgba(20,20,20,.75);
+            box-shadow: 0 1px 9px rgba(20,20,20,.75);
+  }
 }
 
 /* Generic Elements */
@@ -327,7 +445,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.25em;
+  font-size: 4em;
   font-weight: 500;
   font-family: "ITC Franklin Condensed", sans-serif;
 }
@@ -392,7 +510,6 @@ footer a::after {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 0;
-  border: 1px solid #777;
   -moz-background-size: 150px 150px;
     -o-background-size: 150px 150px;
        background-size: 150px 150px;
@@ -620,7 +737,7 @@ section .inner.home {
 }
 
 .tile:hover, .item:hover {
-  color: #AAA;
+  color: #CCC;
   .frame {
     bottom: 0;
   }
@@ -748,10 +865,12 @@ button, input[type="submit"] {
   background: $primary;
   color: #FFF;
   font-size: 1em;
+  font-weight: 900;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
+  border: 2px solid transparent;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
@@ -761,10 +880,6 @@ button, input[type="submit"] {
     background-color: #FFF;
     color: $primary;
     border: 2px solid $primary;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
   
   &:active, input[type="submit"]:active {
@@ -872,15 +987,32 @@ textarea:focus {
   }
 }
 
+.github {
+  padding-right: 50px !important;
+  background-image: url("/assets/github.png");
+  background-repeat: no-repeat;
+  background-position: 93% 46%;
+  background-size: 24px;
+}
+
+.github:hover, nav .inner .right a:hover .github, .github:active {
+  background-image: url("/assets/github_hover.png");
+}
+
+nav .inner .right a:active .github {
+  background-image: url("/assets/github_active.png");
+}
+
 /* Aside */
 
 aside {
   position: absolute;
-  width: 110px;
+  overflow: hidden;
+  width: 100px;
   padding: 15px;
   font-size: .75em;
   left: 50%;
-  border: 1px solid #DDD;
+  border: 1px solid #CCC;
   margin-left: 449px;
   top: 70px;
   background: #FFF;
@@ -897,4 +1029,23 @@ aside {
   section, .inner, nav .inner .left, nav a:last-child div {
     border: none !important;
   }
+  aside {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav h2 {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+/* @2x */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  header#about { background-image: url('/assets/header@2x.jpg'); }
+  .github, nav .inner .right a .github { background-image: url('/assets/github@2x.png'); }
+  .github:hover, nav .inner .right a:hover .github { background-image: url('/assets/github_hover@2x.png'); }
+  nav .inner .right a:active .github { background-image: url('/assets/github_active@2x.png'); }
 }

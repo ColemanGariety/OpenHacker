@@ -6,8 +6,6 @@ class EntriesController < ApplicationController
   def index
     if current_closed_challenge.present?
       @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
-      
-      @closed_challenge_count = Challenge.where("status = ? OR status = ?", 3, 4).count
   
       respond_to do |format|
         format.html # index.html.erb
@@ -16,6 +14,7 @@ class EntriesController < ApplicationController
     else
       respond_to do |format|
         format.html { render "challenges/about" }
+        format.json { render json: Entry.all }
       end
     end
   end
@@ -148,6 +147,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.json
   def destroy
+  
   	redirect_to root_url unless is_moderator(current_user)
     @entry = Entry.find(params[:id])
     @entry.destroy
@@ -159,15 +159,20 @@ class EntriesController < ApplicationController
   end
   
   def get_screen
-    begin
-      driver = Selenium::WebDriver.for(:firefox)
-      driver.get("https://www.google.com")
-      driver.save_screenshot('public/shots/screen.jpg')
-    ensure
-      driver.quit
-    end
+    require 'screencap'
+    require 'RMagick'
     
-    render :text => "http://openhacker.io.dev/shots/screen.jpg"
+    # Grab the screenshot
+    phantom = Screencap::Fetcher.new params[:repo]
+    screenshot = phantom.fetch :output => "public/shots/#{params[:repo_id]}.jpg", :width => 2880, :div => "html"
+
+    # Size dat shit
+    image = Magick::Image.read(Rails.root.join('public', 'shots', "#{params[:repo_id]}.jpg")).first
+    image.crop!(Magick::NorthGravity, 1000, 700)
+    image.format = "JPEG"
+    image.write Rails.root.join('public', 'shots', "#{params[:repo_id]}.jpg") { self.quality = 90 }
+    
+    render :text => "http://openhacker.co/shots/#{params[:repo_id]}.jpg"
   end
 
 private

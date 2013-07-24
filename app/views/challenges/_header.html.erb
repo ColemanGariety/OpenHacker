@@ -12,29 +12,37 @@
     %>
   </h1>
   
-  <p>
-    <b>Description:</b>
-    <%= @challenge.description %>
-  </p>
+  <p><%= @challenge.description %></p>
 
+<!--
   <p>
     <b>Suggested by:</b>
     <%= link_to @challenge.user.full_name, @challenge.user %> 
   </p>
+-->
 
-  <% if @challenge.rules %>
-    <p>
-      <b>Rules:</b>
-      <%= @challenge.rules %>
-    </p>
-  <% end %>
 
-  <% if @challenge.prize %>
-    <p>
-      <b>Prizes:</b>
-      <%= @challenge.prize %>
-    </p>
-  <% end %>
+<!--
+  <p>
+    <b>Rules:</b>
+    <ul>
+      <li>Entries must be in the form of a web page</li>
+      <% @challenge.rules_array.each do |rule| %>
+        <li><%= rule.html_safe %></li>
+      <% end %>
+    </ul>
+  </p>
+-->
+
+  <p>
+    <b>Prizes:</b>
+    <ul>
+      <li>Your project featured on the OpenHacker homepage</li>
+      <% @challenge.prizes_array.each do |prize| %>
+        <li><%= prize.html_safe %></li>
+      <% end %>
+    </ul>
+  </p>
   
   <% 
     case @challenge.status
@@ -47,7 +55,7 @@
     
     <p>
       <b>Submission Deadline:</b>
-      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %>
+      <%= distance_of_time_in_words(@challenge.opened_at + 1.week, Time.now, true) %> from now
     </p>
   <% when Challenge::STATUSES[:voting] %>
     <p>
@@ -57,7 +65,7 @@
     
     <p>
       <b>Voting Deadline:</b>
-      <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %>
+      <%= distance_of_time_in_words(Time.now, @challenge.opened_at + 1.week, true) %> from now
     </p>
     
     <p<%= " class=" + (@challenge.voted_percentage == 100 ? "green" : "red") %>>

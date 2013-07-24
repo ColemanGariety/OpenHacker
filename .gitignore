@@ -23,3 +23,6 @@
 
 # Ignore saved screenshots
 /public/shots
+
+# Ignore compiled assets
+/public/assets

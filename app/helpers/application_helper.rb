@@ -6,4 +6,8 @@ module ApplicationHelper
 	def your_vote(entry)
 	  Vote.find_by_user_id_and_entry_id(current_user.id, entry.id)
 	end
+	
+	def closed_challenge_count
+	  Challenge.where("status = ? OR status = ?", 3, 4).count
+	end
 end
