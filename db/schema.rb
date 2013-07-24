@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130723051923) do
+ActiveRecord::Schema.define(version: 20130724171604) do
 
   create_table "challenges", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "prize"
     t.string   "rules"
     t.integer  "status"
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20130723051923) do
     t.string   "repo_url"
     t.integer  "user_id"
     t.integer  "challenge_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "demo_url"
     t.integer  "github_repo_id"
     t.string   "platform"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20130723051923) do
 
   create_table "users", force: true do |t|
     t.string   "github_uid"
-    t.string   "username"
+    t.string   "username",     default: "", null: false
     t.string   "email"
     t.string   "full_name"
     t.string   "gravatar_id"
@@ -61,18 +61,19 @@ ActiveRecord::Schema.define(version: 20130723051923) do
     t.string   "location"
     t.boolean  "hireable"
     t.text     "bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "github_token"
     t.string   "banned_at"
+    t.boolean  "listed"
   end
 
   create_table "votes", force: true do |t|
     t.integer  "user_id"
     t.integer  "value"
     t.integer  "entry_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.boolean  "ignore",     default: false
   end
 
