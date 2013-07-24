@@ -95,22 +95,29 @@ header {
 header#about {
   border-style: none;
   padding: 0;
+  width: 900px;
   margin-top: -20px;
   margin-bottom: 40px;
   text-align: center;
   margin-left: -20px;
-  padding-right: 20px;
-  padding-left: 20px;
   padding-top: 35px;
   padding-bottom: 45px;
   background-color: #315765;
   background-image: url('/assets/header.jpg');
   background-size: cover;
   background-position: center center;
-  width: 100%;
+  margin: 0 auto;
+  margin-top: -10px;
   color: #FFF !important;
   border-bottom: 1px solid #CCC;
   text-shadow: 0 0 3px rgba(50,50,50,.66);
+  -webkit-box-shadow: inset 1px 0px 0 0 rgba(200,200,200,.33), inset -1px 0px 0 0 rgba(200,200,200,.33);
+     -moz-box-shadow: inset 1px 0px 0 0 rgba(200,200,200,.33), inset -1px 0px 0 0 rgba(200,200,200,.33);
+          box-shadow: inset 1px 0px 0 0 rgba(200,200,200,.33), inset -1px 0px 0 0 rgba(200,200,200,.33);
+}
+
+header#about + section {
+  margin-top: 0;
 }
 
 header#current-challenge {

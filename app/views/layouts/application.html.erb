@@ -62,7 +62,14 @@
       </div>
     </aside>
   <% end %>
-  
+
+  <% if (params[:controller] == 'entries' and params[:action] == 'index') or (params[:controller] == 'challenges' and params[:action] == 'about') %>
+    <header id="about">
+    	<h1>Welcome to OpenHacker</h1>
+    	<h2>A weekly competition for problem solvers.</h2>
+    </header>
+  <% end %>
+
   <section>
     <div class="inner <%= yield(:section_class) %>">
       <%= yield %>
