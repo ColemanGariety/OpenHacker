@@ -118,6 +118,10 @@ header#about {
 
 header#about + section {
   margin-top: 0;
+  
+  .inner {
+    padding-top: 40px;
+  }
 }
 
 header#current-challenge {
