@@ -254,7 +254,7 @@ nav .inner h2 {
   display: inline-block;
   top: 0;
   position: relative;
-  background-image: image-url('/logo_nav.png');
+  background-image: image-url('logo_nav.png');
   -moz-background-size: auto 35px;
     -o-background-size: auto 35px;
        background-size: auto 35px;
@@ -1051,6 +1051,7 @@ aside {
 /* @2x */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav .inner h2 { background-image: url('/assets/logo_nav@2x.png'); }
   header#about { background-image: url('/assets/header@2x.jpg'); }
   .github, nav .inner .right a .github { background-image: url('/assets/github@2x.png'); }
   .github:hover, nav .inner .right a:hover .github { background-image: url('/assets/github_hover@2x.png'); }
