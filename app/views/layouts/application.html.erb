@@ -38,7 +38,7 @@
           <%= link_to '<div>About</div>'.html_safe, about_path if current_closed_challenge.present?  %>
           <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
           <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
-          <%= link_to '<div>Sign in with GitHub</div>'.html_safe, auth_path %>
+          <%= link_to '<div class="github">Sign in with GitHub</div>'.html_safe, auth_path %>
         <% end %>
       </div>
     </div>

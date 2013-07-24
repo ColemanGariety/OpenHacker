@@ -18,6 +18,15 @@
 if location.hash == "#tweet"
   $("#overlay").addClass("active")
 
+# Preload images
+preload = ['/assets/github.png', '/assets/github@2x.png', '/assets/github_hover.png', '/assets/github_hover@2x.png', '/assets/github_active.png', '/assets/github_active@2x.png']
+images = []
+i = 0
+while i < preload.length
+  images[i] = new Image()
+  images[i].src = preload[i]
+  i++
+
 # Update user data
 if $("#user").attr("data-username")
   setTimeout (->

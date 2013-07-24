@@ -134,17 +134,10 @@ header#current-challenge {
   
   button {
     font-size: 1.33em;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    
-    &:hover, &:active {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 6px;
-      padding-bottom: 6px;
-    }
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     
     &:active {
       position: relative;
@@ -877,6 +870,7 @@ button, input[type="submit"] {
   padding-right: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
+  border: 2px solid transparent;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
@@ -886,11 +880,7 @@ button, input[type="submit"] {
     background-color: #FFF;
     color: $primary;
     border: 2px solid $primary;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }f
+  }
   
   &:active, input[type="submit"]:active {
     position: relative;
@@ -997,6 +987,22 @@ textarea:focus {
   }
 }
 
+.github {
+  padding-right: 50px !important;
+  background-image: url("/assets/github.png");
+  background-repeat: no-repeat;
+  background-position: 93% 46%;
+  background-size: 24px;
+}
+
+.github:hover, nav .inner .right a:hover .github, .github:active {
+  background-image: url("/assets/github_hover.png");
+}
+
+nav .inner .right a:active .github {
+  background-image: url("/assets/github_active.png");
+}
+
 /* Aside */
 
 aside {
@@ -1039,4 +1045,7 @@ aside {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   header#about { background-image: url('/assets/header@2x.jpg'); }
+  .github, nav .inner .right a .github { background-image: url('/assets/github@2x.png'); }
+  .github:hover, nav .inner .right a:hover .github { background-image: url('/assets/github_hover@2x.png'); }
+  nav .inner .right a:active .github { background-image: url('/assets/github_active@2x.png'); }
 }

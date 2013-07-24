@@ -21,7 +21,7 @@
 
 <div id="call-to-action">
   <%= link_to submit_path do %>
-    <button><%= current_user && current_open_challenge ? "Submit to '#{current_open_challenge.title}'" : "Sign in with GitHub" %></button>
+    <button <%= "class=github" unless current_user && current_open_challenge %>><%= current_user && current_open_challenge ? "Submit to '#{current_open_challenge.title}'" : "Sign in with GitHub" %></button>
   <% end %>
 </div>
 
