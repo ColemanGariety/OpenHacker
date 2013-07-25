@@ -4,6 +4,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
+    @users = User.where(:listed => 1)
     if current_closed_challenge.present?
       @entries = Entry.where(:challenge_id => current_closed_challenge.id).limit(3)
   

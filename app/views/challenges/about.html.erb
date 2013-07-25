@@ -1,17 +1,34 @@
 <% if current_open_challenge.present? %>
-  <header id="current-challenge">
-    <h2>This week's challenge:</h2>
-    <p><%= current_open_challenge.description %></p>
-    <p>
-      <b>Prizes:</b>
-      <ul>
-        <li>Your project featured on the OpenHacker homepage</li>
-        <% current_open_challenge.prizes_array.each do |prize| %>
-          <li><%= prize.html_safe %></li>
-        <% end %>
-      </ul>
-    </p>
-  </header>
+<table id="about" cellpadding="20" cellspacing="0">
+  <tr>
+    <td>
+      <h1 class="small">Current Challenge:</h1><br>
+      <b>Title: </b><span><%= current_open_challenge.title %></span>
+      <p><b>Description: </b><%= current_open_challenge.description %></p>
+      <b>Submission dealine: </b><span class="ticker"></span> from now
+      <p>
+        <b>Prizes:</b>
+        <ul>
+          <li>Your project featured on the OpenHacker homepage</li>
+          <% current_open_challenge.prizes_array.each do |prize| %>
+            <li><%= prize.html_safe %></li>
+          <% end %>
+        </ul>
+      </p>
+    </td>
+    <td>
+      <h1 class="small">Participants:</h1><br>
+      <% @users.each do |user| %>
+        <div>
+          <div style="background-image: url(http://www.gravatar.com/avatar/<%= user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default" class="small"></div>
+          <h3><%= user.full_name %></h3>
+          <p><%= user.bio %></p>
+          <div class="clearfix"></div>
+        </div><br>
+      <% end %>
+    </td>
+  </tr>
+</table>
 <% end %>
 
 <div id="call-to-action">
@@ -39,7 +56,7 @@
   </li><br>
 	<li>
 	  <h3>Who builds OpenHacker?</h3>
-	  <p>Right now, by <a href="http://jacksongariety.com/" target="_blank">Jackson Gariety</a>.</p>
+	  <p>Right now, <a href="http://jacksongariety.com/" target="_blank">Jackson Gariety</a>.</p>
 	  <p>But in a perfect world it would be maintained entirely by the open source community.</p>
   </li><br>
 	<li>
@@ -47,4 +64,4 @@
 	  <p>The entire website is open source. If you know Ruby, you can help make OpenHacker better right now.</p>
 	  <p><a href="https://github.com/jacksonGariety/OpenHacker" target="_blank">Contribute on GitHub</a>.</p>
   </li>
-</ul><br>
+</ul>

@@ -120,7 +120,20 @@ header#about + section {
   margin-top: 0;
   
   .inner {
-    padding-top: 40px;
+    padding-top: 20px;
+  }
+}
+
+table#about {
+  width: 100%;
+  border-right: 1px dashed #BBB;
+  border-bottom: 1px dashed #BBB;
+  
+  td {
+    vertical-align: top;
+    width: 50%;
+    border-left: 1px dashed #BBB;
+    border-top: 1px dashed #BBB;
   }
 }
 
@@ -459,6 +472,10 @@ h1 {
   font-size: 4em;
   font-weight: 500;
   font-family: "ITC Franklin Condensed", sans-serif;
+  
+  &.small {
+    font-size: 2.75em;
+  }
 }
 
 h1 + p, h1 + span, h1 + a, h1 + h2 {
@@ -527,6 +544,14 @@ footer a::after {
   -webkit-border-radius: 180px;
   	 -moz-border-radius: 180px;
   		    border-radius: 180px;
+  
+  &.small {
+    width: 75px;
+    height: 75px;
+  -moz-background-size: 75px 75px;
+    -o-background-size: 75px 75px;
+       background-size: 75px 75px;
+  }
 }
 
 .bio {
