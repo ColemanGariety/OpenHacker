@@ -1,11 +1,11 @@
 <% if current_open_challenge.present? %>
+<div style="text-align: center;margin-bottom: 20px;"><b>Submission deadline: </b><span class="ticker"></span> from now</div>
 <table id="about" cellpadding="20" cellspacing="0">
   <tr>
     <td>
-      <h1 class="small">Current Challenge:</h1><br>
-      <b>Title: </b><span><%= current_open_challenge.title %></span>
+      <h1 class="small">Challenge #1:</h1>
+      <h2><%= current_open_challenge.title %></h2>
       <p><b>Description: </b><%= current_open_challenge.description %></p>
-      <b>Submission dealine: </b><span class="ticker"></span> from now
       <p>
         <b>Prizes:</b>
         <ul>
@@ -17,7 +17,7 @@
       </p>
     </td>
     <td>
-      <h1 class="small">Participants:</h1><br>
+      <h1 class="small">Hackers:</h1><br>
       <% @users.each do |user| %>
         <div>
           <div style="background-image: url(http://www.gravatar.com/avatar/<%= user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default" class="small"></div>
@@ -64,4 +64,4 @@
 	  <p>The entire website is open source. If you know Ruby, you can help make OpenHacker better right now.</p>
 	  <p><a href="https://github.com/jacksonGariety/OpenHacker" target="_blank">Contribute on GitHub</a>.</p>
   </li>
-</ul>
+</ul><br>

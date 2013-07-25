@@ -83,12 +83,14 @@ header {
   	font-size: 1.15em;
 	}
 	
-	ul {
-  	margin-top: -15px;
-  	
-  	li {
-    	list-style: circle;
-  	}
+
+}
+
+header ul, td ul {
+	margin-top: -15px;
+	
+	li {
+  	list-style: circle;
 	}
 }
 
