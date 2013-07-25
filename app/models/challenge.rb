@@ -5,6 +5,7 @@ class Challenge < ActiveRecord::Base
 
   has_many :votes, :through => :entries
   has_many :entries
+  has_one :user
 
   # Challenge statuses
   STATUSES = {
