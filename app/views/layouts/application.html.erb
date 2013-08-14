@@ -35,10 +35,10 @@
           <%= link_to your_entry.present? ? "<div>#{your_entry.title[0..10] + (your_entry.title.length > 10 ? "&hellip;" : "")}</div>".html_safe : '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
           <%= link_to "<div>Sign Out</div>".html_safe, signout_path %>
         <% else %>
-          <%= link_to '<div>About</div>'.html_safe, about_path if current_closed_challenge.present?  %>
-          <%= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
-          <%= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
-          <%= link_to '<div class="github">Sign in with GitHub</div>'.html_safe, auth_path %>
+          <%#= link_to '<div>About</div>'.html_safe, about_path if current_closed_challenge.present?  %>
+          <%#= link_to '<div>Vote</div>'.html_safe, next_entry if current_voting_challenge %>
+          <%#= link_to '<div>Submit</div>'.html_safe, submit_path if current_open_challenge %>
+          <%#= link_to '<div class="github">Sign in with GitHub</div>'.html_safe, auth_path %>
         <% end %>
       </div>
     </div>
