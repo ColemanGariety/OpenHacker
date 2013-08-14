@@ -1,67 +1,7 @@
-<% if current_open_challenge.present? %>
-<div style="text-align: center;margin-bottom: 20px;"><b>Submission deadline: </b><span class="ticker"></span> from now</div>
-<table id="about" cellpadding="20" cellspacing="0">
-  <tr>
-    <td>
-      <h1 class="small">Challenge #1:</h1><br>
-      <b>Title: </b><span><%= current_open_challenge.title %></span>
-      <p><b>Description: </b><%= current_open_challenge.description %></p>
-      <p>
-        <b>Prizes:</b>
-        <ul>
-          <li>Your project featured on the OpenHacker homepage</li>
-          <% current_open_challenge.prizes_array.each do |prize| %>
-            <li><%= prize.html_safe %></li>
-          <% end %>
-        </ul>
-      </p>
-    </td>
-    <td>
-      <h1 class="small">Hackers:</h1><br>
-      <% @users.each do |user| %>
-        <div>
-          <div style="background-image: url(http://www.gravatar.com/avatar/<%= user.gravatar_id %>?s=300&d=http://thelist.io/assets/profile.jpg);" id="default" class="small"></div>
-          <h3><%= user.full_name %></h3>
-          <span><%= user.bio %></span>
-          <div class="clearfix"></div>
-        </div><br>
-      <% end %>
-    </td>
-  </tr>
-</table>
-<% end %>
-
-<div id="call-to-action">
-  <%= link_to submit_path do %>
-    <button <%= "class=github" unless current_user && current_open_challenge %>><%= current_user && current_open_challenge ? "Submit to '#{current_open_challenge.title}'" : "Sign in with GitHub" %></button>
-  <% end %>
+<div style="text-align: center;">
+  <h4>This project's development is on a short hiatus.</h4>
+  
+  <p>If you have any questions or feedback about OpenHacker, please email me:</p>
+  
+  <script>document.write("<a href=\"mailto:personal" + "@" + "jacksongariety.com?subject=OpenHacker+Inquiry\">personal" + "@" + "jacksongariety.com</a>")</script>
 </div>
-
-<ul>
-  <li>
-    <h3>Why?</h3>
-    <p>To make solving the world's problems fun and organized.</p>
-  </li><br>
-  <li>
-    <h3>How does it work?</h3>
-    <p>Every week a community-decided "challenge" is presented to the members of OpenHacker.</p>
-    <p>Hackers are given a week to create a web page that they think best addresses the problem. At the end of the week, the challenge moves into "voting," where members vote on each others solutions.</p>
-    <p>After a week of voting, the top three highest voted challenge entries are awarded a spot on the site's homepage and a prize.</p>
-  </li><br>
-	<li>
-	  <h3>I can't write code, can I still participate?</h3>
-	  <p>Of course!</p>
-	  <p>Challenge entries can be anything: videos, documents, paintings, music, etc.</p>
-	  <p>The only requirement is that it's accessible somewhere on the web.</p>
-  </li><br>
-	<li>
-	  <h3>Who builds OpenHacker?</h3>
-	  <p>Right now, <a href="http://jacksongariety.com/" target="_blank">Jackson Gariety</a>.</p>
-	  <p>But in a perfect world it would be maintained entirely by the open source community.</p>
-  </li><br>
-	<li>
-	  <h3>Can I help the open hacking movement?</h3>
-	  <p>The entire website is open source. If you know Ruby, you can help make OpenHacker better right now.</p>
-	  <p><a href="https://github.com/jacksonGariety/OpenHacker" target="_blank">Contribute on GitHub</a>.</p>
-  </li>
-</ul><br>
