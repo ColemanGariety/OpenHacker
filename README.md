@@ -8,6 +8,14 @@ A weekly competition for hackers.
 
 OpenHacker is an online competition for hackers of all sorts. Whether you're a hardware hacker, a kickass javascript dev, or a Ruby Rockstar. We feature a new challenge every week, each with a theme that inspires creativity. After the weekly submission period ends, participants are asked to vote on eachothers projects. The creators of winning projects are then awarded with various prizes.
 
+## Testing
+
+To get OH up and running on your machine. You'll need to add a `variables.yml` file to the `config` folder which contains three constants:
+
+GITHUB_KEY:
+GITHUB_SECRET:
+GOSQUARED_ACCT:
+
 ## Contributing
 
 We appreciate contributions.
